@@ -1,0 +1,97 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage{fullpage} % Package to use full page
+\usepackage[utf8]{inputenc}
+%\setlength\parindent{0pt}
+\usepackage{amsmath} %for writing text in equations with \text{}
+\usepackage{dsfont} %for identity matrix
+\usepackage[T1]{fontenc}
+\usepackage{slashed}
+
+\title{\textbf{Gauge Theories: Electroweak}}
+\author{Lecturer: Richard Ball}
+\date{\normalsize\today} % Can't work out how to make this a UK format but oh well
+
+\begin{document}
+
+\maketitle
+\section{Introduction}
+%
+Imagine a world without electroweak:
+\begin{itemize}
+    \item Still have electromagnetism (EM), massive hadrons, atoms, gravity etc.
+    \item Parity (P) and charge conjugation (C) are still good symmetries
+    \item Flavour is always conserved: everything lasts forever (and always existed)
+    \item No neutrinos (would be non-interacting)
+\end{itemize}
+%
+Neutrinos were first hypothesised by Pauli (1930) to explain the missing energy in $\beta$-decay. They were first observed in 1956 (Cowan-Reines). Parity violation was first directly observed in 1956/7 (Lee-Yang-Wu).
+
+\section{Chirality}
+%
+Define the projection operators $P_R \equiv \frac{1}{2}(1 + \gamma^5)$ and $P_L \equiv \frac{1}{2}(1 - \gamma^5)$. Recalling that $(\gamma^5)^2 = 1$ and $(\gamma^5)^\dagger = \gamma^5$, we can deduce the following properties:
+\begin{itemize}
+    \item $P_R^2 = P_R$
+    \item $P_L^2 = P_L$
+    \item $P_LP_R = P_RP_L = 0$
+    \item $P_R + P_L = 1$
+    \item $P_R - P_L = \gamma^5$.
+\end{itemize}
+% 
+Any Dirac spinor can be split up into a right-handed and a left-handed component, $\psi = \psi_R + \psi_L$, using the projection operators to define $\psi_R = P_R \psi$ and $\psi_L = P_L \psi$. Since $\gamma^\mu P_L = P_R \gamma^\mu$, it follows that $\bar{\psi} P_R \equiv (\bar{\psi})_R = \bar{\psi}_L$ and $\bar{\psi} P_L \equiv (\bar{\psi})_L = \bar{\psi}_R$. So 
+\begin{equation}
+\begin{split}
+    \bar{\psi}\psi = \bar{\psi}(\psi_R + \psi_L) &= \bar{\psi}_L\psi_R + \bar{\psi}_R\psi_L \\
+    &\text{and} \\
+    \bar{\psi}\gamma^\mu \psi = \bar{\psi}\gamma^\mu(\psi_R + \psi_L) &= \bar{\psi}_R\gamma^\mu\psi_R 
+    \bar{\psi}_L\gamma^\mu\psi_L.
+\end{split}
+\end{equation}
+%
+The Dirac Lagrangian splits up like 
+\begin{equation}
+\begin{split}
+\mathcal{L}_D &= \bar{\psi}(i\slashed{\partial}-m)\psi \\ 
+&= \bar{\psi}_R i\slashed{\partial}\psi_R + \bar{\psi}_L i\slashed{\partial}\psi_L
++ m(\bar{\psi}_L\psi_R + \bar{\psi_R}\psi_L)
+\end{split}
+\end{equation}
+so the mass term mixes $\psi_R$ and $\psi_L$: if $m \to 0$, $\psi_R$ and $\psi_L$ are independent. In this scenario they are both 2-component spinors obeying the Weyl equation $i\slashed{\partial}\psi_{R/L} = 0$.
+
+\section{Helicity}
+The spin operator can be expressed as $\Sigma^i = \frac{i}{2} \epsilon^{ijk}[\gamma^j, \gamma^k] = \gamma^5\gamma^0\gamma^i$. Then $[P_L, \Sigma^i] = [P_R, \Sigma^i]$: spin and chirality commute. Now consider \textit{helicity}, defined 
+\begin{equation}
+    h \equiv \frac{2\underline{\Sigma} \cdot \underline{p}}{|\underline{p}|}.
+\end{equation}
+$h$ has eigenvalues $\pm1$, which follows from $(\slashed{p} - m)u^\pm = 0 \implies hu^\pm = \pm u^\pm$. But $\slashed{p} = E\gamma^0 - \underline{\gamma}\cdot\underline{p}$ and $h = \gamma^5\gamma^0 (\underline{\gamma}\cdot\underline{p})/|\underline{p}| = \gamma^5\gamma^0(E\gamma^0 - \slashed{p})$. So
+%
+\begin{equation}
+\begin{split}
+\gamma^5(E - \gamma^0\slashed{p})u^\pm &= \pm u^\pm \\
+\implies (P_R-P_L)(E-\gamma^0m)u^\pm &= \pm p(P_R + P_L)u^\pm \\
+\text{ and } (E \mp p)u_R^\pm &= m\gamma^0 u_L^\pm \\
+             (E \pm p)u_L^\pm &= m\gamma^0 u_R^\pm. 
+\end{split}
+\end{equation}
+Again, the mass term mixes R and L, but if $m \to 0$, $p = E + \mathcal{O}(\frac{m^2}{E})$ and $2E u_R^- = 2E u_L^+ = 0$ so $u_R^- = u_L^+ = 0$, i.e. $u_R$ has helicity +1 and $u_L$ has helicity -1. 
+
+Note that when $m=0$, helicity is Lorentz invariant (no rest frame). For $m \neq 0$, 
+\begin{equation}
+\begin{split}
+    u_R^- = \frac{m\gamma^0}{E+p}u_L^- &\approx \frac{m}{2E}\gamma^0u_L^- \\
+    \text{ and } u_L^+ &\approx \frac{m}{2E}\gamma^0u_R^+
+\end{split}
+\end{equation}
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document}
+
