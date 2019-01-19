@@ -7,6 +7,14 @@
 \usepackage[T1]{fontenc}
 \usepackage{slashed}
 
+\newcommand{\icol}[1]{% inline column vector
+  \left(\begin{smallmatrix}#1\end{smallmatrix}\right)%
+}
+
+\newcommand{\irow}[1]{% inline row vector
+  \begin{smallmatrix}(#1)\end{smallmatrix}%
+}
+
 \title{\textbf{Gauge Theories: Electroweak}}
 \author{Lecturer: Richard Ball}
 \date{\normalsize\today} % Can't work out how to make this a UK format but oh well
@@ -81,11 +89,64 @@ Note that when $m=0$, helicity is Lorentz invariant (no rest frame). For $m \neq
     \text{ and } u_L^+ &\approx \frac{m}{2E}\gamma^0u_R^+.
 \end{split}
 \end{equation}
-You get similar expressions for negative energy solutions 
-
-
-
-
+You get similar expressions for negative energy solutions:
+\begin{equation}
+\begin{split}
+\text{for $m = 0$:   } &v_R^- = v_L^+ = 0 \\
+\text{for $m \neq 0$:    }  &v_R^- = -\frac{m\gamma^0}{2E}v_L^- \text{ and } v_L^+ = -\frac{m\gamma^0}{2E}v_R^-.
+\end{split}
+\end{equation}
+%
+\section{The Chiral Representation}
+%
+In the chiral representation the gamma matrices can be expressed as:
+\[ \gamma^0 = \left( \begin{array}{cc}
+0 & 1  \\
+1 & 0  \end{array} \right) \qquad
+\gamma^i = \left( \begin{array}{cc}
+0 & -\sigma^i  \\
+\sigma^i & 0  \end{array} \right) \qquad
+\gamma^5 = \left( \begin{array}{cc}
+1 & 0 \\
+0 & -1     \end{array} \right)\] 
+%
+so
+%
+\[ P_R = \left( \begin{array}{cc}
+1 & 0  \\
+0 & 0  \end{array} \right) \qquad
+P_L = \left( \begin{array}{cc}
+0 & 0  \\
+0 & 1  \end{array} \right) \qquad
+\implies
+\psi = \left( \begin{array}{c}
+\psi_R  \\
+\psi_L      \end{array} \right).\] 
+%
+Furthermore, the spin operator can be written
+%
+\[ \Sigma^i = \gamma^5\gamma^0\gamma^i = \left( \begin{array}{cc}
+\sigma^i & 0  \\
+0 & \sigma^i  \end{array} \right) \]
+%
+so the helicity eigenstates are $\icol{\psi_R^\pm\\0}$ and $\icol{0\\\psi_L^\pm}$. Now consider the positive and negative energy solutions. 
+%
+$(\slashed{p} - m)u =0 \implies$
+%
+\[ \left( \begin{array}{cc}
+-m & E +\underline{\sigma}\cdot\underline{p}  \\
+  E -\underline{\sigma}\cdot\underline{p}& -m  \end{array} \right)
+\left( \begin{array}{c}
+u_R   \\
+u_L  \end{array} \right) = 0.\] 
+%
+But $\underline{\sigma}\cdot \underline{p}\ u_{L/R} = \pm p\ u_{L/R}^\pm$ so $(E \pm p)u_L^\pm = m\ u_R^\pm$. Using $E^2 = p^2 + m^2$:
+\begin{equation}
+\begin{split}
+(E \pm p)u_L^\pm &= \sqrt{(E+p)(E-p)}u_R^\pm \\
+\implies \sqrt{E\pm p}u_L^\pm &= \sqrt{E \mp p}u_R^\pm
+\end{split}
+\end{equation}
 
 
 
