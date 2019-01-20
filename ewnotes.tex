@@ -6,6 +6,7 @@
 \usepackage{dsfont} %for identity matrix
 \usepackage[T1]{fontenc}
 \usepackage{slashed}
+\usepackage{tikz}
 
 \newcommand{\icol}[1]{% inline column vector
   \left(\begin{smallmatrix}#1\end{smallmatrix}\right)%
@@ -202,7 +203,7 @@ Under T, $\psi \to \psi_T = B\psi$ where $B = i\gamma^1\gamma^3 = -i\gamma^5C$ a
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
-\section{CC EWK}
+\section{Charged Current Electroweak}
 %
 \subsection{Fermi Theory (1934)}
 %
@@ -223,15 +224,67 @@ V_\mu &= \bar{\nu}\gamma_\mu e + \bar{p}\gamma_\mu n + ... \\
 A_\mu &= \bar{\nu}\gamma_\mu \gamma^5 e + \bar{p}\gamma_\mu \gamma^5 n + ...
 \end{split}
 \end{equation}
-and whose difference gives the overall current
+whose difference gives the overall current
 \begin{equation}
 \begin{split}
 \frac{1}{2}J_\mu = \frac{1}{2}(V_\mu - A_\mu)  &= \bar{\nu}\gamma_\mu\frac{1}{2}(1-\gamma^5) e + \bar{p}\gamma_\mu\frac{1}{2}(1-\gamma^5) n + ... \\
 &= \bar{\nu}_L\gamma_\mu e_L + \bar{p}_L\gamma_\mu n_L + ... .
 \end{split}
 \end{equation}
-So the weak interactions involve \textbf{only left-handed fields}, and maximally violate P and C.
+So the weak interactions involve \textbf{only left-handed fields}, and maximally violate P and C. In fact, under P, C and CP the currents transform in the following ways:
+\begin{equation}
+\begin{split}
+&P \qquad V^\mu \to V_\mu, \qquad A^\mu \to -A_\mu, \qquad (V-A)^\mu \to (V+A)_\mu \\
+&C \qquad V^\mu \to -V^\mu, \qquad A^\mu \to A^\mu, \qquad (V-A)^\mu \to (-V-A)^\mu \\
+&CP \qquad V^\mu \to -V_\mu, \qquad A^\mu \to -A_\mu, \qquad (V-A)^\mu \to -(V-A)_\mu 
+\end{split}
+\end{equation}
+so $(V-A)^{\mu \dagger}(V-A)_\mu$ is invariant under CP (and T). 
 
+Note that that neutrinos \textbf{only} interact weakly, so $\nu_R$ does not interact at all! If neutrinos are massless, there is no need for $\nu_R$. From 1930-1998 neutrinos were always assumed to be massless: here we will assume $m_\nu=0$ so $\nu$ are always left handed and $\bar{\nu}$ are always right handed. In reality $m_\nu \leq$ 0.3 eV, which is very small.
+
+So we have
+%
+\begin{equation}
+\mathcal{L}_{4F} = -\frac{G_F}{\sqrt{2}} J_\mu^\dagger J^\mu
+\end{equation}
+where the $\sqrt{2}$ is historical. $J_\mu = J_\mu^l + J_\mu^h$ can be split up into a leptonic and a hadronic current, each of which comprises three generations. For example, the leptonic current
+\begin{equation}
+\frac{1}{2}J_\mu^l = \bar{\nu}_e\gamma_\mu e_L + \bar{nu}_{(\mu)}\gamma_\mu \mu_L + \bar{\nu}_\tau \gamma_\mu \tau_L.
+\end{equation}
+Lepton number $L_e = N_{e^-} - N_{e^+} - N_{\nu_e} + N_{\bar{\nu}_e}$ and the corresponding $L_\mu$ and $L_\tau$ are conserved, according to Noether's Theorem.  
+
+The hadronic current
+\begin{equation}
+\frac{1}{2}J_\mu^h = \bar{u}_L\gamma_\mu d_L^\prime + \bar{c}_L \gamma_\mu s_L^\prime + \bar{t}_L \gamma_\mu b_L^\prime
+\end{equation}
+is simplest to express in terms of the quarks. The baryon number $B = \sum_{gen} (N_u -N_{\bar{u}} - N_d + N_{\bar{d}})$ is conserved. Things are complicated due to the effects of quark mixing - see later.
+
+(V-A) Theory is quite complicated, but there is only one coupling, $G_F$: we call this universality. Explicitly,
+\begin{equation}
+\mathcal{L}_{4F} = -\frac{G_F}{\sqrt{2}} (J_\mu^{l \dagger} J^{l\mu} + (J_\mu^{h \dagger} J^{l\mu} + J_\mu^{l \dagger} J^{h\mu}) + J_\mu^{h \dagger} J^{h\mu} ) 
+\end{equation}
+so there are three types of (charged current) weak interaction
+\begin{itemize}
+    \item \textbf{leptonic:} only leptons (and neutrinos) e.g. $\mu \to e \nu_\mu \bar{\nu}_e$
+    \item \textbf{semi-leptonic:} both leptons and quarks e.g. $\pi^- = d\bar{u} \to \mu^- \bar{\nu}_\mu$
+    \item \textbf{hadronic:} only quarks e.g. $\Lambda \to p \pi$
+\end{itemize}
+But all of them violate P and C and conserve CP, only involve left-handed particles and only involve one coupling $G_F$. 
+\newline
+\newline
+\textbf{Example:} $\pi^+ \approx u\bar{d} \to \mu^+ \nu_\mu$. 
+\newline
+\begin{figure}[h!]
+\centering 
+\begin{tikzpicture}
+\draw[<-] (0,1) -- (2,1);
+\node[] at (0,0.5) {$\nu_\mu$};
+\draw[fill=black] (3,1) circle (0.1cm);
+\node[] at (3,0.5) {$\pi^+$};
+\draw[->] (4,1) -- (6,1) ;
+\node[] at (6, 0.5){$\mu^+$};
+\end{tikzpicture}
+\end{figure}
 
 \end{document}
-
