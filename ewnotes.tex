@@ -34,7 +34,7 @@ Imagine a world without electroweak:
 %
 Neutrinos were first hypothesised by Pauli (1930) to explain the missing energy in $\beta$-decay. They were first observed in 1956 (Cowan-Reines). Parity violation was first directly observed in 1956/7 (Lee-Yang-Wu).
 
-\section{Chirality}
+\subsection{Chirality}
 %
 Define the projection operators $P_R \equiv \frac{1}{2}(1 + \gamma^5)$ and $P_L \equiv \frac{1}{2}(1 - \gamma^5)$. Recalling that $(\gamma^5)^2 = 1$ and $(\gamma^5)^\dagger = \gamma^5$, we can deduce the following properties:
 \begin{itemize}
@@ -65,7 +65,7 @@ The Dirac Lagrangian splits up like
 \end{equation}
 so the mass term mixes $\psi_R$ and $\psi_L$: if $m \to 0$, $\psi_R$ and $\psi_L$ are independent. In this scenario they are both 2-component spinors obeying the Weyl equation $i\slashed{\partial}\psi_{R/L} = 0$.
 
-\section{Helicity}
+\subsection{Helicity}
 The spin operator can be expressed as $\Sigma^i = \frac{i}{2} \epsilon^{ijk}[\gamma^j, \gamma^k] = \gamma^5\gamma^0\gamma^i$. Then $[P_L, \Sigma^i] = [P_R, \Sigma^i]$: spin and chirality commute. Now consider \textit{helicity}, defined 
 \begin{equation}
     h \equiv \frac{2\underline{\Sigma} \cdot \underline{p}}{|\underline{p}|}.
@@ -97,7 +97,7 @@ You get similar expressions for negative energy solutions:
 \end{split}
 \end{equation}
 %
-\section{The Chiral Representation}
+\subsection{The Chiral Representation}
 %
 In the chiral representation the gamma matrices can be expressed as:
 \[ \gamma^0 = \left( \begin{array}{cc}
@@ -144,14 +144,93 @@ But $\underline{\sigma}\cdot \underline{p}\ u_{L/R} = \pm p\ u_{L/R}^\pm$ so $(E
 \begin{equation}
 \begin{split}
 (E \pm p)u_L^\pm &= \sqrt{(E+p)(E-p)}u_R^\pm \\
-\implies \sqrt{E\pm p}u_L^\pm &= \sqrt{E \mp p}u_R^\pm
+\implies \sqrt{E\pm p}\ u_L^\pm &= \sqrt{E \mp p}\ u_R^\pm 
 \end{split}
 \end{equation}
+and we can write
+%
+\[ u^\pm =
+\left( \begin{array}{c}
+\sqrt{E \pm p} \ \xi^\pm   \\
+\sqrt{E \mp p} \ \xi^\pm  \end{array} \right) \] 
+%
+where $\xi^+ = \icol{1\\0}$ and $\xi^- = \icol{0\\1}$. 
+\newline
+\newline
+\textit{Exercise: check that the normalisations $\bar{u}u = 2m$, $u^\dagger u = 2E$.}
+\newline
 
+Similarly, $(\slashed{p} +m)v = 0$ and $(\underline{\sigma}\cdot\underline{p})v^\pm = \mp p\ v^\pm$, so 
+\begin{equation}
+\begin{split}
+(E \mp p)v_L^\pm &= -m\ v_R^\pm \\
+\implies \sqrt{E\mp p}\ v_L^\pm &= -\sqrt{E \pm p}\ v_R^\pm 
+\end{split}
+\end{equation}
+and
+%
+\[ v^\pm =
+\left( \begin{array}{c}
+\sqrt{E \mp p} \ \xi^\pm   \\
+-\sqrt{E \pm p} \ \xi^\pm  \end{array} \right). \] 
+%
+You can relate $\xi^\pm$ to $\chi^\pm$ by charge conjugation: $v^\pm = i \gamma^2 u^{\pm *}$, where
+%
+\[ i\gamma^2 = \left( \begin{array}{cc}
+0 & -i \sigma^2  \\
+i\sigma^2 & 0  \end{array} \right); \qquad 
+-i\sigma^2 = \left( \begin{array}{cc}
+0 & -1 \\
+1 & 0 \end{array} \right) \]
+%
+so $\chi^\pm = -i\sigma^2\xi^\pm$ and if $\xi^\pm = \icol{1\\0}, \icol{0\\1}$ then $\chi^\pm = \icol{0\\1}, \icol{-1\\0}$ as before.
+%
+\subsection{Parity}
+%
+Under P, $\psi \to \psi_p = \gamma^0\psi$. We know that $P_L \gamma^0 = \gamma^0 P_R$, so $\psi_L \to \gamma^0 \psi_L =  P_R\gamma^0 \psi_L = (\psi_p)_R$. In other words, $(\psi_L)_p = (\psi_p)_R$, so parity switches L and R.
 
+Note that $[\gamma^0, \Sigma^i] = 0$ but under P $\underline{p} \to - \underline{p}$ so $h \to -h$, as expected. This means $u_R^+ to u_L^-$ etc.: parity flips helicity but not spin.
+%
+\subsection{Charge conjugation}
+%
+Under C, $\psi \to \psi_c = C\overline{\psi}^T$ where $C = i\gamma^2\gamma^0$. Then $P_LC = CP_L$ so $\psi_L \to C(\overline{\psi})_L^T$. 
+This means that charge conjugation leaves the chirality unchanged. Helicity is also unchanged: C just takes particles $\leftrightarrow$ antiparticles.
+%
+\subsection{Time reversal}
+%
+Under T, $\psi \to \psi_T = B\psi$ where $B = i\gamma^1\gamma^3 = -i\gamma^5C$ and $B^\dagger = B = B^{-1}$. Again, $P_LB = BP_L$ so $\psi_L \to B\psi_L$ and time reversal leaves chirality and helicity unchanged (it reverses both spin and momentum). 
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+\section{CC EWK}
+%
+\subsection{Fermi Theory (1934)}
+%
+Fermi theory is based on a point-like 4-fermion interaction
+\begin{equation}
+    G_F(\bar{n}\gamma_\mu p)(\bar{\nu}\gamma^\mu e)
+\end{equation}
+representing the process $n \to pe^-\bar{\nu}$, where $n$ is a neutron, $p$ is a proton, $e^-$ is an electron and $\bar{\nu}$ is an antineutrino. More generally, the interaction can be written as $G_F J_\mu^\dagger J^\mu$ where $J_\mu$ is the "weak current" and is composed of leptonic and hadronic contributions: $J_\mu = \bar{\nu}\gamma_\mu e + \bar{p}\gamma_\mu n + ...$. Note that $J_\mu$ has $\Delta Q = +1$ so $J_\mu^\dagger$ has $\Delta Q = -1$ and electric charge is conserved. 
 
-
-
+Considering mass dimensions $[\cdot]$: $[m\psi\bar{\psi}]=+\psi$, $[\psi]=3/2$ and $[J_\mu] =3$ so $[G_F]=-2$. In other words, the coupling scales as 1/mass$^2$. The mass scale is $\approx$ 300 GeV, so the interaction is weak. The original Fermi interaction conserves parity (and C and CP), just like QED. This turned out to be wrong, according to theory developed by Lee and Yang (1956) and the Wu experiment in 1957. In weak interactions, P and C are violated by CP is conserved. More on this later.
+%
+\subsection{V-A Theory}
+%
+Developed by Masshart, Sudarshan, Feynman, Gell-Man ... in 1958. V-A theory is based on a vector current $V_\mu$ and an axial current $A_\mu$,
+\begin{equation}
+\begin{split}
+V_\mu &= \bar{\nu}\gamma_\mu e + \bar{p}\gamma_\mu n + ... \\
+A_\mu &= \bar{\nu}\gamma_\mu \gamma^5 e + \bar{p}\gamma_\mu \gamma^5 n + ...
+\end{split}
+\end{equation}
+and whose difference gives the overall current
+\begin{equation}
+\begin{split}
+\frac{1}{2}J_\mu = \frac{1}{2}(V_\mu - A_\mu)  &= \bar{\nu}\gamma_\mu\frac{1}{2}(1-\gamma^5) e + \bar{p}\gamma_\mu\frac{1}{2}(1-\gamma^5) n + ... \\
+&= \bar{\nu}_L\gamma_\mu e_L + \bar{p}_L\gamma_\mu n_L + ... .
+\end{split}
+\end{equation}
+So the weak interactions involve \textbf{only left-handed fields}, and maximally violate P and C.
 
 
 \end{document}
