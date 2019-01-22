@@ -7,6 +7,7 @@
 \usepackage[T1]{fontenc}
 \usepackage{slashed}
 \usepackage{tikz}
+\usepackage{wrapfig}
 
 \newcommand{\icol}[1]{% inline column vector
   \left(\begin{smallmatrix}#1\end{smallmatrix}\right)%
@@ -332,5 +333,31 @@ Fig. \ref{pioncp} demonstrates the sequential application of C and P to this pro
 %
 \textbf{Example:} $\mu^- \to e^- \bar{\nu}_e \nu_\mu$. 
 \newline
- 
+%
+\begin{wrapfigure}{l}{0.4\linewidth}
+  \centering
+  \includegraphics[width=\linewidth]{figs/diag_1.png}
+\end{wrapfigure}
+We will work with Dirac spinors everywhere and contract the spiniors as required.
+The matrix element can be written
+\begin{equation}
+  \mathcal{M} = \langle e^-(k);\bar{\nu}_e(q^\prime)|\mathcal{L}_{4F}|\mu^-(p) \rangle
+\end{equation}
+and we can identify the Feynman rule for the four fermion vertex as 
+\begin{equation}
+  -i\frac{G_F}{\sqrt{2}} [\gamma_\mu(1-\gamma^5)]_{ab} [\gamma^\mu(1-\gamma^5)]_{cd}
+\end{equation}
+so 
+\begin{equation}
+  \mathcal{M} = -i\frac{G_F}{\sqrt{2}} \bigg(\bar{u}(k)\gamma^\mu(1-\gamma^5)v(q^\prime)\bigg) \bigg(\bar{u}(q)\gamma_\mu(1-\gamma^5)u(p)\bigg)
+\end{equation}
+where $\bar{u}(k)$, $v(q^\prime)$, $\bar{u}(q)$ and $u(p)$ refer to the electron, anti-electron neutrino, muon neutrino and muon respectively. 
+
+Average over initial spins and sum over final spins (assuming the neutrinos are massless):
+\begin{equation}
+    \frac{1}{2} \sum_{spins} |\mathcal{M}|^2 = \frac{1}{4}G_F^2\ tr\bigg((\slashed{k}+m_e)\gamma^\mu(1-\gamma^5)\slashed{q}^\prime\gamma^\nu(1-\gamma^5)\bigg)\ tr\bigg(\slashed{q}\gamma_\mu(1-\gamma^5)(\slashed{p}+m_\mu)\gamma_\nu(1-\gamma^5)\bigg)
+\end{equation}
+where we call the first trace $\mathcal{M}^{\mu \nu}(k,q^\prime)$ and the second trace $\mathcal{M}_{\mu \nu}(q,p)$. Consider evaluating one of these traces
+
+
 \end{document}
