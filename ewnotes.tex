@@ -333,7 +333,7 @@ Fig. \ref{pioncp} demonstrates the sequential application of C and P to this pro
 %
 \textbf{Example:} $\mu^- \to e^- \bar{\nu}_e \nu_\mu$. 
 \newline
-%
+
 \begin{wrapfigure}{l}{0.4\linewidth}
   \centering
   \includegraphics[width=\linewidth]{figs/diag_1.png}
@@ -357,7 +357,61 @@ Average over initial spins and sum over final spins (assuming the neutrinos are 
 \begin{equation}
     \frac{1}{2} \sum_{spins} |\mathcal{M}|^2 = \frac{1}{4}G_F^2\ tr\bigg((\slashed{k}+m_e)\gamma^\mu(1-\gamma^5)\slashed{q}^\prime\gamma^\nu(1-\gamma^5)\bigg)\ tr\bigg(\slashed{q}\gamma_\mu(1-\gamma^5)(\slashed{p}+m_\mu)\gamma_\nu(1-\gamma^5)\bigg)
 \end{equation}
-where we call the first trace $\mathcal{M}^{\mu \nu}(k,q^\prime)$ and the second trace $\mathcal{M}_{\mu \nu}(q,p)$. Consider evaluating one of these traces
+where we call the first trace $\mathcal{M}^{\mu \nu}(k,q^\prime)$ and the second trace $\mathcal{M}_{\mu \nu}(q,p)$. Consider evaluating one of these traces, using $(1-\gamma^5)^2 = 2(1-\gamma^5)$ and $tr\gamma^5\gamma^\mu \gamma^\nu \gamma^\alpha \gamma^\beta = 4i\epsilon^{\mu \nu \alpha \beta}$:
+\begin{equation}
+\begin{split}
+    \mathcal{M}_{\mu \nu}(q,p) &= 2\ tr\bigg( \slashed{q}\gamma_\mu(\slashed{p} + m_\mu)\gamma_\nu(1-\gamma^5)\bigg)\\
+    &= 8(q_\mu p_\nu + p_\mu q_\nu - \eta_{\mu \nu} p \cdot q - i \epsilon_{\alpha \mu \beta \nu} q^\alpha p^\beta) \\
+    &= 8(q_\mu p_\nu + p_\mu q_\nu - \eta_{\mu \nu} p \cdot q + i \epsilon_{\mu \nu \alpha \beta} q^\alpha p^\beta) 
+\end{split}
+\end{equation}
+so
+\begin{equation}
+\begin{split}
+\frac{1}{2}\sum_{spins}|\mathcal{M}|^2 &= 16\ G_F^2(k^\mu q^{\prime \nu} + q^{\prime \mu} k^\nu - \eta^{\mu \nu} k \cdot q^\prime - i \epsilon^{\mu \nu \alpha \beta} q^{\prime \alpha} k_\beta)(q_\mu p_\nu + p_\mu q_\nu - \eta_{\mu \nu} p \cdot q + i \epsilon_{\mu \nu \rho \sigma} q^\rho p^\sigma) \\
+&= 16\ G_F^2(2p\cdot k q \cdot q^\prime + 2 p \cdot q^\prime k \cdot q + 4 p \cdot q k \cdot q^\prime - 4 k \cdot q^\prime p \cdot q + \epsilon^{\mu \nu \alpha \beta} \epsilon_{\mu \nu \rho \sigma} q^\prime_\alpha k_\beta q^\rho p^\sigma) \\
+&= 64\ G_F^2 p \cdot q^\prime k \cdot q.
+\end{split}
+\end{equation}
+Now we want to evaluate the decay rate in the lab frame of the muon. Here $E(p) = m_\mu$.
+\begin{equation}
+\begin{split}
+d\Gamma &= \frac{1}{2m_\mu}\frac{1}{2}\sum_{spins}|\mathcal{M}|^2(dPS)_3 \\
+& = \frac{1}{2m_\mu} \int \frac{d^3k}{(2\pi)^3 2k^0}\frac{d^3q}{(2\pi)^3 2q^0}\frac{d^3q^\prime}{(2\pi)^3 2q^{\prime 0}}(2\pi)^4\delta^4(p-k-q-q^\prime)\frac{1}{2}\sum_{spins}|\mathcal{M}|^2 \\
+&= \frac{G_F^2}{8 m_\mu \pi^5} \int \frac{d^3k}{k^0} \frac{d^3q}{q^0} \frac{d^3q^\prime}{q^{\prime 0}} \delta^4(p-k-q-q^\prime)(p \cdot q^\prime)(k \cdot q).
+\end{split}
+\end{equation}
+Integrate over $q$ and $q^\prime$, since these are unobserved. Write $Q = q + q^\prime = p - k$, $Q^2 = 2 q \cdot q^\prime = 2(q^0 q^{\prime 0} -\underline{q}\cdot \underline{q}^\prime) \geq 0$. Then we need to evaluate the integral
+\begin{equation}
+	\mathcal{I}_{\mu \nu}(Q) \equiv \int \frac{d^3q}{q^0} \frac{d^3 q^\prime}{q^{\prime 0}} \delta^4(Q - q - q^\prime) q_\mu q^\prime_\nu.
+\end{equation}
+Appealing to Lorentz invariance, we can write $\mathcal{I}_{\mu \nu} = a Q_\mu Q_\nu + b \eta_{\mu \nu} Q^2$ for some $a$, $b$ to be found. This is because these are the only two Lorentz invariant terms which can be constructed using the vectors and tensors available. In order to find the coefficients $a$ and $b$, we can systematically contract the expression with $\eta^{\mu \nu}$ and $Q^\mu Q^\nu$. This gives
+\begin{equation}
+\begin{split}
+a + 4b &= \frac{1}{2}\mathcal{I} \\
+a + b &= \frac{1}{4}\mathcal{I} \\
+\text{where } \mathcal{I} &= \int \frac{d^3q}{|q|} \frac{d^3 q^\prime}{|q^\prime|} \delta^4(Q - q - q^\prime).
+\end{split}
+\end{equation}
+and we have used $q^0 = |q|$, $Q \cdot q Q \cdot q^\prime = (q \cdot q^\prime)^2 = 1/4\ Q^4$. Since $\mathcal{I}$ is a Lorentz scalar, we can evaluate it in any frame. Choose $Q^\mu = (Q^0, \underline{0})$, where $\underline{q} = - \underline{q^\prime}$.
+\begin{equation}
+\begin{split}
+\mathcal{I} &= \int \frac{d^3\underline{q}}{|\underline{q}|^2}\ \delta(Q^0 - 2 |\underline{q}|) \\
+&= 4 \pi \int_0^\infty dq\ \delta(Q^0 - 2q) \\
+&= 2 \pi
+\end{split}
+\end{equation}
+so $a = \pi /3$ and $b= \pi /6$. Putting everything together,
+\begin{equation}
+p^\mu k^\nu \mathcal{I}_{\mu \nu}(Q) = \frac{1}{6} \pi (2 Q \cdot p Q \cdot k + p \cdot k Q^2)
+\end{equation}
+so 
+\begin{equation}
+\begin{split}
+    d\Gamma &= frac{G_F^2}{3 m_\mu (2\pi)^4)} \int \frac{d^3\underline{k}}{k^0}\ \bigg(2p \cdot (p-k) k \cdot (p-k) + p \cdot k (p-k_^2\bigg) \\
+    &= frac{G_F^2}{3 m_\mu (2\pi)^4)}  \int \frac{d^3\underline{k}}{k^0}\ \bigg(-4(p \cdot k)^2\bigg)
+\end{split}
+\end{equation}
 
 
 \end{document}
