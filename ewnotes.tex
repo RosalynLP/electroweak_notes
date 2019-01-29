@@ -502,6 +502,52 @@ and
 The Cabibbo angle, $\theta_c \approx 13\degree$, so $\cos\theta_c = 0.97$ and $\sin\theta_c = 0.22$. This reduces the relative size of $\Gamma(K \to \mu\nu)$ by a factor of roughly 20. We will revisit quark mixing later - stay tuned!
 %
 \subsection{Beta decay}
+$n \to p\ e^- \bar{\nu}_e$.
+\newline
 
+\begin{wrapfigure}{l}{0.4\linewidth}
+  \centering
+  \includegraphics[width=\linewidth]{figs/diag_3.png}
+\end{wrapfigure}
+What's really going on is $d \to u\ e^- \bar{\nu}_e$: the other quarks are "spectators". Again, the matrix element factorises:
+\begin{equation}
+\begin{split}
+    \mathcal{M} &= \langle p(p^\prime) e^-(k)\bar{\nu}_e(q) | \mathcal{L}_{4F} | n(p) \rangle \\
+    &= \frac{-iG_F}{\sqrt{2}} \bar{u}(k)\gamma^\mu(1-\gamma^5)v(q)\\
+    &\times \langle p(p^\prime) | \bar{d}^\prime\gamma_\mu(1-\gamma^5)u | n(p) \rangle \cos\theta_c.
+\end{split}
+\end{equation}
+Considering the hadronic part,
+\begin{equation}
+\langle p(p^\prime) | (V_\mu - A_\mu) | n(p) \rangle = \cos\theta_c\bar{u}(p^\prime)\gamma_\mu(g_v-g_A\gamma^5)u(p)
+\end{equation}
+where $g_V =1$ and $g_A = 1.25$. Then 
+\begin{equation}
+\begin{split}
+\frac{1}{2}\sum_{spins}|\mathcal{M}|^2 &= \frac{1}{4}G_F^2\cos^2\theta_c\ tr\bigg((\slashed{k} + m_e)\gamma^\mu(1-\gamma^5)\slashed{q}\gamma^\mu(1-\gamma^5)\bigg)\\
+&\times tr\bigg((\slashed{p}^\prime + m_p) \gamma_\mu(1-g_A\gamma^5)(\slashed{p}+m_n)\gamma_\nu(1-g_A\gamma^5)\bigg) \\
+&= \frac{1}{4}G_F^2\cos^2\theta_c\ \mathcal{M}^{\mu\nu}(k,q)\tilde{\mathcal{M}}_{\mu\nu}(p^\prime,p).
+\end{split}
+\end{equation}
+Recalling the previous calculation for $\mu \to e\ \nu \bar{\nu}$, 
+\begin{equation}
+\tilde{\mathcal{M}}_{\mu\nu}(p^\prime,p) = 4\bigg((p_\mu^\prime p_\nu + p_\mu p_\nu^\prime - \eta_{\mu\nu} p \cdot p^\prime)(1+g_A^2) + i g_A \epsilon_{\mu\nu\alpha\beta}p^{\prime \alpha}p^\beta + m_n m_p(1-g_A^2)\eta_{\mu\nu}\bigg)
+\end{equation}
+so
+\begin{equation}
+\begin{split}
+\frac{1}{2}\sum_{spins}|\mathcal{M}|^2 &= 8 G_F^2\cos^2\theta_c\ \bigg((2p\cdot k p^\prime \cdot q + 2 p\cdot q p^\prime \cdot k)(1+g_A)^2 \\
+&- 4g_A(k\cdot p q\cdot p^\prime - k\cdot p^\prime q\cdot p) - 2 m_n m_p(1-g_A^2)k \cdot q\bigg)\\
+&= 16G_F^2\cos^2\theta_c\ \bigg(p\cdot k p^\prime \cdot q (1-g_A)^2 + p\cdot q p^\prime \cdot k (1+ g_A)^2 - m_n m_p k \cdot q \bigg).
+\end{split}
+\end{equation}
+The decay rate
+\begin{equation}
+\begin{split}
+d\Gamma &= \frac{1}{2m_n} \int\frac{d^3k}{(2\pi)^32k^0} \int\frac{d^3q}{(2\pi)^32q^0} \int\frac{d^3p^\prime}{(2\pi)^32p^{\prime 0}}\ (2\pi)^4 \delta^4(p - p^\prime -k - q)\frac{1}{2}\sum_{spins}|\mathcal{M}|^2 \\
+&= \frac{1}{16m_n(2\pi)^5}\int\frac{d^3k}{k^0} \int\frac{d^3q}{q^0}\frac{1}{p^{\prime 0}}\ \delta(p^0 - p^{\prime 0} - k^0 - q^0) \frac{1}{2}\sum_{spins}|\mathcal{M}|^2.
+\end{split}
+\end{equation}
+Now write $p^0 = E_p$, $p^{\prime 0} = E_p$, $k^0 = E_e$, $q^0 = E_\nu$ and $d^3k = p_e E_e\ dE_e\ d\Omega_e$, $d^3q = E_\nu^2\ dE_\nu\ d\Omega_\nu$. Using $p_e^2 = E_e^2 - m_e^2$ we can rewrite $p_e\ dp_e = E_e\ dE_e$. So
 
 \end{document}
