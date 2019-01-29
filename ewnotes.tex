@@ -7,6 +7,7 @@
 \usepackage[T1]{fontenc}
 \usepackage{slashed}
 \usepackage{tikz}
+\usepackage{gensymb}
 \usepackage{wrapfig}
 
 \newcommand{\icol}[1]{% inline column vector
@@ -476,8 +477,31 @@ Using the measured rate for $\tau = 2.6 \times 10^{-8}$s, we can calculate $f_\p
 This is a good test of lepton universality. The ratio vanishes as $m_e \to 0$: this is because of helicity conservation. 
 %
 \subsection{Cabibbo mixing (1963)}
-The Kaon decay $K^+ \to \mu^+ \nu_\mu$ works similarly: 
+The Kaon decay $K^+ (u\bar{s}) \to \mu^+ \nu_\mu$ works similarly: $\langle 0 | A_\mu | K^+(p) \rangle = i f_k p_\mu$, and from experiment
+\begin{equation}
+    \frac{\Gamma(K \to \mu\nu)}{\Gamma(\pi \to \mu\nu)} \approx 1.3. 
+\end{equation}
+But if $\mathcal{L}_{4F}$ contained $\bar{u}_L \gamma_\mu s_L$ (in an analogy with $\bar{u}_L \gamma_\mu d_L$) we expect
+\begin{equation}
+    \frac{\Gamma(K \to \mu\nu)}{\Gamma(\pi \to \mu\nu)} = \frac{f_K^2}{f_\pi^2}\frac{m_\pi^3}{m_K^3}\frac{(m_K^2 - m_\mu^2)^2}{(m\pi^2 - m_\mu^2)^2} \approx 24
+\end{equation}
+since $f_K/f_\pi \approx 1.2$, i.e. SU(3) symmetry breaking is small.
 
+The explanation is down to the form of the hadronic weak current. In actual fact this is
+\begin{equation}
+ \frac{1}{2}J_\mu^h = \bar{u}_L\gamma_\mu(\cos\theta_c\ d_L + \sin\theta_c\ s_L) + ... 
+\end{equation}
+where the term in brackets can be thought of as $d_L^\prime$, a \textit{mixture} of $d$ and $s$. Then 
+\begin{equation}
+    \Gamma(\pi \to \mu\nu) = \frac{G_F^2}{4\pi} f_\pi^2 \frac{m_\mu^2}{m_\pi^3}(m_\pi^2 - m_\mu^2)^2 \cos^2\theta_c
+\end{equation} 
+and
+\begin{equation}
+    \Gamma(K \to \mu\nu) = \frac{G_F^2}{4\pi} f_K^2 \frac{m_\mu^2}{m_K^3}(m_K^2 - m_\mu^2)^2 \sin^2\theta_c.
+\end{equation} 
+The Cabibbo angle, $\theta_c \approx 13\degree$, so $\cos\theta_c = 0.97$ and $\sin\theta_c = 0.22$. This reduces the relative size of $\Gamma(K \to \mu\nu)$ by a factor of roughly 20. We will revisit quark mixing later - stay tuned!
+%
+\subsection{Beta decay}
 
 
 \end{document}
