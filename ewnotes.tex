@@ -507,7 +507,7 @@ $n \to p\ e^- \bar{\nu}_e$.
 
 \begin{wrapfigure}{l}{0.4\linewidth}
   \centering
-  \includegraphics[width=\linewidth]{figs/diag_3.png}
+%  \includegraphics[width=\linewidth]{figs/diag_3.png}
 \end{wrapfigure}
 What's really going on is $d \to u\ e^- \bar{\nu}_e$: the other quarks are "spectators". Again, the matrix element factorises:
 \begin{equation}
@@ -549,5 +549,95 @@ d\Gamma &= \frac{1}{2m_n} \int\frac{d^3k}{(2\pi)^32k^0} \int\frac{d^3q}{(2\pi)^3
 \end{split}
 \end{equation}
 Now write $p^0 = E_p$, $p^{\prime 0} = E_p$, $k^0 = E_e$, $q^0 = E_\nu$ and $d^3k = p_e E_e\ dE_e\ d\Omega_e$, $d^3q = E_\nu^2\ dE_\nu\ d\Omega_\nu$. Using $p_e^2 = E_e^2 - m_e^2$ we can rewrite $p_e\ dp_e = E_e\ dE_e$. So
+\begin{equation}
+\begin{split}
+    d\Gamma &= \frac{1}{16m_n(2\pi)^5}\int dE_e\ d\Omega_e\ d\Omega_\nu\ dE_\nu \bigg(\frac{p_e E_\nu}{E_p}\bigg) \delta(E_n - E_p -E_e - E_\nu) \frac{1}{2}\sum_{spins}|\mathcal{M}|^2 \\
+  \implies  \frac{d\Gamma}{dE_e} &= \frac{1}{16m_n(2\pi)^5}\int d\Omega_e\ d\Omega_\nu \bigg(\frac{p_e E_\nu}{E_p}\bigg)\frac{1}{2}\sum_{spins}|\mathcal{M}|^2\\
+\end{split}
+\end{equation}
+Now in the lab frame, $E_n = m_n$. It is useful to define $\Delta \equiv m_n - m_p = 1.29$ MeV $\ll m_n$. We can ignore nuclear recoil by using the Born-Oppenheimer approximation, i.e. $E_p \approx m_p$. Note that $m_e=0.51$ MeV is of the same order as $\Delta$. Then 
+\begin{equation}
+\begin{split}
+&p \cdot k p^\prime \cdot q \approx m_nE_e m_p E_\nu \\
+&p \cdot q p^\prime \cdot k \approx m_nE_\nu m_pE_e \\
+& k \cdot q = E_e E_\nu - \underline{p}_e \cdot \underline{p}_\nu
+\end{split}
+\end{equation}
+so
+\begin{equation}
+\begin{split}
+\frac{d\Gamma}{dE_e} &= \frac{G_F^2 \cos^2\theta_c}{m_n(2\pi)^5} \int d\Omega_e \ d\Omega_\nu \frac{p_e E_\nu}{E_p} m_n\ m_p\ \bigg(E_eE_\nu(1-g_A)^2 \\ &+ E_\nu E_e(1+g_A)^2 - E_e E_\nu(1-g_A^2)\bigg(1-\frac{\underline{p}_e\underline{p}_\nu}{E_e E_\nu}\bigg)\bigg) \\
+&= \frac{G_F^2\cos^2\theta_c}{2\pi^3}(1+3g_A^2)p_eE_e(\Delta-E_e)^2, \quad m_e < E_e < \Delta
+\end{split}
+\end{equation}
+Where the $\underline{p}_e\underline{p}_\nu$ term integrates to zero. This evaluates to
+\begin{equation}
+\Gamma = \frac{G_F^2\cos^2\theta_c}{2\pi^3}(1+3 g_A^2) \Delta^5 \times \varpi
+\end{equation}
+where $\varpi = 0.47$ (left as an exercise).
+
+Other semileptonic processes include:
+\begin{equation}
+\begin{split}
+\Delta S = 0 \qquad &\pi^+ \to \pi^0e^+\nu \qquad \cos\theta_c \\
+\Delta S = 1 \qquad &K^+ \to \pi^0\mu^+\nu,\ K^0 \to \pi^-\mu^+\nu\ \text{etc.} \qquad \sin\theta_c
+\end{split}
+\end{equation}
+and decays of the hyperons $\Sigma = uus$, $\Lambda = uds$, $\Xi = uss$, $\Omega = sss$ etc., which are all related by SU(3):
+\begin{equation}
+\begin{split}
+\Delta S = 0 \qquad &\Sigma \to \Lambda e \bar{\nu} \\
+\Delta S = 1 \qquad &\Lambda \to pe\bar{\nu},\ \Sigma \to ne\bar{\nu} \\
+&\Xi \to \Sigma e \bar{\nu},\ \Omega \to \Xi e \bar{\nu}\ \text{etc.} 
+\end{split}
+\end{equation}
+\subsection{Nonleptonic decays}
+
+e.g. $K \to \pi \pi$, $K \to \pi \pi \pi$, $\Lambda \to p \pi$, $\Omega \to \Xi \pi$ etc.
+\newline
+\begin{wrapfigure}{l}{0.4\linewidth}
+  \centering
+  \includegraphics[width=\linewidth]{figs/diag_4.png}
+\end{wrapfigure}
+Here factorisation no longer holds - there are strong interactions everywhere! We need to resort to non-perturbative methods such as lattice QCD (see later in the course).
+%
+\section{IVBs}
+$\mathcal{L}_{4F}$ provides an excellent description of low-energy charged current weak interactions. But it runs into problems at higher energies.
+\subsection{Unitarity}
+\textbf{Example: } $\nu_\mu e^- \to \mu^- \nu_e$
+
+\begin{wrapfigure}{l}{0.4\linewidth}
+  \centering
+  \includegraphics[width=\linewidth]{figs/diag_5.png}
+\end{wrapfigure}
+We can write the matrix element for this process
+\begin{equation}
+\begin{split}
+\mathcal{M} &= -i \frac{G_F}{2} \bar{v}(q^\prime)\gamma_\mu(1-\gamma^5)u(p) \bar{u}(p^\prime)\gamma^\mu(1-\gamma^5)u(q) \\
+ \frac{1}{2}\sum_{spins}|\mathcal{M}|^2 &= \frac{1}{4} G_F\ tr\bigg(\slashed{q}^\prime \gamma_\mu(1-\gamma^5)(\slashed{p}+m_e)\gamma_\nu(1-\gamma^5)\bigg) \\
+ &\times tr\bigg((\slashed{p}^\prime + m_\mu)\gamma^\mu(1-\gamma^5)\slashed{q}\gamma^\nu(1-\gamma^5)\bigg)\\
+ &= 64\ G_F^2(p \cdot q)(p^\prime \cdot q^\prime) \\
+ &= 16\ G_F^2(s-m_e^2)(s-m_\mu^2)
+\end{split}
+\end{equation}
+where we used $s = (p+q)^2 = (p^\prime + q^\prime)^2 = m_e^2 + 2 p \cdot q = m_\mu^2 + 2p^\prime \cdot q^\prime$. 
+
+In the centre of mass frame, ignoring masses (i.e. at high energy)
+\begin{equation}
+\bigg(\frac{d\sigma}{d\Omega}\bigg)_{CoM} = \frac{1}{64\pi^2s}\frac{1}{2}\sum_{spins}|\mathcal{M}|^2 = \frac{1}{4\pi}G_F^2s.
+\end{equation}
+Using $s=4E^2$, $d\Omega = 2\pi\ d(\cos\theta)$,
+\begin{equation}
+\frac{d\sigma}{d\cos\theta} = \frac{2G_F^2}{\pi}E^2.
+\end{equation}
+Compare this with, for example, the equivalent result for $e^+e^- \to \mu^+\mu^-$:
+\begin{equation}
+\frac{d\sigma}{d\cos\theta} = \frac{\alpha^2}{4\pi E^2}(\cos^4\theta/2 + \sin^4\theta/2)
+\end{equation}
+QED cross-sections scale as $1/E^2$ as $E \to \infty$. But Fermi theory cross-sections rise as $E^2$ as $E \to \infty$. This is a disaster! $|\mathcal{M}|^2$ is a probability, so it must be bounded. It can be shown quite generally that any cross section can be decomposed using the partial wave approximation:
+\begin{equation}
+\sigma = \frac{4\pi}{E^2}\sum_j(2j+1)|f_j|^2
+\end{equation}
+where $|f_j|^2 \leq 1$, which follows from $S^\dagger S =1$. In other words, we define contributions $\sigma_j \leq \frac{4\pi}{E^2}(2j+1)$.
 
 \end{document}
