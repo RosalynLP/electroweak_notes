@@ -601,7 +601,7 @@ e.g. $K \to \pi \pi$, $K \to \pi \pi \pi$, $\Lambda \to p \pi$, $\Omega \to \Xi 
 \end{wrapfigure}
 Here factorisation no longer holds - there are strong interactions everywhere! We need to resort to non-perturbative methods such as lattice QCD (see later in the course).
 %
-\section{IVBs}
+\section{Intermediate vector bosons}
 $\mathcal{L}_{4F}$ provides an excellent description of low-energy charged current weak interactions. But it runs into problems at higher energies.
 \subsection{Unitarity}
 \textbf{Example: } $\nu_\mu e^- \to \mu^- \nu_e$
@@ -638,6 +638,113 @@ QED cross-sections scale as $1/E^2$ as $E \to \infty$. But Fermi theory cross-se
 \begin{equation}
 \sigma = \frac{4\pi}{E^2}\sum_j(2j+1)|f_j|^2
 \end{equation}
-where $|f_j|^2 \leq 1$, which follows from $S^\dagger S =1$. In other words, we define contributions $\sigma_j \leq \frac{4\pi}{E^2}(2j+1)$.
+where $|f_j|^2 \leq 1$, which follows from $S^\dagger S =1$. In other words, we define contributions $\sigma_j \leq \frac{4\pi}{E^2}(2j+1)$. We can see from dimensional arguments that the Lagrangian leads to unitarity violation. $[G_F]=-2$ and $[\sigma]=-2$ so because $E$ is the only scale then $\sigma \sim G_F^2E^2$. We can see that as $E \to \infty$ we will end up with infinite cross sections, violating unitarity. 
+%
+\subsection{Renormalisability}
+%
+We need to draw all the possible Feynman diagrams. Consider, for example, $\nu_e\bar{\nu}_\mu \to \nu_e\bar{\nu}_\mu$.
+\begin{wrapfigure}{l}{0.4\linewidth}
+  \centering
+  \includegraphics[width=\linewidth]{figs/diag_6.png}
+\end{wrapfigure}
+The vertex receives contributions from loop diagrams like the one shown here. But the loop gives contributions to the amplitude of the form
+\begin{equation}
+\sim \int d^4k \frac{\slashed{k}}{k^2}\frac{\slashed{k}}{k^2} \sim \int \frac{d^4k}{k^2}.
+\end{equation}
+In other words, the loop leads to quadratic divergences. But there is no $\bar{\nu}\nu\bar{\nu}\nu$ term in $\mathcal{L}$ to cancel this.
+%
+\subsection{Power counting}
+%
+Let's take QED as an example. Consider a graph with $L$ loops, $I_F$ fermion lines and $I_B$ photon lines. Considering the structure of contributions from Feynman rules, we can define the "superficial degree of divergence", $D$, to be
+\begin{equation}
+D = 4L - I_F - 2I_B.
+\end{equation}
+The logic here is that each loop contributes a $\int d^4k$ term, i.e. +4 powers of $k$. This gives the $4L$ term. Likewise, each fermion propagator contributes $\frac{\slashed{k}}{k^2}$, i.e. -1 powers of $k$, and each boson propagator contributes $\frac{1}{k^2}$, i.e. -2 powers of $k$. If $D \geq 0 $ then we would naively expect the graphs to lead to divergences. We can also impose the general result from graph theory that for $L$ loops, $I$ internal lines and $V$ vertices:
+\begin{equation}
+L = I - V + 1.
+\end{equation}
+The proof is by induction and left as an exercise. This means that
+\begin{equation}
+D = 2I_B + 3I_F - 4V + 4.
+\end{equation}
+Moreover, for QED we have the additional ammunition that there is only one type of vertex, joining two fermions and a photon. So, counting the ends of lines and labelling external lines $E$:
+\begin{equation}
+\begin{split}
+&2I_B + E_B = V \\
+&2I_F + E_F = 2V \\
+\text{so } D &= V-E_B + \frac{3}{2}(2V-E_F) - 4V + 4 \\
+&= 4 - E_B - \frac{3}{2}E_F
+\end{split}
+\end{equation}
+i.e. $V$ cancels! $D$ is independent of $V$ and the only divergent graphs ($D \geq 0$) have corresponding counterterms which can regulate the divergences. The table enumerates the cases for QED where $D \geq 0$, explaining how each of these terms does in fact not lead to a divergence in this instance.
+\begin{table}[h!]
+\begin{tabular}{llll}
+$E_B$ & $E_F$ & Diagram                                                 & Comments                                                                                              \\
+\hline
+2     & 0     & \includegraphics[scale=0.2]{figs/pc1.pdf} & $F_{\mu\nu}F^{\mu\nu}$, i.e. $Z_3$                                                                         \\
+3     & 0     & \includegraphics[scale=0.2]{figs/pc2.pdf}  & Photon is odd under $C$ so this gives 0 contribution                                                    \\ 
+4     & 0     &  \includegraphics[scale=0.2]{figs/pc3.pdf}    & Actually finite (gauge invariance)                                                                    \\ 
+0     & 2     & \includegraphics[scale=0.2]{figs/pc4.pdf}  & $\bar{\psi}\slashed{\partial}\psi + \bar{\psi}m\psi$, i.e. $Z_2$ and $Z_m$                            \\
+2     & 1     & \includegraphics[scale=0.2]{figs/pc5.pdf} & 
+$\bar{\psi}\slashed{A}\psi$, i.e. $Z_1$
+\end{tabular}
+\end{table}
+In summary, QED is power-counting renormalisable. Note that if $E_F=4$ and $E_B=0$ then $D=-2$, i.e. the the four-fermion vertex is convergent.
 
+Now let's move on from QED and consider $\mathcal{L}_{4F}$ instead. We can write the expression
+\begin{equation}
+2I_F + E_F = 4V
+\end{equation}
+so, if we only have fermions
+\begin{equation}
+\begin{split}
+D &= \frac{3}{2}(4V-E_F) - 4V + 4 \\
+&= 4 + 2V - \frac{3}{2} E_F.
+\end{split}
+\end{equation}
+In other words,
+\begin{enumerate}
+\item every time we add a vertex, the graph becomes \textit{more} divergent
+\item graphs with \textit{any} number of external fermions will diverge at a high enough order.
+\end{enumerate}
+For example, if $E_F = 6$, there are divergences for $V=3$. So $\mathcal{L}_{4F}$ is non-renormalisable. Adding bosons doesn't help the situation; we can trace the problem again to $[G_F]=-2$. 
+\newline
+\newline
+\textbf{Theorem: } A theory is only power counting renormalisable if all the couplings have mass dimension $\geq 0$.
+\newline
+\textbf{Proof: } Consider a vertex $V_{bf}$ with $b$ boson lines, $f$ fermion lines and $p$ derivatives. The corresponding term in the Lagrangian is $g\phi^b\psi^f\partial^p$. The dimension of the coupling is
+\begin{equation}
+d_{bf}^p = 4 - b - \frac{3}{2}f - p
+\end{equation}
+because $[\mathcal{L}]=4$, $[\phi]=[A]=1$, $[\psi]=3/2$ and $[\partial]=1$. However,
+\begin{equation}
+\begin{split}
+2I_B + E_B &= \sum bV_{bf}^p \\
+2I_F + E_F &= \sum fV_{bf}^p \\
+\text{so } D &= \sum bV_{bf}^p - E_B + \frac{3}{2}\big(\sum fV_{bf}^p - E_F\big) - 4 \sum V_{bf}^p + 4 + \sum p V_{bf}^p \\
+&= \sum\big(b + \frac{3}{2}f + p - 4\big)V_{bf}^p - E_B - \frac{3}{2}E_F + 4 \\
+&= -\sum d_{bf}^pV_{bf}^p - E_B - \frac{3}{2}E_F + 4.
+\end{split}
+\end{equation}
+This means that for renormalisability we need $d_{bf}^p \geq 0$ so that $D$ increases as $V$ increases.
+\newline
+\textbf{Corollary: } For a theory with scalar, fermion and vector fields, the only vertices allowed in a renormalisable Lorentz invariant Lagrangian are:
+\begin{table}[h!]
+\begin{tabular}{ll}
+ Pure scalar & $\psi^3$, $\psi^4$  \\
+ Yang-Mills &  $\partial_\mu A_\nu A^\mu A^\nu$, $A_\mu A_\nu A^\mu A^\nu$ \\
+ Gauge-scalar interactions & $\phi A_\mu A^\mu$, $\phi^2 A_\mu A^\mu$, $\phi \partial_\mu \phi A^\mu$ \\
+ Yukawa &  $\phi \bar{\psi} \psi$ \\
+ Gauge interactions & $\bar{\psi} \slashed{A} \psi$
+\end{tabular}
+\end{table}
+\newline
+\textbf{Proof: } $d^p_{bf} \geq 0$ only for the above. Note
+\begin{itemize}
+\item you need at least three fields
+\item $A_\mu A^\mu A^\nu$, $\phi^2 \partial_\mu \phi$ and $\phi^2 A_\mu$ are not Lorentz invariant.
+\end{itemize}
+%
+\subsection{Intermediate vector bosons}
+%
 \end{document}
