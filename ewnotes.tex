@@ -747,4 +747,63 @@ This means that for renormalisability we need $d_{bf}^p \geq 0$ so that $D$ incr
 %
 \subsection{Intermediate vector bosons}
 %
+Power counting renormalisability, chirality and Lorentz invariance suggest a vertex of the form $g\bar{\psi}_L\slashed{A}\psi_L$. Such a coupling is dimensionless so, following arguments from the previous section, unitarity is possible. This is the only possible coupling for left-handed fermions: the Yukawa coupling $\phi \bar{\psi}\psi = \phi(\bar{\psi}_L\psi_R + \bar{\psi}_R\psi_L)$ so is not a left-handed-only coupling. The charged currents are
+\begin{equation}
+\begin{split}
+\frac{1}{2}J_\mu &= \bar{\nu}_e\gamma_\mu e_L + ... + \bar{u}_L \gamma_\mu d^\prime_L + ... \qquad \Delta Q = +1 \\
+\frac{1}{2}J_\mu^\dagger &= \bar{e}_L \gamma_\mu \nu_e + ... + \bar{d}^\prime_L \gamma_\mu u_L + ... \qquad \Delta Q = -1
+\end{split}
+\end{equation}
+so we need \textit{two} charged vector fields 
+\begin{equation}
+W_\pm^\mu = \frac{1}{\sqrt{2}} (W_1^\mu \pm i W_2^mu)
+\end{equation}
+where $W_1^\mu$ and $W_2^\mu$ are real. Equivalently, we could define one complex field $W^\mu$, such that $W_+^\mu = W^\mu$ and $W_-^\mu = W^{\mu \dagger}$. The charged current Lagrangian can be written
+\begin{equation}
+\begin{split}
+\mathcal{L}_{CC} &= \frac{g}{2\sqrt{2}}(J_\mu^\dagger W^\mu + W_\mu^\dagger J^\mu) \\
+&= \frac{g}{\sqrt{2}}\bar{\nu}_e \slashed{W} e_L + \frac{g}{\sqrt{2}}\bar{e}_L \slashed{W}^\dagger \nu_e + ...
+\end{split}
+\end{equation}
+where the factor of $2\sqrt{2}$ is conventional. $g$ is the (real) dimensionless coupling, and is the same for every term in $J_\mu$ (universality). 
+
+$W_\mu$ is different from the $A_\mu$ in electromagnetism: 
+\begin{itemize}
+\item $W_\mu$ is charged, and thus complex
+\item $W_\mu$ must be massive, because CC weak interactions are short range
+\end{itemize}
+In 1936 the Romanian physicist Alexandru Proca wrote down a Lagrangian to describe $W^\mu$, consisting of a kinetic term and a mass term:
+\begin{equation}
+\begin{split}
+\mathcal{L}_W &= - \frac{1}{2}(\partial_\mu W_\nu - \partial_\nu W_\mu)^\dagger(\partial^\mu W^\nu - \partial^\nu W^\mu) + m_W^2 W_\mu^\dagger W^\mu \\
+&\equiv -\frac{1}{2}W_{\mu \nu}^\dagger W^{\mu \nu} + m_W^2 W_\mu^\dagger W^\mu .
+\end{split}
+\end{equation}
+So this gives an equation of motion
+\begin{equation}
+\begin{split}
+&(\partial^2 + m_W^2) W^\mu - \partial^\mu \partial^\nu W_{\mu \nu} = 0 \\
+&\implies \partial_\mu W^\mu =0 \text{ if } m_W \neq 0.
+\end{split}
+\end{equation}
+We can look for plane wave solutions of the form $W^\mu = \epsilon^\mu e^{-i k \cdot x}$:
+\begin{equation}
+\begin{split}
+(-k^2 + m_W^2)\epsilon^\mu + k^\mu k_\mu \epsilon^\nu &= 0 \\
+\implies m_W^2 k_\mu \epsilon^\mu &= 0 
+\end{split}
+\end{equation}
+where we have taken the physical solution in the last line. Since $W$ is massive it has three spin states: in the rest frame $k^\mu = (m_W, 0)$
+\begin{equation}
+\begin{split}
+\epsilon_r^\parallel &= (0, \underline{\epsilon}_r) \qquad r=1,2,3 \\
+\text{where } \qquad \underline{\epsilon}_1 &= (1,0,0) \\
+\underline{\epsilon}_2 &= (0,1,0) \\
+\underline{\epsilon}_3 &= (0,0,1). 
+\end{split}
+\end{equation}
+$\underline{\epsilon}_1$ and $\underline{\epsilon}_2$ are the transverse components and can be combined to form $\underline{\epsilon}_\pm = 1/\sqrt{2}(1, \pm i, 0)$, and $\underline{\epsilon}_3$ is the longitudinal component. 
+
+So if $k^\mu = (E, 0, 0, k)$, $\epsilon_3 = 1/m_W(k,0,0,E)$. N.B. for $E \gg m_W$, $\epsilon_3 \approx k^\mu/m_W + \mathcal{O}(m_W/E)$. 
+
 \end{document}
