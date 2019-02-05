@@ -204,6 +204,7 @@ This means that charge conjugation leaves the chirality unchanged. Helicity is a
 Under T, $\psi \to \psi_T = B\psi$ where $B = i\gamma^1\gamma^3 = -i\gamma^5C$ and $B^\dagger = B = B^{-1}$. Again, $P_LB = BP_L$ so $\psi_L \to B\psi_L$ and time reversal leaves chirality and helicity unchanged (it reverses both spin and momentum). 
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
 %
 \section{Charged Current Electroweak}
 %
@@ -507,7 +508,7 @@ $n \to p\ e^- \bar{\nu}_e$.
 
 \begin{wrapfigure}{l}{0.4\linewidth}
   \centering
-%  \includegraphics[width=\linewidth]{figs/diag_3.png}
+  \includegraphics[width=\linewidth]{figs/diag_3.png}
 \end{wrapfigure}
 What's really going on is $d \to u\ e^- \bar{\nu}_e$: the other quarks are "spectators". Again, the matrix element factorises:
 \begin{equation}
@@ -595,22 +596,22 @@ and decays of the hyperons $\Sigma = uus$, $\Lambda = uds$, $\Xi = uss$, $\Omega
 
 e.g. $K \to \pi \pi$, $K \to \pi \pi \pi$, $\Lambda \to p \pi$, $\Omega \to \Xi \pi$ etc.
 \newline
-\begin{wrapfigure}{l}{0.4\linewidth}
-  \centering
-  \includegraphics[width=\linewidth]{figs/diag_4.png}
-\end{wrapfigure}
+%\begin{wrapfigure}{l}{0.4\linewidth}
+  \includegraphics[width=0.5\linewidth]{figs/diag_4.png}
+%\end{wrapfigure}
+\newline
 Here factorisation no longer holds - there are strong interactions everywhere! We need to resort to non-perturbative methods such as lattice QCD (see later in the course).
-%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
 \section{Intermediate vector bosons}
 $\mathcal{L}_{4F}$ provides an excellent description of low-energy charged current weak interactions. But it runs into problems at higher energies.
 \subsection{Unitarity}
-\textbf{Example: } $\nu_\mu e^- \to \mu^- \nu_e$
-
-\begin{wrapfigure}{l}{0.4\linewidth}
-  \centering
-  \includegraphics[width=\linewidth]{figs/diag_5.png}
-\end{wrapfigure}
+\textbf{Example: } $\nu_\mu e^- \to \mu^- \nu_e$.
+\newline
 We can write the matrix element for this process
+\newline
 \begin{equation}
 \begin{split}
 \mathcal{M} &= -i \frac{G_F}{2} \bar{v}(q^\prime)\gamma_\mu(1-\gamma^5)u(p) \bar{u}(p^\prime)\gamma^\mu(1-\gamma^5)u(q) \\
@@ -621,7 +622,10 @@ We can write the matrix element for this process
 \end{split}
 \end{equation}
 where we used $s = (p+q)^2 = (p^\prime + q^\prime)^2 = m_e^2 + 2 p \cdot q = m_\mu^2 + 2p^\prime \cdot q^\prime$. 
-
+\begin{wrapfigure}{l}{0.4\linewidth}
+  \centering
+  \includegraphics[width=\linewidth]{figs/diag_5.png}
+\end{wrapfigure}
 In the centre of mass frame, ignoring masses (i.e. at high energy)
 \begin{equation}
 \bigg(\frac{d\sigma}{d\Omega}\bigg)_{CoM} = \frac{1}{64\pi^2s}\frac{1}{2}\sum_{spins}|\mathcal{M}|^2 = \frac{1}{4\pi}G_F^2s.
@@ -804,6 +808,110 @@ where we have taken the physical solution in the last line. Since $W$ is massive
 \end{equation}
 $\underline{\epsilon}_1$ and $\underline{\epsilon}_2$ are the transverse components and can be combined to form $\underline{\epsilon}_\pm = 1/\sqrt{2}(1, \pm i, 0)$, and $\underline{\epsilon}_3$ is the longitudinal component. 
 
-So if $k^\mu = (E, 0, 0, k)$, $\epsilon_3 = 1/m_W(k,0,0,E)$. N.B. for $E \gg m_W$, $\epsilon_3 \approx k^\mu/m_W + \mathcal{O}(m_W/E)$. 
+So if $k^\mu = (E, 0, 0, k)$, $\epsilon_3 = 1/m_W(k,0,0,E)$. N.B. for $E \gg m_W$, $\epsilon_3 \approx k^\mu/m_W + \mathcal{O}(m_W/E)$. Now let's evaluate the different polarisation sums: defining $\epsilon_0^\mu = k^\mu/m_W$ (so in the rest frame $\epsilon_0^\mu = (1, \underline{0})$ which is timelike, and therefore unphysical)
+\begin{equation}
+\begin{split}
+&\sum_{r=0,1,2,3}\eta^{rr}\epsilon_r^\mu \epsilon_r^{\nu *} = - \eta^{\mu \nu} \qquad \text{completeness: cf RQFT} \\
+\text{so } &\sum_{r=1,2,3}\epsilon^\mu_r \epsilon_r^{\nu *} = -\eta^{\mu \nu} + \epsilon_0^\mu \epsilon_0^\nu = -\eta^{\mu\nu} + \frac{k^\mu k^\nu}{m_W^2}
+\end{split}
+\end{equation}
+The propagator is 
+\begin{equation}
+\Delta^{\mu\nu}_W = \frac{i(-\eta^{\mu \nu} + k^\mu k^\nu/m_W^2)}{k^2-m_W^2 + i\epsilon}
+\end{equation}
+because
+\begin{equation}
+\big((-k^2 + m_W^2)\eta_{\mu\nu} + k_\mu k_\nu)\Delta^{\nu \rho}_W = -i\delta_\mu^\rho
+\end{equation}
+(check this as an exercise).
+
+The Feynman rule for the interaction is
+\newline
+\begin{wrapfigure}{l}{0.4\linewidth}
+  \centering
+  \includegraphics[width=\linewidth]{figs/17a.png}
+\end{wrapfigure}
+\begin{equation}
+i\frac{g}{\sqrt{2}}\gamma_\mu\frac{1}{2}(1-\gamma^5)
+\end{equation}
+How does this theory work in practice? The following are some examples.
+\newline
+\newline
+\subsubsection{$\mu^- \to e^-\bar{\nu}_e\nu_\mu$}
+%\begin{wrapfigure}{r}{0.4\linewidth}
+%  \centering
+  \includegraphics[width=0.4\linewidth]{figs/17b.png}
+%\end{wrapfigure}
+The momentum of $W^-$, $k=p-q=p^\prime + q^\prime$.
+\begin{equation}
+\begin{split}
+\mathcal{M}& = \frac{(ig)^2}{8}\bar{u}(p^\prime)\gamma_mu(1-\gamma^5)v(q^\prime)\frac{(-\eta^{\mu \nu} + k^\mu k^\nu/m_W^2)}{k^2-m_W^2}\bar{u}(q)\gamma_\nu(1-\gamma^5)u(p) \\
+\text{But } \qquad &\bar{u}(q)\slashed{k}(1-\gamma^5)u(p) = \bar{u}(q)(\slashed{p}-\slashed{q})(1-\gamma^5)u(p) = m_\mu \bar{u}(q)(1+\gamma^5)u(p) \\
+&\bar{u}(p^\prime)\slashed{k}(1-\gamma^5)v(q^\prime) = \bar{u}(p^\prime)(\slashed{p}^\prime+\slashed{q}^\prime)(1-\gamma^5)v(q^\prime) = -m_e \bar{u}(p^\prime)(1+\gamma^5)v(q^\prime) 
+\end{split}
+\end{equation}
+so the $k^\mu k^\nu/m_W^2$ term in the propagator tends to $m_e m_\mu/m_W^2 \sim 10^{-8}$ ($m_W=75$ GeV). Also $k^2 = m_\mu^2 - 2p \cdot q < m_\mu^2 \ll m_W^2$. If we ignore these terms, 
+\begin{equation}
+\frac{1}{2}\sum_{spins}|\mathcal{M}|^2 = \frac{2g^4}{m_W^4}(p \cdot q^\prime)(p^\prime \cdot q)
+\end{equation}
+i.e. this is the same as in 4-Fermi theory, provided that $G_F/\sqrt{2} = g^2/8m_W^2$. So the weak force is weak because $m_W$ is large ($\gg 1$ GeV). It is easy to see that the same arguments apply to \textit{all} weak decays in Chapter 1. 
+%
+\subsubsection{$\nu_\mu e^- \to \mu^- \nu_e$}
+%
+%\begin{wrapfigure}{r}{0.4\linewidth}
+%  \centering
+  \includegraphics[width=0.3\linewidth]{figs/17c.png}
+%\end{wrapfigure}
+Here $k = p=q^\prime = p^\prime - q$ and
+\begin{equation}
+\mathcal{M} = \frac{(ig)^2}{8}\bar{u}(q^\prime)\gamma_\mu(1-\gamma^5)u(p)\frac{i(-\eta^{\mu\nu} + k^\mu k^\nu/m_W^2)}{k^2-m_W^2}\bar{u}(p^\prime)\gamma_\nu (1-\gamma^5)u(q).
+\end{equation}
+As before, $k^\mu k^\nu /m_W^2 \to m_e m_\mu /m_W^2$ so we can ignore these terms. But $k^2 = (p-q^\prime)^2 = t$ so
+\begin{equation}
+\frac{d\sigma}{d\Omega} = \frac{g^4}{128\pi^2}\frac{s}{(t-m_W^2)^2}
+\end{equation}
+where $s=4E^2$ and $t=-4E^2\sin^2\theta/2$. Integrating over $\phi$,
+\begin{equation}
+\begin{split}
+\frac{d\sigma}{d\cos\theta} &= \frac{g^4E^2}{64\pi(E^2\sin^2\theta/2 + m_W^2/4)^2}
+\\
+&= \frac{g^4}{64\pi E^2}\csc^2 \frac{\theta}{2}\bigg( 1 + \mathcal{O}\big(\frac{m_W^2}{E^2}\big)\bigg).
+\end{split}
+\end{equation}
+At very high energy, $E^2 \gg m_W^2$ so unitarity is restored. 
+%
+\subsubsection{$\nu \bar{\nu} \to W^+ W^-$}
+%
+Consider now the production of external $W^\pm$. In this case $q + q^\prime = k + k^\prime$. 
+\newline
+%
+%\begin{wrapfigure}{r}{0.4\linewidth}
+%  \centering
+  \includegraphics[width=0.4\linewidth]{figs/18a.png}
+%\end{wrapfigure}
+%
+\begin{equation}
+\mathcal{M} = \frac{(ig)^2}{8} \bar{v}(q^\prime) \gamma_\mu(1-\gamma^5)\frac{i(\slashed{q}-\slashed{k}+m_e)}{(q-k)^2 -m_e^2}\gamma_\nu(1-\gamma^5)u(q)\epsilon_r^\mu(k^\prime)^* \epsilon_r^\nu(k)
+\end{equation}
+We want the behaviour of the cross-section at very high energy, so we can ignore $m_e$. Also consider the $W$s to be longitudinally polarised, i.e. $\epsilon_3^\mu(k) \approx k^\mu/m_W + \mathcal{O}(m_W/E)$. So
+\begin{equation}
+\mathcal{M} = \frac{-ig^2}{4}\frac{1}{m_W^2(q-k)^2}\bar{v}(q^\prime)\slashed{k}^\prime(\slashed{q}-\slashed{k})\slashed{k}(1-\gamma^5)u(q)
+\end{equation}
+But $\slashed{q}u(q)=0$ so 
+\begin{equation}
+\begin{split}
+\slashed{k}u(q) &= - (\slashed{q}-\slashed{k})u(q) \\
+\text{similarly } \qquad \bar{v}(q^\prime)\slashed{k}^\prime &= \bar{v}(q^\prime)(\slashed{q}-\slashed{k})
+\end{split}
+\end{equation}
+so if $p = q -k$
+\begin{equation}
+\begin{split}
+\mathcal{M} &= \frac{-ig^2}{4}\frac{1}{m_W^2p^2}\bar{v}(q^\prime)\slashed{p}\slashed{p}\slashed{p}(1-\gamma^5)u(q) \\
+&= +\frac{ig^2}{4}\bar{v}(q^\prime)
+\end{split}
+\end{equation}
+
+
 
 \end{document}
