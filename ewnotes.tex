@@ -41,10 +41,10 @@ Neutrinos were first hypothesised by Pauli (1930) to explain the missing energy 
 %
 Define the projection operators $P_R \equiv \frac{1}{2}(1 + \gamma^5)$ and $P_L \equiv \frac{1}{2}(1 - \gamma^5)$. Recalling that $(\gamma^5)^2 = 1$ and $(\gamma^5)^\dagger = \gamma^5$, we can deduce the following properties:
 \begin{itemize}
-    \item $P_R^2 = P_R$
-    \item $P_L^2 = P_L$
-    \item $P_LP_R = P_RP_L = 0$
-    \item $P_R + P_L = 1$
+    \item $P_R^2 = P_R$,
+    \item $P_L^2 = P_L$,
+    \item $P_LP_R = P_RP_L = 0$,
+    \item $P_R + P_L = 1$,
     \item $P_R - P_L = \gamma^5$.
 \end{itemize}
 % 
@@ -63,7 +63,7 @@ The Dirac Lagrangian splits up like
 \begin{split}
 \mathcal{L}_D &= \bar{\psi}(i\slashed{\partial}-m)\psi \\ 
 &= \bar{\psi}_R i\slashed{\partial}\psi_R + \bar{\psi}_L i\slashed{\partial}\psi_L
-+ m(\bar{\psi}_L\psi_R + \bar{\psi_R}\psi_L)
++ m(\bar{\psi}_L\psi_R + \bar{\psi_R}\psi_L),
 \end{split}
 \end{equation}
 so the mass term mixes $\psi_R$ and $\psi_L$: if $m \to 0$, $\psi_R$ and $\psi_L$ are independent. In this scenario they are both 2-component spinors obeying the Weyl equation $i\slashed{\partial}\psi_{R/L} = 0$.
@@ -79,7 +79,7 @@ $h$ has eigenvalues $\pm1$, which follows from $(\slashed{p} - m)u^\pm = 0 \impl
 \begin{split}
 \gamma^5(E - \gamma^0\slashed{p})u^\pm &= \pm u^\pm \\
 \implies (P_R-P_L)(E-\gamma^0m)u^\pm &= \pm p(P_R + P_L)u^\pm \\
-\text{ and } (E \mp p)u_R^\pm &= m\gamma^0 u_L^\pm \\
+\text{ and } (E \mp p)u_R^\pm &= m\gamma^0 u_L^\pm, \\
              (E \pm p)u_L^\pm &= m\gamma^0 u_R^\pm. 
 \end{split}
 \end{equation}
@@ -95,7 +95,7 @@ Note that when $m=0$, helicity is Lorentz invariant (no rest frame). For $m \neq
 You get similar expressions for negative energy solutions:
 \begin{equation}
 \begin{split}
-\text{for $m = 0$:   } &v_R^- = v_L^+ = 0 \\
+\text{for $m = 0$:   } &v_R^- = v_L^+ = 0, \\
 \text{for $m \neq 0$:    }  &v_R^- = -\frac{m\gamma^0}{2E}v_L^- \text{ and } v_L^+ = -\frac{m\gamma^0}{2E}v_R^-.
 \end{split}
 \end{equation}
@@ -105,19 +105,19 @@ You get similar expressions for negative energy solutions:
 In the chiral representation the gamma matrices can be expressed as:
 \[ \gamma^0 = \left( \begin{array}{cc}
 0 & 1  \\
-1 & 0  \end{array} \right) \qquad
+1 & 0  \end{array} \right), \qquad
 \gamma^i = \left( \begin{array}{cc}
 0 & -\sigma^i  \\
-\sigma^i & 0  \end{array} \right) \qquad
+\sigma^i & 0  \end{array} \right), \qquad
 \gamma^5 = \left( \begin{array}{cc}
 1 & 0 \\
-0 & -1     \end{array} \right)\] 
+0 & -1     \end{array} \right).\] 
 %
-so
+So
 %
 \[ P_R = \left( \begin{array}{cc}
 1 & 0  \\
-0 & 0  \end{array} \right) \qquad
+0 & 0  \end{array} \right), \qquad
 P_L = \left( \begin{array}{cc}
 0 & 0  \\
 0 & 1  \end{array} \right) \qquad
@@ -130,7 +130,7 @@ Furthermore, the spin operator can be written
 %
 \[ \Sigma^i = \gamma^5\gamma^0\gamma^i = \left( \begin{array}{cc}
 \sigma^i & 0  \\
-0 & \sigma^i  \end{array} \right) \]
+0 & \sigma^i  \end{array} \right), \]
 %
 so the helicity eigenstates are $\icol{\psi_R^\pm\\0}$ and $\icol{0\\\psi_L^\pm}$. Now consider the positive and negative energy solutions. 
 %
@@ -155,7 +155,7 @@ and we can write
 \[ u^\pm =
 \left( \begin{array}{c}
 \sqrt{E \pm p} \ \xi^\pm   \\
-\sqrt{E \mp p} \ \xi^\pm  \end{array} \right) \] 
+\sqrt{E \mp p} \ \xi^\pm  \end{array} \right), \] 
 %
 where $\xi^+ = \icol{1\\0}$ and $\xi^- = \icol{0\\1}$. 
 \newline
@@ -181,12 +181,12 @@ You can relate $\xi^\pm$ to $\chi^\pm$ by charge conjugation: $v^\pm = i \gamma^
 %
 \[ i\gamma^2 = \left( \begin{array}{cc}
 0 & -i \sigma^2  \\
-i\sigma^2 & 0  \end{array} \right); \qquad 
+i\sigma^2 & 0  \end{array} \right), \qquad 
 -i\sigma^2 = \left( \begin{array}{cc}
 0 & -1 \\
-1 & 0 \end{array} \right) \]
+1 & 0 \end{array} \right). \]
 %
-so $\chi^\pm = -i\sigma^2\xi^\pm$ and if $\xi^\pm = \icol{1\\0}, \icol{0\\1}$ then $\chi^\pm = \icol{0\\1}, \icol{-1\\0}$ as before.
+So $\chi^\pm = -i\sigma^2\xi^\pm$ and if $\xi^\pm = \icol{1\\0}, \icol{0\\1}$ then $\chi^\pm = \icol{0\\1}, \icol{-1\\0}$ as before.
 %
 \subsection{Parity}
 %
@@ -212,19 +212,19 @@ Under T, $\psi \to \psi_T = B\psi$ where $B = i\gamma^1\gamma^3 = -i\gamma^5C$ a
 %
 Fermi theory is based on a point-like 4-fermion interaction
 \begin{equation}
-    G_F(\bar{n}\gamma_\mu p)(\bar{\nu}\gamma^\mu e)
+    G_F(\bar{n}\gamma_\mu p)(\bar{\nu}\gamma^\mu e),
 \end{equation}
 representing the process $n \to pe^-\bar{\nu}$, where $n$ is a neutron, $p$ is a proton, $e^-$ is an electron and $\bar{\nu}$ is an antineutrino. More generally, the interaction can be written as $G_F J_\mu^\dagger J^\mu$ where $J_\mu$ is the "weak current" and is composed of leptonic and hadronic contributions: $J_\mu = \bar{\nu}\gamma_\mu e + \bar{p}\gamma_\mu n + ...$. Note that $J_\mu$ has $\Delta Q = +1$ so $J_\mu^\dagger$ has $\Delta Q = -1$ and electric charge is conserved. 
 
-Considering mass dimensions $[\cdot]$: $[m\psi\bar{\psi}]=+\psi$, $[\psi]=3/2$ and $[J_\mu] =3$ so $[G_F]=-2$. In other words, the coupling scales as 1/mass$^2$. The mass scale is $\approx$ 300 GeV, so the interaction is weak. The original Fermi interaction conserves parity (and C and CP), just like QED. This turned out to be wrong, according to theory developed by Lee and Yang (1956) and the Wu experiment in 1957. In weak interactions, P and C are violated by CP is conserved. More on this later.
+Considering mass dimensions $[\cdot]$: $[m\psi\bar{\psi}]=+4$, $[\psi]=3/2$ and $[J_\mu] =3$ so $[G_F]=-2$. In other words, the coupling scales as 1/mass$^2$. The mass scale is $\approx$ 300 GeV, so the interaction is weak. The original Fermi interaction conserves parity (and C and CP), just like QED. This turned out to be wrong, according to theory developed by Lee and Yang (1956) and the Wu experiment in 1957. In charged current weak interactions, P and C are violated but CP is conserved. More on this later.
 %
 \subsection{V-A Theory}
 %
-Developed by Masshart, Sudarshan, Feynman, Gell-Man ... in 1958. V-A theory is based on a vector current $V_\mu$ and an axial current $A_\mu$,
+Developed by Masshart, Sudarshan, Feynman, Gell-Man ... in 1958. V-A theory is based on a vector current $V_\mu$ and an axial current $A_\mu$:
 \begin{equation}
 \begin{split}
-V_\mu &= \bar{\nu}\gamma_\mu e + \bar{p}\gamma_\mu n + ... \\
-A_\mu &= \bar{\nu}\gamma_\mu \gamma^5 e + \bar{p}\gamma_\mu \gamma^5 n + ...
+V_\mu &= \bar{\nu}\gamma_\mu e + \bar{p}\gamma_\mu n + ... ,\\
+A_\mu &= \bar{\nu}\gamma_\mu \gamma^5 e + \bar{p}\gamma_\mu \gamma^5 n + ...,
 \end{split}
 \end{equation}
 whose difference gives the overall current
@@ -237,41 +237,41 @@ whose difference gives the overall current
 So the weak interactions involve \textbf{only left-handed fields}, and maximally violate P and C. In fact, under P, C and CP the currents transform in the following ways:
 \begin{equation}
 \begin{split}
-&P \qquad V^\mu \to V_\mu, \qquad A^\mu \to -A_\mu, \qquad (V-A)^\mu \to (V+A)_\mu \\
-&C \qquad V^\mu \to -V^\mu, \qquad A^\mu \to A^\mu, \qquad (V-A)^\mu \to (-V-A)^\mu \\
-&CP \qquad V^\mu \to -V_\mu, \qquad A^\mu \to -A_\mu, \qquad (V-A)^\mu \to -(V-A)_\mu 
+&P: \qquad V^\mu \to V_\mu, \qquad A^\mu \to -A_\mu, \qquad (V-A)^\mu \to (V+A)_\mu. \\
+&C: \qquad V^\mu \to -V^\mu, \qquad A^\mu \to A^\mu, \qquad (V-A)^\mu \to (-V-A)^\mu. \\
+&CP: \qquad V^\mu \to -V_\mu, \qquad A^\mu \to -A_\mu, \qquad (V-A)^\mu \to -(V-A)_\mu. 
 \end{split}
 \end{equation}
-so $(V-A)^{\mu \dagger}(V-A)_\mu$ is invariant under CP (and T). 
+So $(V-A)^{\mu \dagger}(V-A)_\mu$ is invariant under CP (and T). 
 
 Note that that neutrinos \textbf{only} interact weakly, so $\nu_R$ does not interact at all! If neutrinos are massless, there is no need for $\nu_R$. From 1930-1998 neutrinos were always assumed to be massless: here we will assume $m_\nu=0$ so $\nu$ are always left handed and $\bar{\nu}$ are always right handed. In reality $m_\nu \leq$ 0.3 eV, which is very small.
 
 So we have
 %
 \begin{equation}
-\mathcal{L}_{4F} = -\frac{G_F}{\sqrt{2}} J_\mu^\dagger J^\mu
+\mathcal{L}_{4F} = -\frac{G_F}{\sqrt{2}} J_\mu^\dagger J^\mu,
 \end{equation}
-where the $\sqrt{2}$ is historical. $J_\mu = J_\mu^l + J_\mu^h$ can be split up into a leptonic and a hadronic current, each of which comprises three generations. For example, the leptonic current
+where the $\sqrt{2}$ is historical. $J_\mu = J_\mu^l + J_\mu^h$ can be split up into a leptonic and a hadronic current, each of which comprises three generations. For example, the leptonic current,
 \begin{equation}
-\frac{1}{2}J_\mu^l = \bar{\nu}_e\gamma_\mu e_L + \bar{nu}_{(\mu)}\gamma_\mu \mu_L + \bar{\nu}_\tau \gamma_\mu \tau_L.
+\frac{1}{2}J_\mu^l = \bar{\nu}_e\gamma_\mu e_L + \bar{\nu}_{(\mu)}\gamma_\mu \mu_L + \bar{\nu}_\tau \gamma_\mu \tau_L.
 \end{equation}
-Lepton number $L_e = N_{e^-} - N_{e^+} - N_{\nu_e} + N_{\bar{\nu}_e}$ and the corresponding $L_\mu$ and $L_\tau$ are conserved, according to Noether's Theorem.  
+Lepton number $L_e = N_{e^-} - N_{e^+} + N_{\nu_e} - N_{\bar{\nu}_e}$ and the corresponding $L_\mu$ and $L_\tau$ are conserved, according to Noether's Theorem.  
 
-The hadronic current
+The hadronic current,
 \begin{equation}
-\frac{1}{2}J_\mu^h = \bar{u}_L\gamma_\mu d_L^\prime + \bar{c}_L \gamma_\mu s_L^\prime + \bar{t}_L \gamma_\mu b_L^\prime
+\frac{1}{2}J_\mu^h = \bar{u}_L\gamma_\mu d_L^\prime + \bar{c}_L \gamma_\mu s_L^\prime + \bar{t}_L \gamma_\mu b_L^\prime,
 \end{equation}
-is simplest to express in terms of the quarks. The baryon number $B = \sum_{gen} (N_u -N_{\bar{u}} - N_d + N_{\bar{d}})$ is conserved. Things are complicated due to the effects of quark mixing - see later.
+is simplest to express in terms of the quarks. The baryon number $B = \sum_{gen} (N_u -N_{\bar{u}} + N_d - N_{\bar{d}})$ is conserved. Things are complicated due to the effects of quark mixing - see later.
 
 (V-A) Theory is quite complicated, but there is only one coupling, $G_F$: we call this universality. Explicitly,
 \begin{equation}
-\mathcal{L}_{4F} = -\frac{G_F}{\sqrt{2}} (J_\mu^{l \dagger} J^{l\mu} + (J_\mu^{h \dagger} J^{l\mu} + J_\mu^{l \dagger} J^{h\mu}) + J_\mu^{h \dagger} J^{h\mu} ) 
+\mathcal{L}_{4F} = -\frac{G_F}{\sqrt{2}} (J_\mu^{l \dagger} J^{l\mu} + (J_\mu^{h \dagger} J^{l\mu} + J_\mu^{l \dagger} J^{h\mu}) + J_\mu^{h \dagger} J^{h\mu} ),
 \end{equation}
-so there are three types of (charged current) weak interaction
+so there are three types of (charged current) weak interaction:
 \begin{itemize}
-    \item \textbf{leptonic:} only leptons (and neutrinos) e.g. $\mu \to e \nu_\mu \bar{\nu}_e$
-    \item \textbf{semi-leptonic:} both leptons and quarks e.g. $\pi^- = d\bar{u} \to \mu^- \bar{\nu}_\mu$
-    \item \textbf{hadronic:} only quarks e.g. $\Lambda \to p \pi$
+    \item \textbf{leptonic,} only leptons (and neutrinos) e.g. $\mu \to e \nu_\mu \bar{\nu}_e$;
+    \item \textbf{semi-leptonic,} both leptons and quarks e.g. $\pi^- = d\bar{u} \to \mu^- \bar{\nu}_\mu$;
+    \item \textbf{hadronic,} only quarks e.g. $\Lambda \to p \pi$.
 \end{itemize}
 But all of them violate P and C and conserve CP, only involve left-handed particles and only involve one coupling $G_F$. 
 \newline
@@ -343,7 +343,7 @@ Fig. \ref{pioncp} demonstrates the sequential application of C and P to this pro
 We will work with Dirac spinors everywhere and contract the spiniors as required.
 The matrix element can be written
 \begin{equation}
-  \mathcal{M} = \langle e^-(k);\bar{\nu}_e(q^\prime)|\mathcal{L}_{4F}|\mu^-(p) \rangle
+  \mathcal{M} = \langle e^-(k);\bar{\nu}_e(q^\prime)|\mathcal{L}_{4F}|\mu^-(p) \rangle,
 \end{equation}
 and we can identify the Feynman rule for the four fermion vertex as 
 \begin{equation}
@@ -351,20 +351,20 @@ and we can identify the Feynman rule for the four fermion vertex as
 \end{equation}
 so 
 \begin{equation}
-  \mathcal{M} = -i\frac{G_F}{\sqrt{2}} \bigg(\bar{u}(k)\gamma^\mu(1-\gamma^5)v(q^\prime)\bigg) \bigg(\bar{u}(q)\gamma_\mu(1-\gamma^5)u(p)\bigg)
+  \mathcal{M} = -i\frac{G_F}{\sqrt{2}} \bigg(\bar{u}(k)\gamma^\mu(1-\gamma^5)v(q^\prime)\bigg) \bigg(\bar{u}(q)\gamma_\mu(1-\gamma^5)u(p)\bigg),
 \end{equation}
 where $\bar{u}(k)$, $v(q^\prime)$, $\bar{u}(q)$ and $u(p)$ refer to the electron, anti-electron neutrino, muon neutrino and muon respectively. 
 
 Average over initial spins and sum over final spins (assuming the neutrinos are massless):
 \begin{equation}
-    \frac{1}{2} \sum_{spins} |\mathcal{M}|^2 = \frac{1}{4}G_F^2\ tr\bigg((\slashed{k}+m_e)\gamma^\mu(1-\gamma^5)\slashed{q}^\prime\gamma^\nu(1-\gamma^5)\bigg)\ tr\bigg(\slashed{q}\gamma_\mu(1-\gamma^5)(\slashed{p}+m_\mu)\gamma_\nu(1-\gamma^5)\bigg)
+    \frac{1}{2} \sum_{spins} |\mathcal{M}|^2 = \frac{1}{4}G_F^2\ tr\bigg((\slashed{k}+m_e)\gamma^\mu(1-\gamma^5)\slashed{q}^\prime\gamma^\nu(1-\gamma^5)\bigg)\ tr\bigg(\slashed{q}\gamma_\mu(1-\gamma^5)(\slashed{p}+m_\mu)\gamma_\nu(1-\gamma^5)\bigg),
 \end{equation}
 where we call the first trace $\mathcal{M}^{\mu \nu}(k,q^\prime)$ and the second trace $\mathcal{M}_{\mu \nu}(q,p)$. Consider evaluating one of these traces, using $(1-\gamma^5)^2 = 2(1-\gamma^5)$ and $tr\gamma^5\gamma^\mu \gamma^\nu \gamma^\alpha \gamma^\beta = 4i\epsilon^{\mu \nu \alpha \beta}$:
 \begin{equation}
 \begin{split}
     \mathcal{M}_{\mu \nu}(q,p) &= 2\ tr\bigg( \slashed{q}\gamma_\mu(\slashed{p} + m_\mu)\gamma_\nu(1-\gamma^5)\bigg)\\
     &= 8(q_\mu p_\nu + p_\mu q_\nu - \eta_{\mu \nu} p \cdot q - i \epsilon_{\alpha \mu \beta \nu} q^\alpha p^\beta) \\
-    &= 8(q_\mu p_\nu + p_\mu q_\nu - \eta_{\mu \nu} p \cdot q + i \epsilon_{\mu \nu \alpha \beta} q^\alpha p^\beta) 
+    &= 8(q_\mu p_\nu + p_\mu q_\nu - \eta_{\mu \nu} p \cdot q + i \epsilon_{\mu \nu \alpha \beta} q^\alpha p^\beta),
 \end{split}
 \end{equation}
 so
@@ -390,9 +390,9 @@ Integrate over $q$ and $q^\prime$, since these are unobserved. Write $Q = q + q^
 Appealing to Lorentz invariance, we can write $\mathcal{I}_{\mu \nu} = a Q_\mu Q_\nu + b \eta_{\mu \nu} Q^2$ for some $a$, $b$ to be found. This is because these are the only two Lorentz invariant terms which can be constructed using the vectors and tensors available. In order to find the coefficients $a$ and $b$, we can systematically contract the expression with $\eta^{\mu \nu}$ and $Q^\mu Q^\nu$. This gives
 \begin{equation}
 \begin{split}
-a + 4b &= \frac{1}{2}\mathcal{I} \\
-a + b &= \frac{1}{4}\mathcal{I} \\
-\text{where } \mathcal{I} &= \int \frac{d^3q}{|q|} \frac{d^3 q^\prime}{|q^\prime|} \delta^4(Q - q - q^\prime).
+a + 4b &= \frac{1}{2}\mathcal{I}, \\
+a + b &= \frac{1}{4}\mathcal{I}, \\
+\text{where } \mathcal{I} &= \int \frac{d^3q}{|q|} \frac{d^3 q^\prime}{|q^\prime|} \delta^4(Q - q - q^\prime)
 \end{split}
 \end{equation}
 and we have used $q^0 = |q|$, $Q \cdot q Q \cdot q^\prime = (q \cdot q^\prime)^2 = 1/4\ Q^4$. Since $\mathcal{I}$ is a Lorentz scalar, we can evaluate it in any frame. Choose $Q^\mu = (Q^0, \underline{0})$, where $\underline{q} = - \underline{q^\prime}$.
@@ -400,23 +400,23 @@ and we have used $q^0 = |q|$, $Q \cdot q Q \cdot q^\prime = (q \cdot q^\prime)^2
 \begin{split}
 \mathcal{I} &= \int \frac{d^3\underline{q}}{|\underline{q}|^2}\ \delta(Q^0 - 2 |\underline{q}|) \\
 &= 4 \pi \int_0^\infty dq\ \delta(Q^0 - 2q) \\
-&= 2 \pi
+&= 2 \pi,
 \end{split}
 \end{equation}
 so $a = \pi /3$ and $b= \pi /6$. Putting everything together,
 \begin{equation}
-p^\mu k^\nu \mathcal{I}_{\mu \nu}(Q) = \frac{1}{6} \pi (2 Q \cdot p Q \cdot k + p \cdot k Q^2)
+p^\mu k^\nu \mathcal{I}_{\mu \nu}(Q) = \frac{1}{6} \pi (2 Q \cdot p Q \cdot k + p \cdot k Q^2),
 \end{equation}
 so 
 \begin{equation}
 \begin{split}
     d\Gamma &= \frac{G_F^2}{3 m_\mu (2\pi)^4)} \int \frac{d^3\underline{k}}{k^0}\ \bigg(2p \cdot (p-k) k \cdot (p-k) + p \cdot k (p-k)^2\bigg) \\
-    &= \frac{G_F^2}{3 m_\mu (2\pi)^4)}  \int \frac{d^3\underline{k}}{k^0}\ \bigg(-2p^2k^2 + 3(p^2+k^2)p \cdot k -4(p \cdot k)^2\bigg)
+    &= \frac{G_F^2}{3 m_\mu (2\pi)^4)}  \int \frac{d^3\underline{k}}{k^0}\ \bigg(-2p^2k^2 + 3(p^2+k^2)p \cdot k -4(p \cdot k)^2\bigg).
 \end{split}
 \end{equation}
 In the muon rest frame, $p \cdot k = m_\mu E$, where $E \equiv k^0$, and $\frac{d^3\underline{k}}{k^0} \to 4\pi |\underline{k}|dE$. We can ignore $m_e \ll m_\mu$. Then
 \begin{equation}
-    d\Gamma = \frac{2G_F^2}{3(2\pi)^3} m_\mu E^2(3m_\mu - 4E)dE
+    d\Gamma = \frac{2G_F^2}{3(2\pi)^3} m_\mu E^2(3m_\mu - 4E)dE,
 \end{equation}
 but $Q^2 > 0$ so $m_\mu^2 - 2p\cdot k = m_\mu(m_\mu - 2e) >0$, i.e. $E < m_\mu/2$. The total cross-section
 \begin{equation}
@@ -441,10 +441,10 @@ The matrix element can be written
 \begin{equation}
 \begin{split}
     \mathcal{M} &= \langle \mu^+(k) \nu_\mu(q) | \mathcal{L}_{4F} | \pi^+(p) \rangle \\
-    &= \frac{-iG_F}{\sqrt{2}} \bar{u}(q)\gamma^\mu(1-\gamma^5)v(k) \langle 0 | \bar{d}\gamma_\mu(1-\gamma^5)u | \pi^+(p) \rangle
+    &= \frac{-iG_F}{\sqrt{2}} \bar{u}(q)\gamma^\mu(1-\gamma^5)v(k) \langle 0 | \bar{d}\gamma_\mu(1-\gamma^5)u | \pi^+(p) \rangle,
 \end{split}
 \end{equation}
-in other words, it factorises into a lepton piece and a quark piece, where the quark piece is of $V_\mu - A_\mu$ form. The pion is a pseudoscalar, so $\langle 0 | V_\mu | \pi^+ \rangle = 0$. The $\langle 0 | A_\mu | \pi^+ \rangle$ piece is a four-vector, so Lorentz invariance means it must take the form $\langle 0 | A_\mu | \pi^+ \rangle = i f_\pi p_\mu$, with $f_\mu$ some "pion decay constant" to be found. This means we can write
+in other words, it factorises into a lepton piece and a quark piece, where the quark piece is of $V_\mu - A_\mu$ form. The pion is a pseudoscalar, so $\langle 0 | V_\mu | \pi^+ \rangle = 0$. The $\langle 0 | A_\mu | \pi^+ \rangle$ piece is a four-vector, so Lorentz invariance means it must take the form $\langle 0 | A_\mu | \pi^+ \rangle = i f_\pi p_\mu$, with $f_\pi$ some "pion decay constant" to be found. This means we can write
 \begin{equation}
     \mathcal{M} = \frac{G_F f_\pi}{\sqrt{2}}\bar{u}(q)\slashed{p}(1-\gamma^5)v(k).
 \end{equation}
@@ -458,16 +458,16 @@ But $p = k + q$, and using $\slashed{q}u(q)=0$; $(\slashed{k} + m_\mu)v(k)=0$ gi
 \end{equation}
 In the lab frame,
 \begin{equation}
-    d\Gamma = \frac{1}{2m_\mu} \sum_{spins} |\mathcal{M}|^2(dPS)_2
+    d\Gamma = \frac{1}{2m_\mu} \sum_{spins} |\mathcal{M}|^2(dPS)_2,
 \end{equation}
 while
 \begin{equation}
 \begin{split}
 \int(dPS)_2 &= \frac{1}{(4\pi)^2} \frac{|\underline{k}|}{m_\pi} \int d\Omega \\
-&= \frac{1}{4\pi}\frac{|\underline{k}|}{m_\pi}
+&= \frac{1}{4\pi}\frac{|\underline{k}|}{m_\pi},
 \end{split}
 \end{equation}
-where $|\underline{k}| = (m_\pi^2 - m_\mu^2)/2m_\pi$, so
+where $|\underline{k}| = (m_\pi^2 - m_\mu^2)/2m_\pi$. So
 \begin{equation}
 \Gamma = \frac{1}{8\pi} G_F^2f_\pi^2 \frac{m_\mu^2}{m_\pi^3}(m_\pi^2 - m_\mu^2)^2.
 \end{equation}
@@ -484,13 +484,13 @@ The Kaon decay $K^+ (u\bar{s}) \to \mu^+ \nu_\mu$ works similarly: $\langle 0 | 
 \end{equation}
 But if $\mathcal{L}_{4F}$ contained $\bar{u}_L \gamma_\mu s_L$ (in an analogy with $\bar{u}_L \gamma_\mu d_L$) we expect
 \begin{equation}
-    \frac{\Gamma(K \to \mu\nu)}{\Gamma(\pi \to \mu\nu)} = \frac{f_K^2}{f_\pi^2}\frac{m_\pi^3}{m_K^3}\frac{(m_K^2 - m_\mu^2)^2}{(m\pi^2 - m_\mu^2)^2} \approx 24
+    \frac{\Gamma(K \to \mu\nu)}{\Gamma(\pi \to \mu\nu)} = \frac{f_K^2}{f_\pi^2}\frac{m_\pi^3}{m_K^3}\frac{(m_K^2 - m_\mu^2)^2}{(m\pi^2 - m_\mu^2)^2} \approx 24,
 \end{equation}
 since $f_K/f_\pi \approx 1.2$, i.e. SU(3) symmetry breaking is small.
 
 The explanation is down to the form of the hadronic weak current. In actual fact this is
 \begin{equation}
- \frac{1}{2}J_\mu^h = \bar{u}_L\gamma_\mu(\cos\theta_c\ d_L + \sin\theta_c\ s_L) + ... 
+ \frac{1}{2}J_\mu^h = \bar{u}_L\gamma_\mu(\cos\theta_c\ d_L + \sin\theta_c\ s_L) + ..., 
 \end{equation}
 where the term in brackets can be thought of as $d_L^\prime$, a \textit{mixture} of $d$ and $s$. Then 
 \begin{equation}
@@ -520,7 +520,7 @@ What's really going on is $d \to u\ e^- \bar{\nu}_e$: the other quarks are "spec
 \end{equation}
 Considering the hadronic part,
 \begin{equation}
-\langle p(p^\prime) | (V_\mu - A_\mu) | n(p) \rangle = \cos\theta_c\bar{u}(p^\prime)\gamma_\mu(g_v-g_A\gamma^5)u(p)
+\langle p(p^\prime) | (V_\mu - A_\mu) | n(p) \rangle = \cos\theta_c\bar{u}(p^\prime)\gamma_\mu(g_v-g_A\gamma^5)u(p),
 \end{equation}
 where $g_V =1$ and $g_A = 1.25$. Then 
 \begin{equation}
@@ -539,7 +539,7 @@ so
 \begin{split}
 \frac{1}{2}\sum_{spins}|\mathcal{M}|^2 &= 8 G_F^2\cos^2\theta_c\ \bigg((2p\cdot k p^\prime \cdot q + 2 p\cdot q p^\prime \cdot k)(1+g_A)^2 \\
 &- 4g_A(k\cdot p q\cdot p^\prime - k\cdot p^\prime q\cdot p) - 2 m_n m_p(1-g_A^2)k \cdot q\bigg)\\
-&= 16G_F^2\cos^2\theta_c\ \bigg(p\cdot k p^\prime \cdot q (1-g_A)^2 + p\cdot q p^\prime \cdot k (1+ g_A)^2 - m_n m_p k \cdot q \bigg).
+&= 16G_F^2\cos^2\theta_c\ \bigg(p\cdot k p^\prime \cdot q (1-g_A)^2 + p\cdot q p^\prime \cdot k (1+ g_A)^2 - (1-g_A^2)m_n m_p k \cdot q \bigg).
 \end{split}
 \end{equation}
 The decay rate
@@ -553,25 +553,25 @@ Now write $p^0 = E_p$, $p^{\prime 0} = E_p$, $k^0 = E_e$, $q^0 = E_\nu$ and $d^3
 \begin{equation}
 \begin{split}
     d\Gamma &= \frac{1}{16m_n(2\pi)^5}\int dE_e\ d\Omega_e\ d\Omega_\nu\ dE_\nu \bigg(\frac{p_e E_\nu}{E_p}\bigg) \delta(E_n - E_p -E_e - E_\nu) \frac{1}{2}\sum_{spins}|\mathcal{M}|^2 \\
-  \implies  \frac{d\Gamma}{dE_e} &= \frac{1}{16m_n(2\pi)^5}\int d\Omega_e\ d\Omega_\nu \bigg(\frac{p_e E_\nu}{E_p}\bigg)\frac{1}{2}\sum_{spins}|\mathcal{M}|^2\\
+  \implies  \frac{d\Gamma}{dE_e} &= \frac{1}{16m_n(2\pi)^5}\int d\Omega_e\ d\Omega_\nu \bigg(\frac{p_e E_\nu}{E_p}\bigg)\frac{1}{2}\sum_{spins}|\mathcal{M}|^2.\\
 \end{split}
 \end{equation}
 Now in the lab frame, $E_n = m_n$. It is useful to define $\Delta \equiv m_n - m_p = 1.29$ MeV $\ll m_n$. We can ignore nuclear recoil by using the Born-Oppenheimer approximation, i.e. $E_p \approx m_p$. Note that $m_e=0.51$ MeV is of the same order as $\Delta$. Then 
 \begin{equation}
 \begin{split}
-&p \cdot k p^\prime \cdot q \approx m_nE_e m_p E_\nu \\
-&p \cdot q p^\prime \cdot k \approx m_nE_\nu m_pE_e \\
-& k \cdot q = E_e E_\nu - \underline{p}_e \cdot \underline{p}_\nu
+&p \cdot k p^\prime \cdot q \approx m_nE_e m_p E_\nu, \\
+&p \cdot q p^\prime \cdot k \approx m_nE_\nu m_pE_e, \\
+& k \cdot q = E_e E_\nu - \underline{p}_e . \underline{p}_\nu,
 \end{split}
 \end{equation}
 so
 \begin{equation}
 \begin{split}
-\frac{d\Gamma}{dE_e} &= \frac{G_F^2 \cos^2\theta_c}{m_n(2\pi)^5} \int d\Omega_e \ d\Omega_\nu \frac{p_e E_\nu}{E_p} m_n\ m_p\ \bigg(E_eE_\nu(1-g_A)^2 \\ &+ E_\nu E_e(1+g_A)^2 - E_e E_\nu(1-g_A^2)\bigg(1-\frac{\underline{p}_e\underline{p}_\nu}{E_e E_\nu}\bigg)\bigg) \\
-&= \frac{G_F^2\cos^2\theta_c}{2\pi^3}(1+3g_A^2)p_eE_e(\Delta-E_e)^2, \quad m_e < E_e < \Delta
+\frac{d\Gamma}{dE_e} &= \frac{G_F^2 \cos^2\theta_c}{m_n(2\pi)^5} \int d\Omega_e \ d\Omega_\nu \frac{p_e E_\nu}{E_p} m_n\ m_p\ \bigg(E_eE_\nu(1-g_A)^2 \\ &+ E_\nu E_e(1+g_A)^2 - E_e E_\nu(1-g_A^2)\bigg(1-\frac{\underline{p}_e.\underline{p}_\nu}{E_e E_\nu}\bigg)\bigg) \\
+&= \frac{G_F^2\cos^2\theta_c}{2\pi^3}(1+3g_A^2)p_eE_e(\Delta-E_e)^2, \quad m_e < E_e < \Delta,
 \end{split}
 \end{equation}
-Where the $\underline{p}_e\underline{p}_\nu$ term integrates to zero. This evaluates to
+where the $\underline{p}_e\underline{p}_\nu$ term integrates to zero. This evaluates to
 \begin{equation}
 \Gamma = \frac{G_F^2\cos^2\theta_c}{2\pi^3}(1+3 g_A^2) \Delta^5 \times \varpi
 \end{equation}
@@ -580,15 +580,15 @@ where $\varpi = 0.47$ (left as an exercise).
 Other semileptonic processes include:
 \begin{equation}
 \begin{split}
-\Delta S = 0 \qquad &\pi^+ \to \pi^0e^+\nu \qquad \cos\theta_c \\
-\Delta S = 1 \qquad &K^+ \to \pi^0\mu^+\nu,\ K^0 \to \pi^-\mu^+\nu\ \text{etc.} \qquad \sin\theta_c
+\Delta S = 0: \qquad &\pi^+ \to \pi^0e^+\nu; \qquad \cos\theta_c \\
+\Delta S = 1: \qquad &K^+ \to \pi^0\mu^+\nu,\ K^0 \to \pi^-\mu^+\nu\ \text{etc.}; \qquad \sin\theta_c,
 \end{split}
 \end{equation}
 and decays of the hyperons $\Sigma = uus$, $\Lambda = uds$, $\Xi = uss$, $\Omega = sss$ etc., which are all related by SU(3):
 \begin{equation}
 \begin{split}
-\Delta S = 0 \qquad &\Sigma \to \Lambda e \bar{\nu} \\
-\Delta S = 1 \qquad &\Lambda \to pe\bar{\nu},\ \Sigma \to ne\bar{\nu} \\
+\Delta S = 0: \qquad &\Sigma \to \Lambda e \bar{\nu}; \\
+\Delta S = 1: \qquad &\Lambda \to pe\bar{\nu},\ \Sigma \to ne\bar{\nu}; \\
 &\Xi \to \Sigma e \bar{\nu},\ \Omega \to \Xi e \bar{\nu}\ \text{etc.} 
 \end{split}
 \end{equation}
