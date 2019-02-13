@@ -473,7 +473,7 @@ where $|\underline{k}| = (m_\pi^2 - m_\mu^2)/2m_\pi$. So
 \end{equation}
 Using the measured rate for $\tau = 2.6 \times 10^{-8}$s, we can calculate $f_\pi \approx 130$ MeV. Note that 
 \begin{equation}
-\frac{\Gamma(\pi \to e \nu_e)}{\Gamma(\pi \to \mu \nu_\mu)} = \frac{m_e^2}{m_\mu^2}\frac{(m_\pi^2 - m_e^2)}{(m_\pi^2 - m_\mu^2)} \approx 10^{-4}.
+\frac{\Gamma(\pi \to e \nu_e)}{\Gamma(\pi \to \mu \nu_\mu)} = \frac{m_e^2}{m_\mu^2}\frac{(m_\pi^2 - m_e^2)^2}{(m_\pi^2 - m_\mu^2)^2} \approx 10^{-4}.
 \end{equation}
 This is a good test of lepton universality. The ratio vanishes as $m_e \to 0$: this is because of helicity conservation. 
 %
@@ -484,7 +484,7 @@ The Kaon decay $K^+ (u\bar{s}) \to \mu^+ \nu_\mu$ works similarly: $\langle 0 | 
 \end{equation}
 But if $\mathcal{L}_{4F}$ contained $\bar{u}_L \gamma_\mu s_L$ (in an analogy with $\bar{u}_L \gamma_\mu d_L$) we expect
 \begin{equation}
-    \frac{\Gamma(K \to \mu\nu)}{\Gamma(\pi \to \mu\nu)} = \frac{f_K^2}{f_\pi^2}\frac{m_\pi^3}{m_K^3}\frac{(m_K^2 - m_\mu^2)^2}{(m\pi^2 - m_\mu^2)^2} \approx 24,
+    \frac{\Gamma(K \to \mu\nu)}{\Gamma(\pi \to \mu\nu)} = \frac{f_K^2}{f_\pi^2}\frac{m_\pi^3}{m_K^3}\frac{(m_K^2 - m_\mu^2)^2}{(m_\pi^2 - m_\mu^2)^2} \approx 24,
 \end{equation}
 since $f_K/f_\pi \approx 1.2$, i.e. SU(3) symmetry breaking is small.
 
@@ -520,7 +520,7 @@ What's really going on is $d \to u\ e^- \bar{\nu}_e$: the other quarks are "spec
 \end{equation}
 Considering the hadronic part,
 \begin{equation}
-\langle p(p^\prime) | (V_\mu - A_\mu) | n(p) \rangle = \cos\theta_c\bar{u}(p^\prime)\gamma_\mu(g_v-g_A\gamma^5)u(p),
+\langle p(p^\prime) | (V_\mu - A_\mu) | n(p) \rangle = \cos\theta_c\bar{u}(p^\prime)\gamma_\mu(g_V-g_A\gamma^5)u(p),
 \end{equation}
 where $g_V =1$ and $g_A = 1.25$. Then 
 \begin{equation}
@@ -760,7 +760,7 @@ Power counting renormalisability, chirality and Lorentz invariance suggest a ver
 \end{equation}
 so we need \textit{two} charged vector fields 
 \begin{equation}
-W_\pm^\mu = \frac{1}{\sqrt{2}} (W_1^\mu \pm i W_2^mu)
+W_\pm^\mu = \frac{1}{\sqrt{2}} (W_1^\mu \pm i W_2^\mu)
 \end{equation}
 where $W_1^\mu$ and $W_2^\mu$ are real. Equivalently, we could define one complex field $W^\mu$, such that $W_+^\mu = W^\mu$ and $W_-^\mu = W^{\mu \dagger}$. The charged current Lagrangian can be written
 \begin{equation}
