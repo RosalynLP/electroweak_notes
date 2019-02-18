@@ -891,7 +891,7 @@ Consider now the production of external $W^\pm$. In this case $q + q^\prime = k 
 %\end{wrapfigure}
 %
 \begin{equation}
-\mathcal{M} = \frac{(ig)^2}{8} \bar{v}(q^\prime) \gamma_\mu(1-\gamma^5)\frac{i(\slashed{q}-\slashed{k}+m_e)}{(q-k)^2 -m_e^2}\gamma_\nu(1-\gamma^5)u(q)\epsilon_r^\mu(k^\prime)^* \epsilon_r^\nu(k)
+\mathcal{M} = \frac{(ig)^2}{8} \bar{v}(q^\prime) \gamma_\mu(1-\gamma^5)\frac{i(\slashed{q}-\slashed{k}+m_e)}{(q-k)^2 -m_e^2}\gamma_\nu(1-\gamma^5)u(q)\epsilon_r^\mu(k^\prime)^* \epsilon_r^\nu(k).
 \end{equation}
 We want the behaviour of the cross-section at very high energy, so we can ignore $m_e$. Also consider the $W$s to be longitudinally polarised, i.e. $\epsilon_3^\mu(k) \approx k^\mu/m_W + \mathcal{O}(m_W/E)$. So
 \begin{equation}
@@ -911,7 +911,66 @@ so if $p = q -k$, and recalling $\slashed{q}u(q)=0$)
 &= +\frac{ig^2}{4}\bar{v}(q^\prime)\slashed{k}(1-\gamma^5)u(q)
 \end{split}
 \end{equation}
+and
+\begin{equation}
+\begin{split}
+    \sum_{pol}|\mathcal{M}|^2 &= \frac{g^4}{16 m_W^4}\ tr\bigg(\slashed{q}^\prime \slashed{k}(1-\gamma^5)\slashed{q}\slashed{k}(1-\gamma^5)\bigg) \\
+    & = \frac{g^4}{2m_W^4}(2q^\prime \cdot k q \cdot k - k^2 q \cdot q^\prime) \\
+    & = \frac{g^4}{m_W^4} (q \cdot k q^\prime \cdot k - \frac{m_W^2}{2}q \cdot q^\prime).
+\end{split}
+\end{equation} 
+Transforming to the Mandelstam variables, we can write
+\begin{equation}
+\begin{split}
+s &= 2 q \cdot q^\prime, \\
+t &= - 2 q \cdot k + m_W^2, \\
+u &= - 2 q^\prime \cdot k + m_W^2,
+\end{split}
+\end{equation}
+so
+\begin{equation}
+\begin{split}
+    \sum_{pol}|\mathcal{M}|^2 &= \frac{g^4}{4m_W^4} \big(m_W^4 - (u + t + s)m_W^2 + ut\big)\\
+    &= \frac{g^4}{4m_W^4} \big(m_W^4 - 2m_W^2 \times m_W^2 + ut\big)\\
+ \text{so} \qquad   \frac{d\sigma}{d\Omega} &= \frac{g^4}{64\pi^2m_W^4}\frac{ut-m_W^4}{4s}.
+\end{split}
+\end{equation}
+Considering the high energy limit, $E^2 \gg m_W^2$, so we can neglect the $m_W^4$ term, $s=4E^2$ and $ut = 4E^2\sin(\theta/2)\times 4E^2\cos(\theta/2) = 4E^4\sin^2\theta$. Integrating over $\phi$ in this limit,
+\begin{equation}
+\begin{split}
+\frac{d\sigma}{d\cos\theta} &= \frac{g^4}{128\pi}\frac{E^2}{m_W^4}\sin^2\theta \\
+\text{and} \qquad \qquad \sigma &= \frac{g^4}{128\pi}\frac{E^2}{m_W^4} \int_{-1}^1 d\cos\theta (1-\cos^2\theta) \\
+&= \frac{g^4}{96\pi}\frac{E^2}{m_W^4}. 
+\end{split}
+\end{equation}
+We can see that this violates unitarity! The cross section is unbounded as $E \to \infty$. It is clear that the $k_\mu k_\nu/m_W^2$ term in the $W$ propagator will spoil the power-counting renormalisability for graphs with internal $W$ lines coupled to internal fermions. 
+%
+\begin{wrapfigure}{l}{0.4\linewidth}
+  \centering
+  \includegraphics[width=\linewidth]{figs/18b.png}
+\end{wrapfigure}
+%
+For example, this diagram has contributions
+\begin{equation}
+\sim \int d^4k \bigg(\frac{k^2/m_W^2}{k^2-m_W^2}\bigg)^2 \bigg(\frac{\slashed{k}}{k}\bigg)^2 \sim \int \frac{d^4k}{m_W^4k^2}.
+\end{equation}
+Unitarity and renormalisability of theories with vectors requires \textit{gauge invariance} under $W_\mu \to W_\mu + \partial_\mu \alpha \implies \epsilon_\mu \to \epsilon_\mu + \alpha k_\mu$. 
+Remember that this problem doesn't arise in QED because for the comparitive process $\gamma e^- \to \gamma e^-$ we have two contributing diagrams:
 
+%
+%\begin{wrapfigure}{r}{0.7\linewidth}
+%  \centering
+  \includegraphics[width=\linewidth]{figs/18c.png}
+%\end{wrapfigure}
+%
+\newline
+whereas for EW, $W^+ \neq W^-$ so there is only one.
 
+%
+%\begin{wrapfigure}{r}{0.7\linewidth}
+%  \centering
+  \includegraphics[width=0.4\linewidth]{figs/18d.png}
+%\end{wrapfigure}
+%
 
 \end{document}
