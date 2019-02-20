@@ -972,5 +972,118 @@ whereas for EW, $W^+ \neq W^-$ so there is only one.
   \includegraphics[width=0.4\linewidth]{figs/18d.png}
 %\end{wrapfigure}
 %
+\newpage
+%
+\section{SU(2)$_L \otimes$U(1)$_V$ (Glashow, 1961)}
+%
+In the previous section we saw that in order to avoid unitarity violation we need to construct a gauge theory for the $W^\pm$ bosons. This must be:
+\begin{itemize}
+\item non-abelian, because abelian gauge bosons ($\gamma$) are neutral,
+\item massive (how do we achieve this?).
+\end{itemize}
+The weak current $1/2 J_\mu = \bar{\nu}_e\gamma_\mu e_L + ...$ is built out of left-handed doublets:
+
+\[ \psi_L \equiv \left( \begin{array}{cc}
+\nu_e   \\
+e   \end{array} \right)_L, \qquad
+  \\ \left( \begin{array}{cc}
+ \nu_\mu \\
+\mu   \end{array} \right)_L, \qquad  \\ 
+\left( \begin{array}{cc}
+ \nu_\tau \\
+\tau   \end{array} \right)_L \qquad\] 
+and right-handed singlets 
+$\psi_R \equiv e_R, \mu_R, \tau_R$. Notice that there is no $\nu_R$ because $\nu$ are massless. For now we are ignoring the quarks, and focussing on formulating a "theory of leptons". One obvious gauge group is SU(2) (or \textit{weak isospin}), with the $\psi_L$ and the $\psi_R$ in different representations because the weak interaction is \textit{chiral}. More explicitly,
+\begin{equation}
+\psi_L \to U \psi_L \qquad \text{and} \qquad \psi_R \to \psi_R, \qquad \text{where} \qquad U=\exp\bigg(\frac{i}{2}\underline{\alpha}\cdot\underline{\tau}\bigg) \in \text{SU(2)}.
+\end{equation}
+The dimension of SU(2) is 3, so there will be three gauge bosons. The hope is that these will correspond to $W^\pm, \gamma$. 
+
+To see how the theory works in practice, consider explicitly writing
+
+\[ \bar{\nu}_e\gamma_\mu e_L= \left( \begin{array}{c}
+\nu_e \ e_L   \end{array} \right)
+  \\ \left( \begin{array}{cc}
+ 0 \ 1 \\
+1 \ 0   \end{array} \right)\gamma_\mu \\ 
+\left( \begin{array}{cc}
+ \nu_e \\
+e_L   \end{array} \right). \qquad\] 
+Now note that 
+\[ \left( \begin{array}{cc}
+ 0 \ 1 \\
+0 \ 0   \end{array} \right) = \frac{1}{2} 
+\left( \begin{array}{cc}
+ 0 \ 1 \\
+1 \ 0   \end{array} \right) + \frac{i}{2}
+\left( \begin{array}{cc}
+ 0 \ -i \\
+i \ \ 0   \end{array} \right) = \frac{1}{2}(\tau_1 + i\tau_2) \equiv T^+.
+\qquad\] 
+So
+\begin{equation}
+\begin{split}
+\frac{1}{2}J_\mu &= \bar{\psi}_L T^+ \gamma_\mu \psi_L \\
+\text{and} \qquad \frac{1}{2}J_\mu^\dagger &= \bar{\psi}_L T^- \gamma_\mu \psi_L,
+\end{split}
+\end{equation}
+where 
+\[ T^- = \frac{1}{2}(\tau_1 - i\tau_2) =
+  \\ \left( \begin{array}{cc}
+ 0 \ 0 \\
+1 \ 0   \end{array} \right). \qquad\]
+Then, using the SU(2) relations
+\begin{equation}
+\begin{split}
+&[T^+,T^-] = 2T_3, \\
+&[T_3, T^\pm] = \pm T^\pm \\
+\text{where} \qquad &T_3 = \frac{1}{2}\tau_3,
+\end{split}
+\end{equation}
+we can compute the commutator
+\begin{equation}
+\begin{split}
+[J_0^\dagger, J_0] &= \psi_L^\dagger[T^+,T^-]\psi_L \\
+&=\psi_L^\dagger \ 2T^3 \psi_L \\
+&= 2J_0^3.
+\end{split}
+\end{equation}
+So we have three weak Noether currents:
+\begin{equation}
+\begin{split}
+\underline{J}_\mu = (J_\mu^1, J_\mu^2, J_\mu^3) = \bar{\psi}_L \underline{T} \psi_L, \qquad \underline{T} = \frac{1}{2}\sigma, \\
+\text{with} \qquad J_\mu^\pm = \frac{1}{2}(J_\mu^1 \pm iJ_\mu^2), \qquad J_\mu = J_\mu^+, \qquad J_mu^\dagger = J_\mu^-.
+\end{split}
+\end{equation}
+Transforming in the adjoint representation of SU(2)$_L$ (i.e. the fundamental representation of SO(3)), we find
+\begin{equation}
+J_\mu^3 = \frac{1}{2}(\bar{\nu}_e \gamma_\mu \nu_e - \bar{e}_L \gamma_\mu e_L).
+\end{equation}
+This has $\Delta Q =0$ so it is a neutral current. However, it is \textit{not} the electromagnetic neutral current:
+\begin{equation}
+j_\mu = - \bar{e}\gamma_\mu e = - \bar{e}_L \gamma_\mu e_L - \bar{e}_R \gamma_\mu e_R,
+\end{equation}
+because this is vector-like and does not involve any neutrinos.
+Considering the electric charge operator, $Q$:
+\[ Q \psi_L = \left( \begin{array}{cc}
+0 & 0  \\
+0 & -1  \end{array} \right) \psi_L, \qquad
+Q \psi_R = - \psi_R, \]
+we can write $Q = T_3 + Y$, where $Y = (-1/2) \mathds{1}$ for left-handed leptons, and $Y = -1$ for right-handed leptons. Decomposed in the representation,
+\[ Q \qquad = \qquad T_3 \qquad + \qquad Y: \]
+\[\left( \begin{array}{cc}
+0 & 0  \\
+0 & -1  \end{array} \right)=
+\left( \begin{array}{cc}
+1/2 & 0  \\
+0 & -1/2  \end{array} \right) +
+\left( \begin{array}{cc}
+-1/2 & 0  \\
+0 & -1/2  \end{array} \right). \]
+We call $Y$ the "weak hypercharge". It generates a U(1) symmetry of the form
+\begin{equation}
+\psi_L \to e^{-1/2 i \beta}\psi_L,  \qquad \psi_R \to e^{-i \beta}  \psi_R.
+\end{equation}
+Again, note the chiral structure.
 
 \end{document}
