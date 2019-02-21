@@ -1181,11 +1181,40 @@ The Feynman rule corresponding to the neutral current vertex is
 %\end{wrapfigure}
 \newline
 where for neutrinos $c_V = c_A = 1/2$ and for electrons $c_V = -1/2 + 2\sin\theta_w$ and $c_A = -1/2$. We can also write down gauge invariant vector boson kinetic terms
-\begin{equation}
+\begin{equation} \label{eqn:22a}
 \begin{split}
 \mathcal{L}_{YM} &= - \frac{1}{2} tr \mathcal{W}^{\mu \nu} \mathcal{W}_{\mu \nu} - \frac{1}{4} B^{\mu \nu} B_{\mu \nu}, \\
 \text{where} \qquad \mathcal{W}_{\mu \nu} &= \partial_\mu \mathcal{W}_\nu - \partial_\nu \mathcal{W}_\mu -ig[\mathcal{W}_\mu, \mathcal{W}_\nu] \qquad \text{SU(2)}_L \text{: nonabelian}, \\
 B_{\mu \nu} &= \partial_\mu B_\nu - \partial_\nu B_\mu \qquad \qquad \qquad \qquad \qquad \text{U(1)}_Y \text{: abelian}.
 \end{split}
 \end{equation}
+Now expand in terms of the generators:
+\begin{equation}
+\begin{split}
+\mathcal{W}_\mu &= \frac{1}{\sqrt{2}}(W_\mu^\dagger T^+ + W_\mu T^-) + W_\mu^3 T_3, \\
+\mathcal{W}_{\mu \nu} &= \frac{1}{\sqrt{2}}(W_{\mu \nu}^\dagger T^+ + W_{\mu \nu} T^- ) + W_{\mu \nu} ^3 T_3
+\end{split}
+\end{equation}
+and substitute into Eqn. \ref{eqn:22a}. Applying the commutation relations $[T^+, T^-] = 2 T_3$ and $[T_3, T^\pm] = \pm T^\pm$, and then equating terms proportional to each of the generators yields:
+\begin{equation}
+\begin{split}
+W_{\mu \nu} &= \partial_\mu W_\nu - \partial_\nu W_\mu -ig(W_\mu^3 W_\nu - W_\nu^3 W_\mu), \\
+W_{\mu \nu}^3 &= \partial_\mu W_\nu^3 - \partial_\nu W_\mu^3 - ig(W_\mu^\dagger W_\nu - W_\nu^\dagger W_\mu).
+\end{split}
+\end{equation}
+Now using the fact that $tr \ T_1^2 + T_2^2 = tr\ T_-T_+ = 1$ and $tr \ T_3^2 = 1/2$, we can rephrase the Lagrangian as:
+\begin{equation}
+\begin{split}
+\mathcal{L}_{YM} = &-\frac{1}{2} W_{\mu \nu}^\dagger W^{\mu \nu} = \frac{1}{4} W_{\mu \nu}^3 W^{\mu \nu}_3 - \frac{1}{4}B_{\mu \nu} B^{\mu \nu} \\
+= &- \frac{1}{2}(\partial_\mu W_\nu^\dagger - \partial_\nu W_\mu^\dagger)(\partial^\mu W^\nu - \partial^\nu W^\mu)\\ &- \frac{1}{4}(\partial_\mu Z_\nu - \partial_\nu Z_\mu)^2 - \frac{1}{4}(\partial_\mu A_\nu - \partial_\nu A_\mu)^2 + \mathcal{L}_{YM}^3 + \mathcal{L}_{YM}^4,
+\end{split}
+\end{equation}
+where $\mathcal{L}_{YM}^3$ and $\mathcal{L}_{YM}^4$ are the interaction terms:
+\begin{equation}
+\begin{split}
+\mathcal{L}_{YM}^3 = &ig \bigg( (\partial_\mu W_\nu^\dagger - \partial_\nu W_\mu^\dagger) W_3^\mu W^\nu - W_3^\mu W^{\nu \dagger}(\partial_\mu W_\nu - \partial_\nu W_\mu) \\ &+ (\partial_\mu W_\nu^3 - \partial_\nu W_\mu^3) W^{\mu \dagger} W^\nu \bigg), \\
+\mathcal{L}_{YM}^4 = &g^2 \bigg( \frac{1}{4}(W_\mu^\dagger W_\nu - W_\nu^\dagger W_\mu)^2 - (W_\mu^3 W_\nu^\dagger - W\nu^3 W_\mu^\dagger) W_3^\mu W^\nu \bigg).
+\end{split}
+\end{equation}
+The weak mixing matrix is orthogonal, which means $W_3^2 + B^2 = Z^2 + A^2$ so we end up with the usual kinetic terms for $W, Z, \gamma$. Finally, using the relations $W_\mu^3 = \cos\theta_wZ^\mu + \sin\theta_w A^\mu$ and $g=e/\sin\theta_w$, we have following Feynman rules:
 \end{document}
