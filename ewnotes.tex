@@ -1086,4 +1086,37 @@ We call $Y$ the "weak hypercharge". It generates a U(1) symmetry of the form
 \end{equation}
 Again, note the chiral structure.
 
+Clearly the generators of SU(2)$_L$ and U(1)$_Y$ commute: the full symmetry group is SU(2)$_L \otimes$U(1)$_Y$, with elements $\exp{(i \underline{\alpha} \cdot \underline{T} + i \beta Y)}$. Overall, the Noether current is made up of a part belonging to SU(2)$_L$ and a part belonging to U(1)$_Y$, so we can write:
+\begin{equation}
+J_\mu^Y = j_\mu - J_\mu^3 = - \frac{1}{2}(\bar{\nu}_e \gamma_\mu \nu_e + \bar{e}_L \gamma_\mu e_L) - (\bar{e}_R \gamma_\mu e_R).
+\end{equation}
+From this starting point we want to build an SU(2)$_L \otimes$U(1)$_Y$ gauge theory. Considering the two individual groups,
+\begin{equation}
+\begin{split}
+&\text{SU(2)}_L: \qquad \text{coupling \ } g, \qquad \text{gauge fields \ } \mathcal{W}_\mu \equiv \underline{W}_\mu \cdot \underline{T} \\
+&\text{U(1)}_Y: \qquad \text{coupling \ } g^\prime, \qquad \text{gauge fields \ } B_\mu.
+\end{split}
+\end{equation}
+The local symmetries are:
+\begin{equation}
+\begin{split}
+&\mathcal{W}_\mu \to u \mathcal{W}_\mu u^\dagger + ig\ u \partial_\mu u^\dagger \\
+&B_\mu \to B_\mu + i g^\prime \partial_\mu \beta,
+\end{split}
+\end{equation}
+which translate to the covariant derivatives (using the hypercharge assignments):
+\begin{equation}
+\begin{split}
+\mathcal{D}_\mu \psi_L &= (\partial_\mu - ig \mathcal{W}_\mu + i g^\prime \frac{1}{2} B_\mu) \psi_L, \\
+\mathcal{D}_\mu \psi_R &= (\partial_\mu + i g^\prime B_\mu) \psi_R.
+\end{split}
+\end{equation}
+Recalling that $\bar{\psi}\slashed{\partial}\psi = \psi_L \slashed{\partial} \psi_L + \psi_R \slashed{\partial} \psi_R$, we can write the Lagrangian explicitly as:
+\begin{equation}
+\begin{split}
+\mathcal{L}_D &= \bar{\psi}_L i \mathcal{D} \psi_L +  \bar{\psi}_R i \mathcal{D} \psi_R
+\end{split}
+\end{equation}
+
+
 \end{document}
