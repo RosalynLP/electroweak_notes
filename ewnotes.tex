@@ -1112,11 +1112,80 @@ which translate to the covariant derivatives (using the hypercharge assignments)
 \end{split}
 \end{equation}
 Recalling that $\bar{\psi}\slashed{\partial}\psi = \psi_L \slashed{\partial} \psi_L + \psi_R \slashed{\partial} \psi_R$, we can write the Lagrangian explicitly as:
-\begin{equation}
+\begin{equation} 
+\label{eqn:20a}
 \begin{split}
-\mathcal{L}_D &= \bar{\psi}_L i \mathcal{D} \psi_L +  \bar{\psi}_R i \mathcal{D} \psi_R
+\mathcal{L}_D &= \bar{\psi}_L i \mathcal{D} \psi_L +  \bar{\psi}_R i \mathcal{D} \psi_R \\
+&= \bar{\psi} i \slashed{\partial} \psi + g \underline{W}^\mu \bar{\psi} \underline{T} \gamma_\mu \psi_L - g^\prime B^\mu \bigg( \frac{1}{2} \bar{\psi}_L \gamma_\mu \psi_L + \bar{\psi}_R \gamma_\mu \psi_R \bigg) \\
+& = \bar{\psi} i \slashed{\partial} \psi + g \underline{W}^\mu \cdot \underline{J}_\mu + g^\prime B^\mu J_\mu^Y.
 \end{split}
 \end{equation}
+Let's consider the charged current terms. We can write the complex field $W$ in terms of two real fields $W_1$ and $W_2$:
+\begin{equation}
+W^\mu = \frac{1}{\sqrt{2}} (W_1^\mu + i W_2^\mu), \qquad W^{\mu \dagger} = \frac{1}{\sqrt{2}} (W_1^\mu - i W_2^\mu).
+\end{equation}
+Now let's evaluate the terms in Eqn. \ref{eqn:20a} in turn, using $T^\pm = (T_1 \pm iT_2)$ and $W^\pm = 1/\sqrt{2}(W_1 \pm iW_2)$:
+\begin{equation} \label{eqn:20b}
+\begin{split}
+\underline{T} \cdot \underline{W}^\mu &= \frac{1}{2} (T_1 + i T_2) (W_1^\mu + i W_2^\mu) + \frac{1}{2} (T_1 - i T_2)(W_1^\mu + i W_2^\mu) + T_3 W_3^\mu \\
+&= \frac{1}{\sqrt{2}} (T^+ W^{\mu \dagger} + T^- W^\mu) + T_3 W_3^\mu,\\
+g \underline{W}^\mu \cdot \underline{J}_\mu &= \frac{1}{2 \sqrt{2}} g(W^{\mu \dagger} J_\mu + J_\mu^\dagger W^\mu) + gJ_\mu^3 W_3^\mu.
+\end{split}
+\end{equation}
+Looking at the last line of Eqn. \ref{eqn:20b}, the term in brackets is the charged current interaction, and the $gJ_\mu^3 W_3^\mu$ term is a new addition. 
 
+Now let's consider the neutral current and electromagnetic terms. Clearly neither $W_\mu^3$ nor $B_\mu$ alone is the photon. Instead, the photon is produced through a mixture of the two. In general, we can write:
+\[\left( \begin{array}{cc}
+W^\mu_3 \\
+B^\mu 
+\end{array} \right) =
+ \left( \begin{array}{cc}
+\cos\theta_w & \sin\theta_w  \\
+-\sin\theta_w & \cos\theta_w  \end{array} \right) 
+\left( \begin{array}{cc}
+Z^\mu \\
+A^\mu 
+\end{array} \right), \]
+where $\theta_w$ is the weak mixing or "Weinberg" angle, to be determined. Substituting this explicitly into the expressions above leads to:
+\begin{equation}
+\begin{split}
+gJ_\mu^3W_3^\mu + g^\prime(j_\mu - J_\mu^3)B^\mu &= \bigg((g\sin\theta_w - g^\prime \cos\theta_w)J_\mu^3 + g^\prime \cos\theta_wj_\mu\bigg)A^\mu \\
+&+ \bigg((g\cos\theta_w + g^\prime \sin\theta_w)J_\mu^3 - g^\prime \sin\theta_w j_\mu\bigg)Z^\mu \\
+&= ej_\mu A^\mu + \frac{g}{\cos\theta_w}\bigg(J_\mu^3 - \sin^2\theta_w j_\mu \bigg)Z^\mu,
+\end{split}
+\end{equation}
+where we have inferred that $e = g^\prime \cos\theta_w = g \sin\theta_w$ is the electric charge. The first term is the QED part and the second term is the neutral current part. Note that $g, g^\prime$ are the same order as $e$: in fact, according to \textit{electroweak unification}, $1/e^2 = 1/g^2 + 1/g^{\prime 2}$, i.e. $e = g g^\prime/\sqrt{g^2 + g^{\prime 2}}$.
 
+All in all the complete interaction is:
+\begin{equation}
+\begin{split}
+ej_\mu A^\mu + &\frac{1}{2\sqrt{2}}g\big(W^{\mu \dagger}J_\mu + J_\mu^\dagger W^\mu \big) + \frac{g}{2 \cos\theta_w} J_\mu^{NC}Z^\mu, \\
+\text{where } \qquad J_\mu^{NC} &= 2(J_\mu^3 - \sin^2\theta_w j_\mu) \\
+&= 2\bigg( \frac{1}{2} (\bar{\nu}_L \gamma_\mu \nu_L - \bar{e}_L \gamma_\mu e_L) + \sin^2\theta_w \bar{e} \gamma_\mu e \bigg) \\
+&= \bar{\nu}_L \gamma_\mu \nu_L + \bar{e} \gamma_\mu \big( (2\sin^2\theta_w - \frac{1}{2}) + \frac{1}{2} \gamma^5 \big) e \\
+&\equiv \bar{\nu}_L \gamma_\mu \nu_L + \bar{e} \gamma_\mu \big(c_V + c_A \gamma^5 \big)e.
+\end{split}
+\end{equation}
+So the neutral current is not pure V-A, but instead a mixture of left and right:
+\begin{equation}
+\begin{split}
+&c_V- c_A\gamma^5 = c_L P_L + c_R P_R \\
+\text{where} \qquad &c_L = c_V + c_A = 2 \sin^2\theta_w -1, \qquad c_R = c_V-c_A = 2 \sin^2\theta_w.
+\end{split}
+\end{equation}
+The Feynman rule corresponding to the neutral current vertex is
+%
+\newline
+%\begin{wrapfigure}{l}{\linewidth}
+  \includegraphics[width=0.4\linewidth]{figs/21a.png}
+%\end{wrapfigure}
+\newline
+where for neutrinos $c_V = c_A = 1/2$ and for electrons $c_V = -1/2 + 2\sin\theta_w$ and $c_A = -1/2$. We can also write down gauge invariant vector boson kinetic terms
+\begin{equation}
+\begin{split}
+\mathcal{L}_{YM} &= - \frac{1}{2} tr \mathcal{W}^{\mu \nu} \mathcal{W}_{\mu \nu} - \frac{1}{4} B^{\mu \nu} B_{\mu \nu}, \\
+\text{where} \qquad \mathcal{W}_{\mu \nu} &= \partial_\mu \mathcal{W}_\nu - \partial_\nu \mathcal{W}_\mu -ig[\mathcal{W}_\mu, \mathcal{W}_\nu] \qquad \text{SU(2)}_L \text{: nonabelian}, \\
+B_{\mu \nu} &= \partial_\mu B_\nu - \partial_\nu B_\mu \qquad \qquad \qquad \qquad \qquad \text{U(1)}_Y \text{: abelian}.
+\end{split}
+\end{equation}
 \end{document}
