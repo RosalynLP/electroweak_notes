@@ -9,6 +9,7 @@
 \usepackage{tikz}
 \usepackage{gensymb}
 \usepackage{wrapfig}
+\usepackage{subfig}
 
 \newcommand{\icol}[1]{% inline column vector
   \left(\begin{smallmatrix}#1\end{smallmatrix}\right)%
@@ -1217,4 +1218,76 @@ where $\mathcal{L}_{YM}^3$ and $\mathcal{L}_{YM}^4$ are the interaction terms:
 \end{split}
 \end{equation}
 The weak mixing matrix is orthogonal, which means $W_3^2 + B^2 = Z^2 + A^2$ so we end up with the usual kinetic terms for $W, Z, \gamma$. Finally, using the relations $W_\mu^3 = \cos\theta_wZ^\mu + \sin\theta_w A^\mu$ and $g=e/\sin\theta_w$, we have following Feynman rules:
+\newline
+\begin{figure}[!h]
+  \centering
+  \subfloat[]{\includegraphics[width=0.5\textwidth]{figs/22a.png}}
+  \hfill
+  \subfloat[]{\includegraphics[width=0.5\textwidth]{figs/22b.png}}
+\end{figure}
+\newline
+where 
+\begin{equation}
+c_3 =
+\begin{cases}
+1 \qquad \qquad \text{for } \gamma\\
+\cot\theta_w \qquad \text{for } Z,
+\end{cases}
+\end{equation}
+and
+
+\begin{equation}
+c_4 =
+\begin{cases}
+\csc^2\theta_w \qquad \text{for } WWWW\\
+-1 \qquad \qquad \text{for } WW\gamma \gamma \\
+-\cot\theta_w \qquad \text{for } WWZ \gamma \\
+-\cot^2\theta_w \qquad \text{for } WWZZ.
+\end{cases}
+\end{equation}
+Note that the photon couples to the electric charge of the $W^\pm$: there is no dependence on $\theta_w$. There are no couplings which only involve $\gamma$ and $Z^0$, as the $Z^0$ is neutral and $\gamma$ only couples to electrically charged particles. It is easy to show that $\mathcal{L}_{YM}$ is gauge invariant under U(1)$_Q$ if the $Z$ is ignored (Exercise). 
+%
+\subsection{The Z mass}
+%
+Clearly the $Z^0$ must be heavy, like $W^\pm$, otherwise the neutral current interactions would be long-range. We can introduce a mass term by hand, just as we did for the $W^\pm$, ensuring it is consistent with \textit{global} SU(2)$_L \otimes$U(1)$_Y$ symmetry. Remember that such a term will always break gauge invariance. The most general mass term is
+\begin{equation}
+\mathcal{L}_M  = m_W^2 W_\mu^\dagger W^\mu + \frac{1}{2} W_\mu^3 W_3^\mu + \frac{1}{2}m_B^2 B_\mu B^\mu.
+\end{equation}
+However, this can't be correct: the mass eigenstates are $Z_\mu$ and $A_\mu$, and the photon ($A_\mu$) is massless. We saw above that $W_\mu^3$ and $B_\mu$ mix. We can assume this mixing is in the mass matrix, which will mean it has no effect at high energy (where the masses are negligible). This is known as \textit{soft breaking}. In this case,
+\begin{equation}
+\mathcal{L}_{gauge}^{mass} \to \mathcal{L}_{gauge}^{mass} - m_X^2W_\mu^3 B^\mu,
+\end{equation}
+and we can write the mass matrix for $W_\mu^3$ and $B_\mu$ as:
+\[ \left( \begin{array}{cc}
+m_W^2 & -m_X^2  \\
+-m_X^2 & m_B^2  \end{array} \right).  \]
+We know because the photon is massless that this must have a zero eigenvalue. This fixes $m_X^2 = m_W m_B$. Moreover, we know that the corresponding zero eigenvector is
+$A_\mu = \sin\theta_w W_\mu^3 + \cos\theta_w B_\mu$, so 
+\[ \left( \begin{array}{cc}
+m_W^2 & -m_Wm_B  \\
+-m_Wm_B & m_B^2  \end{array} \right)
+\left( \begin{array}{cc}
+\sin\theta_w \\
+\cos\theta_w \end{array} \right) = 0 \\
+\implies m_B\cos\theta_w = m_W\sin\theta_w. \]
+The other eigenvalue is 
+\begin{equation}
+\begin{split}
+m_Z^2 &= m_W^2 + m_B^2 \\
+&= m_W^2(1+ \tan^2\theta_w) \\
+&= \frac{m_W^2}{\cos\theta_w} > m_W^2.
+\end{split}
+\end{equation}
+Note that the fermion mass terms $\mathcal{L}_m = m(\bar{\psi}_L\psi_R + \bar{\psi}_R \psi_L)$ also break SU(2)$_L \otimes$U(1)$_Y$, and mix the SU(2) doublets (left-handed fermions) with the U(1) singlets (right-handed fermions). 
+%
+\subsection{Summary}
+%
+\begin{itemize}
+\item SU(2)$_L \otimes$U(1)$_Y$ symmetry remains at high energy,
+\item $g = e/\sin\theta_w$: QED and electroweak are unified,
+\item we predict a new \textit{neutral current} weak interaction with mass $m_Z = m_W/\cos\theta_w$,
+\item mass terms for both vector bosons and fermions break the SU(2)$_L \otimes$U(1)$_Y$ symmetry by mixing.
+\end{itemize}
+
+
 \end{document}
