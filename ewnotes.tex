@@ -1211,13 +1211,13 @@ where $\mathcal{L}_{YM}^3$ and $\mathcal{L}_{YM}^4$ are the interaction terms:
 \mathcal{L}_{YM}^4 = &g^2 \bigg( \frac{1}{4}(W_\mu^\dagger W_\nu - W_\nu^\dagger W_\mu)^2 - (W_\mu^3 W_\nu^\dagger - W\nu^3 W_\mu^\dagger) W_3^\mu W^\nu \bigg).
 \end{split}
 \end{equation}
-The weak mixing matrix is orthogonal, which means $W_3^2 + B^2 = Z^2 + A^2$ so we end up with the usual kinetic terms for $W, Z, \gamma$. Finally, using the relations $W_\mu^3 = \cos\theta_wZ^\mu + \sin\theta_w A^\mu$ and $g=e/\sin\theta_w$, we have following Feynman rules:
+The weak mixing matrix is orthogonal, which means $W_3^2 + B^2 = Z^2 + A^2$ so we end up with the usual kinetic terms for $W, Z, \gamma$. Finally, using the relations $W_\mu^3 = \cos\theta_wZ^\mu + \sin\theta_w A^\mu$ and $g=e/\sin\theta_w$, we have the following Feynman rules:
 \newline
 \begin{figure}[!h]
   \centering
-  \subfloat[]{\includegraphics[width=0.5\textwidth]{figs/22a.png}}
+  \subfloat[triple vertex]{\includegraphics[width=0.5\textwidth]{figs/22a.png}}
   \hfill
-  \subfloat[]{\includegraphics[width=0.5\textwidth]{figs/22b.png}}
+  \subfloat[quartic vertex]{\includegraphics[width=0.5\textwidth]{figs/22b.png}}
 \end{figure}
 \newline
 where 
@@ -1303,8 +1303,10 @@ with an effective Lagrangian
 \end{equation}
 where $\rho = m_W^2/\cos^2\theta_w m_Z^2 =1$ is the Veltman parameter. Neutral current interactions are very difficult to see at low energy because of the  presence of the neutral electromagnetic current $\gamma$. Neutral current interactions were first observed at Garganelle (CERN) in 1973, in neutrino scattering off a nucleus: $\nu_\mu N \to \nu_\mu N$. These experiments are very difficult as the neutrino beam comes from pion decays at a rate of just 3 events in 2 years!
 %
-\subsubsection{Example: $\nu_\mu e^- \to \nu_\mu e^-$ at low energy}
+\subsubsection{Example: $\nu_\mu e^- \to \nu_\mu e^-$}
 %
+Let's first consider the process at low energy, as an effective theory.
+\newline
 %\begin{wrapfigure}{l}{\linewidth}
   \includegraphics[width=0.4\linewidth]{figs/24b.png}
 %\end{wrapfigure}
@@ -1333,7 +1335,115 @@ where we have used $c_L = c_V + c_A$ and $c_R = c_V-c_A$, and the Mandelstam var
 \end{equation}
 You can infer $\sigma(\bar{\nu}_\mu e)$ from crossing symmetry $q \leftrightarrow q^\prime$, or $c_A \leftrightarrow -c_A$, $c_L \leftrightarrow c_R$. So the ratio of these two cross sections is
 \begin{equation}
-\frac{\sigma(\bar{\nu}_\mu e)}{\sigma(\nu_\mu e)}
+\frac{\sigma(\bar{\nu}_\mu e)}{\sigma(\nu_\mu e)} = \frac{c_V^2 + c_A^2 - c_Vc_A}{c_V^2 + c_A^2 + c_V c_A},
 \end{equation}
+where in this instance $c_V = 2 \sin^2\theta_w -1/2$ and $c_A = -1/2$. From this we can deduce that $\sin^2\theta_w \approx 0.23$. 
+
+For the high-energy cross section we need to take account of the $Z^0$ propagator.
+\begin{wrapfigure}{l}{0.4\linewidth}
+  \includegraphics[width=\linewidth]{figs/25a.png}
+\end{wrapfigure}
+This corresponds to replacing 
+\begin{equation}
+-i\eta^{\mu\nu} \to i(-\eta^{\mu\nu} + k^\mu k^\nu/m_Z^2)/k^2-m_Z^2.
+\end{equation} 
+But remember that 
+\begin{equation}
+\bar{u}(q^\prime)\slashed{k}(1-\gamma^5)u(q) = \bar{u}(q^\prime)(\slashed{q}-\slashed{q}^\prime)(1-\gamma^5)u(q)=0,
+\end{equation}
+so in fact we can ignore the $k^\mu k^\nu/m_Z^2$ term, and only need to address the change in the denominator. 
+\begin{equation}
+k^2 = t = -2E^2(1-\cos\theta),
+\end{equation}
+so the total differential cross section becomes
+\begin{equation}
+\frac{d\sigma}{d\cos\theta} = \frac{e^4}{\pi\sin^2\theta_w}\frac{E^2}{(m_Z^2 + 2E^2(1-\cos\theta))^2}\big(c_L^2 + c_A^2 \frac{1}{2}(1+\cos\theta)^2\big).
+\end{equation}
+You can see that in this case unitarity is retained in the limit $E^2 \gg m_Z^2$.
+%
+\subsubsection{Example: $e^+ e^- \to \mu^+ \mu^-$}
+%
+\begin{figure}[!h]
+  \centering
+  \subfloat[QED]{\includegraphics[width=0.5\textwidth]{figs/25b.png}}
+  \hfill
+  \subfloat[NC]{\includegraphics[width=0.5\textwidth]{figs/25c.png}}
+\end{figure}
+This is a standard process occurring at $e^+ e^-$ colliders, and is a very sensitive test of NC electroweak theory. See the examples sheet.
+%
+\subsubsection{Example: $\nu \bar{\nu} \to W^+W^-$ again}
+%
+We saw earlier that the diagram in the $t$-channel violates unitarity. We now have a new graph in the $s$-channel, representing the contribution from the $Z^0$.
+\begin{figure}[!h]
+  \centering
+  \subfloat[$t$-channel]{\includegraphics[width=0.3\textwidth]{figs/26a.png}}
+  \hfill
+  \subfloat[$s$-channel]{\includegraphics[width=0.5\textwidth]{figs/26b.png}}
+\end{figure}
+Does the addition of this diagram restore unitarity? We need to compute the total amplitude $\mathcal{M} = \mathcal{M}_t + \mathcal{M}_s$. We already worked out that
+\begin{equation}
+\mathcal{M}_t = \frac{+ig^2}{4m_W^2}\bar{v}(q^\prime)\slashed{k}(1-\gamma^5)u(q),
+\end{equation}
+and we can use the Feynman rules in the $s$-channel to write
+\begin{equation}
+\begin{split}
+\mathcal{M}_s = \frac{+ig}{4\cos\theta_w}\bar{v}(q^\prime)\gamma_\mu(1-\gamma^5)u(q)i\frac{-\eta^{\mu \nu}+p^\mu p^\nu/m_Z^2}{p^2-m_Z^2}(ig\cos\theta_w) \\
+\times \bigg(\eta_{\alpha \beta}(k^\prime - k)_\nu - \eta_{\beta \nu} (p + k^\prime)_\alpha + \eta_{\alpha \nu}(p+k)_\beta \bigg)\frac{k^\alpha}{m_W}\frac{k^{\prime \beta}}{m_W},
+\end{split}
+\end{equation}
+where we have used the high energy limits to simplify the external $W$ lines, and that, for $\nu$, $c_V = c_A = 1/2$.
+
+Let's look first at the $p^\mu p ^\nu$ term, using $p=q+q^\prime = k + k^\prime$ and matching up all the indices:
+\begin{equation}
+\begin{split}
+&(k \cdot k^\prime) p \cdot(k^\prime - k) - (p \cdot k^\prime)(p+k^\prime)\cdot k + (p \cdot k)(p+k) \cdot k^\prime \\
+=\ &(k \cdot k^\prime)p\cdot(k^\prime-k) + k\cdot k^\prime (p\cdot k - p \cdot k^\prime) \\
+=\ &0.
+\end{split}
+\end{equation}
+So we are just left with the $-\eta^{\mu \nu}$ term:
+\begin{equation}
+\begin{split}
+&- \big( (k \cdot k^\prime)(k^\prime_\mu - k_\mu) - k_\mu^\prime (p+k^\prime)\cdot k + k_\mu (p+k)\cdot k^\prime \big) \\
+=\ &p \cdot k k^\prime_\mu - p \cdot k^\prime k_\mu,
+\end{split}
+\end{equation}
+but 
+\begin{equation}
+\bar{v}(q^\prime)\slashed{k}^\prime(1-\gamma^5)u(q) = -\bar{v}(g^\prime)\slashed{k}(1-\gamma^5)u(q),
+\end{equation}
+so altogether
+\begin{equation}
+\mathcal{M}_s = -\frac{ig}{4m_W^2}v(q^\prime)\slashed{k}(1-\gamma^5)u(q) \frac{p \cdot (k + k^\prime)}{p^2-m_Z^2},
+\end{equation}
+and
+\begin{equation}
+\begin{split}
+\mathcal{M}_t + \mathcal{M}_s = \frac{ig^2}{4m_W^2}\bar{v}(q^\prime)\slashed{k}(1-\gamma^5)u(q)\bigg(1-\frac{p^2}{p^2-m_Z^2}\bigg).
+\end{split}
+\end{equation}
+The bracketed term on the right can be re-expressed as $-m_Z^2/(p^2-m_Z^2) = -m_Z^2/(s-m_Z^2)$, so 
+\begin{equation}
+\mathcal{M}_t + \mathcal{M}_s = -{ig^2}{4\cos^2\theta_w}\frac{1}{s-m_Z}^2\bar{v}(q^\prime)\slashed{k}(-\gamma^5)u(q).
+\end{equation}
+Squaring as before, we arrive at
+\begin{equation}
+\frac{d\sigma}{d\Omega} = \frac{g^4}{64\pi^2\cos\theta_w}\frac{ut-m_W^4}{s(s-m_Z^2)^2},
+\end{equation}
+so for $E^2 \gg m_W^2$
+\begin{equation}
+\frac{d\sigma}{d\cos\theta} = \frac{1}{16E^2}\frac{g^4\sin^2\theta}{128\pi\cos^4\theta_w}.
+\end{equation}
+Thankfully, unitarity is restored! (N.B. Remember that we took the high energy limit in the $\epsilon_\mu$ terms for external $W$ bosons. The sub-leading terms give an additional factor of $\cos^22\theta_w$.) 
+
+However, there are still processes which violate unitarity, such as $W^+W^- \to W^+W^-$. There is also no improvement in the issue of power-counting renormalisability. 
+%
+\subsection{Hadronic Neutral Current}
+%
+Remember the expression for hadronic charged current:
+\begin{equation}
+\frac{1}{2}J_\mu^h = \bar{u}_L \gamma_\mu d^\prime_L + ...,
+\end{equation}
+so we have left-handed doublets
 
 \end{document}
