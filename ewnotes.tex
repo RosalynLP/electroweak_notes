@@ -277,8 +277,7 @@ so there are three types of (charged current) weak interaction:
 But all of them violate P and C and conserve CP, only involve left-handed particles and only involve one coupling $G_F$. 
 \newline
 \newline
-\textbf{Example:} $\pi^+ \approx u\bar{d} \to \mu^+ \nu_\mu$. 
-\newline
+\subsubsection{Example: $\pi^+ \approx u\bar{d} \to \mu^+ \nu_\mu$}
 Fig. \ref{pioncp} demonstrates the sequential application of C and P to this process. Neither of the intermediate steps can happen, as they involve either a right-handed neutrino or a left-handed antineutrino.
 \begin{figure}[h!]
 \caption{Visualisation of applying C and P to the process $\pi^+ \approx u\bar{d} \to \mu^+ \nu_\mu$.}
@@ -334,9 +333,7 @@ Fig. \ref{pioncp} demonstrates the sequential application of C and P to this pro
 %
 \subsection{Leptonic decays}
 %
-\textbf{Example:} $\mu^- \to e^- \bar{\nu}_e \nu_\mu$. 
-\newline
-
+\subsubsection{Example: $\mu^- \to e^- \bar{\nu}_e \nu_\mu$}
 \begin{wrapfigure}{l}{0.4\linewidth}
   \centering
   \includegraphics[width=\linewidth]{figs/diag_1.png}
@@ -431,9 +428,7 @@ We can then use this to determine $G_F$: $\tau_\mu$ = 2.2$\times 10^{-6}$s and $
 You can use the same expression for $\tau^- \to \mu^- \bar{\nu}_\mu \nu_\tau$, $e^- \bar{\nu}_e \nu_\tau$ as a nice test of universality: $\Gamma(\tau^- \to \mu^- \bar{\nu}_\mu \nu_\tau) = \Gamma(\tau^- \to e^- \bar{\nu}_e \nu_\tau) = B\ \Gamma_\tau = (\frac{m_\tau}{m_\mu})^5\ \Gamma_\mu \approx 4 \times 10^{-13}$GeV.
 
 \subsection{Semi-leptonic decays}
-\textbf{Example: } $\pi^+ \to \mu^+ \nu_\mu$.
-\newline
-
+\subsubsection{Example:  $\pi^+ \to \mu^+ \nu_\mu$}
 \begin{wrapfigure}{l}{0.4\linewidth}
   \centering
   \includegraphics[width=\linewidth]{figs/diag_2.png}
@@ -609,8 +604,7 @@ Here factorisation no longer holds - there are strong interactions everywhere! W
 \section{Intermediate vector bosons}
 $\mathcal{L}_{4F}$ provides an excellent description of low-energy charged current weak interactions. But it runs into problems at higher energies.
 \subsection{Unitarity}
-\textbf{Example: } $\nu_\mu e^- \to \mu^- \nu_e$.
-\newline
+\subsubsection{Example:  $\nu_\mu e^- \to \mu^- \nu_e$}
 We can write the matrix element for this process
 \newline
 \begin{equation}
@@ -1280,7 +1274,7 @@ m_Z^2 &= m_W^2 + m_B^2 \\
 \end{equation}
 Note that the fermion mass terms $\mathcal{L}_m = m(\bar{\psi}_L\psi_R + \bar{\psi}_R \psi_L)$ also break SU(2)$_L \otimes$U(1)$_Y$, and mix the SU(2) doublets (left-handed fermions) with the U(1) singlets (right-handed fermions). 
 %
-\subsection{Summary}
+\subsubsection{Summary}
 %
 \begin{itemize}
 \item SU(2)$_L \otimes$U(1)$_Y$ symmetry remains at high energy,
@@ -1288,6 +1282,58 @@ Note that the fermion mass terms $\mathcal{L}_m = m(\bar{\psi}_L\psi_R + \bar{\p
 \item we predict a new \textit{neutral current} weak interaction with mass $m_Z = m_W/\cos\theta_w$,
 \item mass terms for both vector bosons and fermions break the SU(2)$_L \otimes$U(1)$_Y$ symmetry by mixing.
 \end{itemize}
+%
+\subsection{Neutral Currents}
+%
+Neutral currents are \textit{chiral}: they involve both left-handed and right-handed components but not equally, and they can involve neutrinos. However, they do \textit{not} change flavour, e.g. they don't change electrons into neutrinos. We say that there are no "flavour changing neutral currents" (FCNCs). 
 
+The $Z_0$ is heavy (in fact it is heavier than the $W^\pm$), and has the propagator
+\begin{equation}
+\Delta_Z^{\mu \nu} = \frac{i(-\eta^{\mu \nu} + k^\mu k^\nu/m_Z^2)}{k^2 - m_Z^2 + i \epsilon},
+\end{equation}
+and polarisation vectors $\epsilon_\mu^r(k)$, $r=1,2,3$ as for the $W$. At low energies $k^2 \ll m_Z^2$ and you end up with a new effective four-fermion interaction:
+\newline
+%\begin{wrapfigure}{l}{\linewidth}
+  \includegraphics[width=0.6\linewidth]{figs/24a.png}
+%\end{wrapfigure}
+\newline
+with an effective Lagrangian
+\begin{equation}
+\mathcal{L}_{4F} \to \frac{-g^2}{8m_W^2}(J_\mu^\dagger J^\mu + \rho J_\mu^{NC}J^\mu_{NC}),
+\end{equation}
+where $\rho = m_W^2/\cos^2\theta_w m_Z^2 =1$ is the Veltman parameter. Neutral current interactions are very difficult to see at low energy because of the  presence of the neutral electromagnetic current $\gamma$. Neutral current interactions were first observed at Garganelle (CERN) in 1973, in neutrino scattering off a nucleus: $\nu_\mu N \to \nu_\mu N$. These experiments are very difficult as the neutrino beam comes from pion decays at a rate of just 3 events in 2 years!
+%
+\subsubsection{Example: $\nu_\mu e^- \to \nu_\mu e^-$ at low energy}
+%
+%\begin{wrapfigure}{l}{\linewidth}
+  \includegraphics[width=0.4\linewidth]{figs/24b.png}
+%\end{wrapfigure}
+\newline
+\begin{equation}
+\mathcal{M} = \frac{-iG_F}{\sqrt{2}} \rho \bar{u}(p^\prime) \gamma_\mu(c_V - c_A \gamma^5) u(p) \bar{u}(q^\prime) \gamma^\mu (1-\gamma^5) u(q),
+\end{equation}
+so averaging over initial spins and summing over final spins gives
+\begin{equation}
+\begin{split}
+\frac{1}{2}\sum_{spins}|\mathcal{M}|^2 &= \frac{G_F^2\rho^2}{2}\ tr \bigg(\slashed{p}^\prime \gamma_\mu(c_V-c_A\gamma^5)\slashed{p}\gamma_\nu(c_V-c_A \gamma^5)\bigg)\ tr \bigg(\slashed{q}^\prime \gamma^\mu(1-\gamma^5)\slashed{q}\gamma^\nu(1-\gamma^5)\bigg) \\
+&= 32G_F^2 \rho^2 \bigg( (c_V^2+c_A^2)(p_\mu p^\prime_\nu + p^\prime_\mu p_\nu - \eta_{\mu \nu} p\cdot p^\prime) - 2ic_Vc_A \epsilon_{\mu \nu \alpha \beta}p^\alpha p^{\prime \beta}\bigg) \\
+&\times \bigg(q^\mu q^{\prime \nu} + q^{\prime \mu} q^\nu -\eta^{\mu \nu} q \cdot q^\prime - i\epsilon^{\mu \nu \rho \sigma}q_\sigma q^\prime_\rho \bigg) \\
+&= 64G_F^2 \rho^2 \bigg( (c_V^2+c_A^2)(p \cdot q p^\prime \cdot q^\prime + p\cdot q^\prime p^\prime \cdot q) + 2c_Vc_A(p \cdot q p^\prime \cdot q^\prime - p\cdot q^\prime p^\prime \cdot q) \bigg) \\
+&= 64G_F^2 \rho^2 \bigg((c_V+c_A)^2 p \cdot q p^\prime \cdot q^\prime + (c_V-c_A)^2 p \cdot q^\prime p^\prime \cdot q \bigg) \\
+&= 16 G_F^2\rho^2(c_L^2s^2 + c_R^2u^2)
+\end{split}
+\end{equation}
+where we have used $c_L = c_V + c_A$ and $c_R = c_V-c_A$, and the Mandelstam variables $s=2 p \cdot q = 4E^2$ and $u=-2p \cdot q^\prime = -2E^2(1+ \cos\theta)$. We can now calculate the total cross section by integrating first over $\phi$ and then over $\theta$:
+\begin{equation}
+\begin{split}
+\frac{d\sigma}{d\cos\theta} &= \frac{G_F^2 \rho^2}{2 \pi} E^2 \big(c_L^2 + c_R^2\frac{1}{2}(1 + \cos^2\theta)\big) \\
+\implies \sigma(\nu_\mu e) &= \frac{G_F^2 \rho^2 E^2}{\pi} \big(c_L^2 + \frac{1}{3}c_R^2\big) \\
+&= \frac{4G_F^2 \rho^2E^2}{3 \pi}\big(c_V^2 + c_A^2 + c_V c_A\big).
+\end{split}
+\end{equation}
+You can infer $\sigma(\bar{\nu}_\mu e)$ from crossing symmetry $q \leftrightarrow q^\prime$, or $c_A \leftrightarrow -c_A$, $c_L \leftrightarrow c_R$. So the ratio of these two cross sections is
+\begin{equation}
+\frac{\sigma(\bar{\nu}_\mu e)}{\sigma(\nu_\mu e)}
+\end{equation}
 
 \end{document}
