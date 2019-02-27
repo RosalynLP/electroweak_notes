@@ -1340,7 +1340,7 @@ You can infer $\sigma(\bar{\nu}_\mu e)$ from crossing symmetry $q \leftrightarro
 where in this instance $c_V = 2 \sin^2\theta_w -1/2$ and $c_A = -1/2$. From this we can deduce that $\sin^2\theta_w \approx 0.23$. 
 
 For the high-energy cross section we need to take account of the $Z^0$ propagator.
-\begin{wrapfigure}{l}{0.4\linewidth}
+\begin{wrapfigure}{l}{0.3\linewidth}
   \includegraphics[width=\linewidth]{figs/25a.png}
 \end{wrapfigure}
 This corresponds to replacing 
@@ -1543,5 +1543,78 @@ The $W$ and $Z$ were discovered at SPS and CERN in 1983. They are easiest to pro
 \end{figure}
 The partonic cross-sections are easy to calculate, allowing the properties of the $Z^0$ in particular to be explored with great precision at LEP (an $e^+ e^-$ collider operating from 1989-2001). This is because the $Z^0$ has a very clean final state signature, unlike the $W$ where the neutrino is not visible to the detectors. 
 %
+\newpage
+%
+\section{Spontaneous Symmetry Breaking and Mass (Weinberg, 1967)}
+%
+In summary of the situation thus far, the Lagrangian is made up of a $\psi$ kinetic term, a vector boson kinetic term, a $\psi$ mass term and a vector boson mass term:
+\begin{equation}
+\mathcal{L} = \mathcal{L}_D + \mathcal{L}_{YM} + \mathcal{L}_m + \mathcal{L}_M,
+\end{equation}
+where the first two terms are SU(2)$_L \otimes$U(1)$_Y$ gauge invariant, and the
+second two break the symmetry: the problems are all to do with the mass terms.
+\begin{equation}
+\mathcal{L}_m = m(\bar{\psi}_L \psi_R + \bar{\psi}_R \psi_L) + ...
+\end{equation}
+breaks SU(2)$_L \otimes$U(1)$_Y$ explicitly, due to chirality, and
+\begin{equation}
+\mathcal{L}_M = m_W^2W_\mu^\dagger W^\mu + \frac{1}{2}m_Z^2 Z_\mu Z^\mu 
+\end{equation}
+also breaks SU(2)$_L \otimes$U(1)$_Y$ explicitly: $Z_\mu \neq W_\mu^3$ and $m_z \neq m_W$. We have Weinberg mixing, which again is due to chirality. 
+
+Soft breaking of global symmetries is OK, but gauge symmetries must be exact so that the Noether current is conserved. Otherwise you miscount the degrees of freedom.
+%
+\subsection{Lepton Masses}
+%
+Under SU(2)$_L$:
+\begin{equation}
+\psi_L \to U \psi_L \qquad \text{and} \qquad \psi_R \to \psi_R, \qquad \text{where} \qquad U=\exp\bigg(\frac{i}{2}\underline{\alpha}\cdot\underline{\tau}\bigg);
+\end{equation}
+and under U(1)$_Y$:
+\begin{equation}
+\psi_L \to \exp\bigg(-\frac{i}{2}\beta\bigg) \psi_L \qquad \text{and} \qquad \psi_R \to \psi_R.
+\end{equation}
+An invariant mass term in SU(2)$_L \otimes$U(1)$_Y$ is impossible. But what about a Yukawa term ($\phi \bar{\psi} \psi$)? For this we need a scalar field, $\phi$. The simplest way to do this (but not the only way!) is to introduce a spin zero complex scalar doublet,
+\[\phi = \left( \begin{array}{cc}
+\phi^+ \\
+\phi^0
+\end{array} \right), \]
+such that under SU(2)$_L$, $\phi \to U \phi$ (i.e. a doublet) and under U(1)$_Y$ $\phi \to \exp(i \beta /2)$ (i.e. $Y$ = 1/2). Then the additional Yukawa term in the Lagrangian looks like
+\begin{equation}
+\mathcal{L}_Y = -y(\bar{\psi}_L \phi \psi_R + \bar{\psi}_R \phi^\dagger \psi_L).
+\end{equation}
+This term is invariant because 
+\begin{equation}
+\bar{\psi}_L \phi \psi_R \to
+\begin{cases}
+\bar{\psi}_L U^\dagger U \phi \psi_R \qquad \qquad= \bar{\psi}_L \phi \psi_R \qquad \text{under SU(2)}_L,\\
+\bar{\psi}_L e^{i \beta/2} e^{i \beta/2} \phi e^{-i\beta} \psi_R =\bar{\psi}_L \phi \psi_R \qquad \text{under U(1)}_Y.
+\end{cases}
+\end{equation}
+Note that
+\[ Q \qquad = \qquad T_3 \qquad + \qquad Y: \]
+\[\left( \begin{array}{cc}
+1 & 0  \\
+0 & 0  \end{array} \right)=
+\left( \begin{array}{cc}
+1/2 & 0  \\
+0 & -1/2  \end{array} \right) +
+\left( \begin{array}{cc}
+1/2 & 0  \\
+0 & 1/2  \end{array} \right), \]
+so $\phi^+$ has $Q = +1$ and $\phi^0$ has $Q=0$ (how fortuitous). Since $\phi^\dagger \phi$ is SU(2)$_L \otimes$U(1)$_Y$ invariant,
+\begin{equation}
+\mathcal{L}_\phi = d_\mu \phi^\dagger d^\mu \phi - V(\phi^\dagger \phi)
+\end{equation}
+has the correct global symmetry.
+
+We still have no fermion masses. But because $\phi^0$ has $Q=0$ we can have spontaneous symmetry breaking. Choose a form for the potential
+\begin{equation}
+V(\phi^\dagger \phi) = \lambda \bigg(\phi^\dagger \phi - \frac{1}{2}v^2\bigg)^2.
+\end{equation}
+The minimum of $V$ is when $\phi^\dagger \phi = v^2/2$, so it's helpful to pick 
+\[\phi^0 = \frac{1}{\sqrt{2}} = \left( \begin{array}{cc}
+0   \\
+v   \end{array} \right). \]
 
 \end{document}
