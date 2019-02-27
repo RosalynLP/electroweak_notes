@@ -1445,5 +1445,103 @@ Remember the expression for hadronic charged current:
 \frac{1}{2}J_\mu^h = \bar{u}_L \gamma_\mu d^\prime_L + ...,
 \end{equation}
 so we have left-handed doublets
+\[ q_L = \left( \begin{array}{cc}
+u   \\
+d^\prime   \end{array} \right)_L, \qquad
+  \\ \left( \begin{array}{cc}
+ c \\
+s^\prime   \end{array} \right)_L, \qquad  \\ 
+\left( \begin{array}{cc}
+ t \\
+b^\prime   \end{array} \right)_L; \qquad\] 
+and right-handed singlets $q_R = u_R, d_R, c_R, s_R, t_R, b_R$.  So
+\begin{equation}
+\underline{J}^h_\mu = \bar{q}_L \underline{T} \gamma_\mu q_L,
+\end{equation}
+i.e.
+\begin{equation}
+J_\mu^{3\ h} = \frac{1}{2}\bar{u}_L \gamma_\mu u_L - \frac{1}{2} \bar{d}_L^\prime \gamma_\mu d_L^\prime + ...,
+\end{equation}
+while the electromagnetic current is
+\begin{equation}
+j_\mu^h = \frac{2}{3} \bar{u} \gamma_\mu u - \frac{1}{3} \bar{d}^\prime \gamma_\mu d^\prime + ...,
+\end{equation}
+corresponding to 
+\[ Q = \left( \begin{array}{cc}
+2/3 & 0   \\
+0 & -1/3   \end{array} \right). \qquad \]
+Using this to evaluate the weak hypercharge,
+\begin{equation}
+Y = Q - T_3 =
+\begin{cases}
++\frac{1}{6}\mathds{1} \qquad \qquad \text{for LH doublets} \\
++\frac{2}{3} \qquad \qquad \text{  for } u_R, c_R, t_R \\
+-\frac{1}{3} \qquad \qquad \text{  for } d_R, s_R, b_R. 
+\end{cases}
+\end{equation}
+The netural-current can then be expressed:
+\begin{equation}
+\begin{split}
+J_\mu^{NC\ h} &= 2 (J_\mu^{3\ h} - \sin^2\theta_w j_\mu^h) \\
+&= 2 \bar{q} \gamma_\mu \bigg(\frac{1}{2} T_3 (1-\gamma^5) - Q \sin^2\theta_w \bigg) q \\
+&= \bar{u} \gamma_\mu \bigg( -\frac{4}{3}\sin^2\theta_w + \frac{1}{2}(1-\gamma^5)\bigg) u + \bar{d}^\prime \gamma_\mu \bigg(\frac{2}{3} \sin^2\theta_w - \frac{1}{2}(1 - \gamma^5) \bigg) d^\prime + ...
+\end{split}
+\end{equation}
+This corresponds to the Feynman rule
+\newline
+  \includegraphics[width=0.7\linewidth]{figs/27a.png}
+\newline
+where for up-type quarks,
+\begin{equation}
+c_V = -\frac{4}{3}\sin^2\theta_w + \frac{1}{2}, \qquad c_A = \frac{1}{2};
+\end{equation}
+and for down-type quarks,
+\begin{equation}
+c_V = \frac{2}{3}\sin^2\theta_w - \frac{1}{2}, \qquad c_A = -\frac{1}{2}.
+\end{equation}
+%
+\subsection{The GIM Mechanism - Glashow, Illiopoulos, Maiani (1970)}
+%
+For now let's consider only the light quarks $u$, $d$ and $s$. The down-type quarks are in general mixtures of the down-type components of the left-handed doublets. We can express this "Cabbibo mixing" using the Cabbibo angle $\theta_c$:
+\begin{equation}
+d^\prime = \cos\theta_c + \sin\theta_c.
+\end{equation}
+Then the neutral-current term $\bar{d}^\prime \gamma_\mu (c_V - c_A \gamma^5) d^\prime \equiv \bar{d}^\prime \Gamma d^\prime$, contains $\Delta Q = 0, \Delta S = 1$ pieces:
+\begin{equation}
+\sin\theta_c \cos\theta_c (\bar{d} \Gamma s + \bar{s} \Gamma d) .
+\end{equation}
+These are "flavour changing neutral currents" (FCNCs). The existence of these in the theory is embarrassing, because in actual fact $s \to d \nu \bar{\nu}$ never happens. There are experimental constraints set by Kaon decay rates:
+\begin{equation}
+\frac{\Gamma(K^+ \to \pi^+ \nu \bar{\nu})}{\Gamma(K^+ \to \text{all})} < 10^{-7}, \qquad \frac{\Gamma(K^0 \to \pi^+ \mu^+ \mu^-)}{\Gamma(K^0 \to \text{all})} < 10^{-8}.
+\end{equation}
+The solution is via the introduction of the charm quark, $c$. Then $\icol{c\\s^\prime}_L$ is an SU(2)$_L$ doublet, and if $s^\prime = -\sin\theta_L d + \cos \theta_c s$, the FCNCs cancel:
+\begin{equation}
+\bar{d}^\prime \Gamma d^\prime + \bar{s}^\prime \Gamma s^\prime =\bar{d} \Gamma d + \bar{s} \Gamma s.
+\end{equation}
+So with two generations (for three generations see later in the course), 
+\[\left( \begin{array}{cc}
+d^\prime \\
+s^\prime 
+\end{array} \right) =
+ \left( \begin{array}{cc}
+\cos\theta_c & \sin\theta_c \\
+-\sin\theta_c & \cos\theta_c  \end{array} \right) 
+\left( \begin{array}{cc}
+d \\
+s
+\end{array} \right). \]
+This predicted the existence of the charm quark, which was discovered in the form of the $J/\psi$ particle, a bound $c\bar{c}$ state of mass 3 GeV, in 1974 at SLAC/BNL.
+%
+\subsection{The Discovery of $W$ and $Z$}
+%
+The $W$ and $Z$ were discovered at SPS and CERN in 1983. They are easiest to produce in hadronic collisions.
+\begin{figure}[!h]
+  \centering
+  \subfloat[$W$]{\includegraphics[width=0.4\textwidth]{figs/27b.png}}
+  \hfill
+  \subfloat[$Z$]{\includegraphics[width=0.4\textwidth]{figs/27c.png}}
+\end{figure}
+The partonic cross-sections are easy to calculate, allowing the properties of the $Z^0$ in particular to be explored with great precision at LEP (an $e^+ e^-$ collider operating from 1989-2001). This is because the $Z^0$ has a very clean final state signature, unlike the $W$ where the neutrino is not visible to the detectors. 
+%
 
 \end{document}
