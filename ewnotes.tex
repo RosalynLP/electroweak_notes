@@ -1581,7 +1581,7 @@ An invariant mass term in SU(2)$_L \otimes$U(1)$_Y$ is impossible. But what abou
 \end{array} \right), \]
 such that under SU(2)$_L$, $\phi \to U \phi$ (i.e. a doublet) and under U(1)$_Y$ $\phi \to \exp(i \beta /2)$ (i.e. $Y$ = 1/2). Then the additional Yukawa term in the Lagrangian looks like
 \begin{equation}
-\mathcal{L}_Y = -y(\bar{\psi}_L \phi \psi_R + \bar{\psi}_R \phi^\dagger \psi_L).
+\mathcal{L}_Y = -y_\psi(\bar{\psi}_L \phi \psi_R + \bar{\psi}_R \phi^\dagger \psi_L).
 \end{equation}
 This term is invariant because 
 \begin{equation}
@@ -1604,7 +1604,7 @@ Note that
 0 & 1/2  \end{array} \right), \]
 so $\phi^+$ has $Q = +1$ and $\phi^0$ has $Q=0$ (how fortuitous). Since $\phi^\dagger \phi$ is SU(2)$_L \otimes$U(1)$_Y$ invariant,
 \begin{equation}
-\mathcal{L}_\phi = d_\mu \phi^\dagger d^\mu \phi - V(\phi^\dagger \phi)
+\mathcal{L}_\phi = \partial_\mu \phi^\dagger \partial^\mu \phi - V(\phi^\dagger \phi)
 \end{equation}
 has the correct global symmetry.
 
@@ -1616,5 +1616,194 @@ The minimum of $V$ is when $\phi^\dagger \phi = v^2/2$, so it's helpful to pick
 \[\phi^0 = \frac{1}{\sqrt{2}} = \left( \begin{array}{cc}
 0   \\
 v   \end{array} \right). \]
+We can make this choice without loss of generality, due to global symmetry: we could have chosen e.g.
+\[\phi^0 = u_0\frac{1}{\sqrt{2}} = \left( \begin{array}{cc}
+0   \\
+v   \end{array} \right), \]
+but then let $\psi_L \to u_0 \psi_L$ and $\mathcal{W}_\mu \to u_0 \mathcal{W}_\mu u_0^\dagger$, and the Lagrangian would be unchanged.
+Note that $i \underline{\alpha}\cdot \underline{T} \phi^0 \neq 0$, $i\beta\phi^0/2 \neq 0$, so both SU(2)$_L$ and U(1)$_Y$ are broken. But $Q\phi^0 = 0$ so U(1)$_Q$ remains unbroken. In other words SU(2)$_L$ $\otimes$U(1)$_Y$ $\to$ U(1)$_Q$. If we set $\phi \to \phi^0$ in $\mathcal{L}_Y$,
+\begin{equation}
+\mathcal{L}_Y \to -y_\psi (\bar{\psi}_L \phi_0 \psi_R + \bar{\psi_R} \phi_0^\dagger \psi_L) = -\frac{yv}{\sqrt{2}}(\bar{\psi}_L \psi_R + \bar{\psi}_R \psi_L) = -m_\psi \bar{\psi} \psi,
+\end{equation}
+i.e. we end up with the usual Dirac mass, where $m_\psi = y_\psi v/\sqrt{2}$, and is different for each of the leptons, dependent on their individual Yukawa couplings. The neutrinos remain massless. 
 
+The only freedom is in the choice of $v$, which sets the scale, and in the parameters $y_e, y_\mu, y_\tau$ which fix the lepton masses.
+
+Expanding around the minimum,
+\[\phi = \phi^0 + \chi = \frac{1}{\sqrt{2}} \left( \begin{array}{cc}
+\chi_1 + i \chi_2  \\
+v + h + i \chi_3  \end{array} \right), \]
+then 
+\begin{equation}
+\partial_\mu \phi^\dagger \partial^\mu \phi = \frac{1}{2} (\partial_\mu h)^2 + \frac{1}{2} (\partial_\mu \underline{\chi})^2, \qquad \text{where } \underline{\chi} = \chi_i; \ i=1,2,3.
+\end{equation}
+But
+\begin{equation}
+\phi^\dagger \phi -\frac{1}{2}v^2 = (\chi^\dagger \phi^0 + \phi^{\dagger 0}\chi) + \chi^\dagger \chi = vh + \frac{1}{2}h^2 + \frac{1}{2}\underline{\chi}^2,
+\end{equation}
+so 
+\begin{equation}
+V(\phi^\dagger \phi) = \lambda v^2 h^2 + \lambda v (h^3 + h \underline{\chi}^2) + \frac{\lambda}{4}(h^2 + \underline{\chi}^2)^2,
+\end{equation}
+so $h$ is massive: $m_h^2 = 2 \lambda v^2$, but the $\chi$ are massless: they are \textit{Goldstone} bosons. Because SU(2)$_L$ has dimension 3 and and U(1)$_Y$ and U(1)$_Q$ both have dimension 1, there are three Goldstone bosons because the degrees of freedom in the symmetry are reduced from 4 to 1 during symmetry breaking. $\lambda$ is a free parameter with a value $\approx 1/8$. 
+
+Note that after spontaneous symmetry breaking we still have an SO(3) global symmetry, $\underline{\chi} \to R \underline{\chi}$, where $R^\dagger R =1$. This is called "custodial symmetry" or "custodial" SU(2) (because SO(3) $\cong$ SU(2)).
+
+There are a number of vertices arising from the terms in $V$, which have the Feynman rules given in the figure.
+\begin{figure}[!h]
+  \centering
+  \subfloat[3-point]{\includegraphics[width=0.5\textwidth]{figs/29a.png}}
+  \hfill
+  \subfloat[4-point]{\includegraphics[width=0.5\textwidth]{figs/29b.png}}
+\end{figure}
+%
+\subsection{Gauge Boson Masses}
+%
+$\mathcal{L}_\phi$ is invariant under \textit{global} SU(2)$_L \otimes$U(1)$_Y$. $\mathcal{L}_{YM}, \mathcal{L}_D$ and $\mathcal{L}_{Y}$ are all invariant under \textit{local} SU(2)$_L \otimes$U(1)$_Y$. So if we make $\mathcal{L}_\phi$ \textit{gauge} invariant, \textit{everything} will be gauge invariant! There is a unique prescription for achieving this:
+\begin{equation}
+\partial_\mu \phi \to \mathcal{D}_\mu \phi = (\partial_\mu - ig \mathcal{W}_\mu - \frac{1}{2} ig^\prime B_\mu) \phi,
+\end{equation}
+since $\phi$ is an SU(2) doublet, with $Y = +1/2$, and
+\begin{equation}
+\mathcal{L}_\phi \to \mathcal{L}_h = (\mathcal{D}_\mu \phi)^\dagger \mathcal{D}_\mu \phi - V(\phi^\dagger \phi).
+\end{equation}
+Now after spontaneous symmetry breaking, $\phi \to \phi^0 + \chi$, where $\partial_\mu \phi^0 = 0$. So
+\begin{equation}
+\begin{split}
+\mathcal{D}_\mu \phi^0 &= -ig \underline{W}_\mu \cdot \underline{T}_\mu \phi^0 - \frac{1}{2} i g^\prime B_\mu \phi^0 \\
+&= \frac{v}{2\sqrt{2}} 
+\begin{pmatrix}  
+-ig(W_\mu^1 - i W_\mu^2) \\
+i(gW_\mu^3 - g^\prime B_\mu)
+\end{pmatrix}, \\
+\mathcal{D}_\mu \phi^{0 \dagger} \mathcal{D}^\mu \phi^0 &= \frac{v^2}{2} \bigg(\frac{g^2}{2} W_\mu^\dagger W^\mu + \frac{1}{4}(g W_\mu^3 - g^\prime B_\mu)^2 \bigg).
+\end{split}
+\end{equation}
+So $m_W^2 = g^2v^2/4$, and $W$ becomes massive ($v \approx$ 50 GeV). $W_\mu^3$ and $B_\mu$ mix, but we know that already from the currents (because $j$ is not chiral).  
+\[\left( \begin{array}{cc}
+W^\mu_3 \\
+B^\mu 
+\end{array} \right) =
+ \left( \begin{array}{cc}
+\cos\theta_w & \sin\theta_w  \\
+-\sin\theta_w & \cos\theta_w  \end{array} \right) 
+\left( \begin{array}{cc}
+Z^\mu \\
+A^\mu 
+\end{array} \right), \]
+while $e = g \sin\theta_w = g^\prime \cos\theta_w$ so 
+\begin{equation}
+g W_\mu^3 - g^\prime B_\mu = \frac{g}{\cos \theta_w} (\cos\theta_w W_\mu^3 - \sin\theta_w B_\mu) = \frac{g}{\cos\theta} Z_\mu,
+\end{equation}
+and
+\begin{equation}
+\mathcal{D}_\mu \phi^{0 \dagger} \mathcal{D}^\mu \phi^0 = m_W^2 W_\mu^\dagger W^\mu + \frac{1}{2}m_Z^2 Z_\mu Z^\mu,
+\end{equation}
+with $m_Z^2 = g^2v^2/4\cos^2\theta_w = m_W^2/\cos^2\theta_w$, so $\rho = m_W^2/m_Z^2\cos^2\theta = 1$. $A_\mu$ remains massless, as expected, since U(1)$_Q$ is unbroken. So spontaneous symmetry breaking gives vector boson masses \textit{and} mixing.
+
+There are also new interactions of vector bosons with scalars: $\phi = \phi^0 + \chi$, so
+\begin{equation}
+\mathcal{D}_\mu \phi^{\dagger} \mathcal{D}^\mu \phi = \mathcal{D}_\mu \phi^{0 \dagger} \mathcal{D}^\mu \phi^0 + \mathcal{D}_\mu \chi^{\dagger} \mathcal{D}^\mu \phi^0 + \mathcal{D}_\mu \phi^{0 \dagger} \mathcal{D}^\mu \chi + \mathcal{D}_\mu \chi^{\dagger} \mathcal{D}^\mu \chi,
+\end{equation}
+which leads to the mixing terms
+\begin{equation}
+ig(\phi^{0 \dagger} \underline{T} \partial_\mu \chi -\partial_\mu \chi^\dagger \underline{T} \phi^0) \cdot \underline{W}^\mu + i g^\prime (\phi^{0 \dagger} \partial_\mu \chi - \partial_\mu \chi^\dagger \phi^0) B^\mu.
+\end{equation}
+To simplify this, write $A_\mu^a = (W_\mu^i, B_\mu)$, $\tilde{T}^a = (gT^i, g^{\prime Y}) = (g\sigma^i/2, g^\prime/2)$, so that the mixing is
+\begin{equation}
++i(\phi^{0 \dagger} \tilde{T}^a \partial_\mu \chi - \partial_\mu \chi^\dagger \tilde{T}^a \phi^0)A^{\mu a} = +i \tilde{J}_\mu^a A^{\mu a}.
+\end{equation}
+$\tilde{J}_\mu^a$ is actually the linear part of the Noether current of the SU(2)$_L \otimes$U(1)$_Y$ symmetry. In terms of real fields, writing 
+\[\phi^0 = \frac{1}{\sqrt{2}} \left( \begin{array}{cc}
+0 \\
+v
+\end{array} \right); \qquad
+\chi = \frac{1}{\sqrt{2}}
+ \left( \begin{array}{cc}
+\chi_1 + i \chi_2 \\
+h + i \chi_3  \end{array} \right), \]
+it is easy to show (left as an exercise) that
+\begin{equation}
+\tilde{J}_\mu^a = -i F^{T a}_i \partial_\mu \chi_i = -i \partial_\mu \chi_i^T F_i^a,
+\end{equation}
+where
+\[F_i^a = \frac{v}{2} \left( \begin{array}{cccc}
+0 & -g & 0 & 0 \\
+-g & 0 & 0 & 0 \\
+0 & 0 & g & -g^\prime 
+\end{array} \right). \]
+So the mixing is between the vector bosons $A_\mu^a$ and the Goldstone bosons $\chi_i$ (\textit{not} the Higgs boson $h$): the mixing term is $A_\mu^a F^{a T} \partial_\mu \chi$. Note that
+\begin{equation}
+<0|\tilde{J}_\mu^a|\chi_i> = p_\mu F^a_i,
+\end{equation}
+so $F_i^a$ are the decay constants of the Goldstone bosons. $\partial^\mu \tilde{J}_\mu^a = 0 \implies p^2=0$ (i.e. the Goldstone bosons are massless: this is another derivation of Goldstone's theorem). It is easy to see that "$F^a = \tilde{T}^a \phi^0$ is the basis for the Goldstone bosons.
+
+The mass term of the vector bosons is given by
+\begin{equation}
+\begin{split}
+\mathcal{D}_\mu \phi^{0 \dagger} \mathcal{D}^\mu \phi^0 &= \frac{1}{2} \phi^{0 \dagger} \tilde{T}^a \tilde{T}^b \phi^0 A_\mu^a A^{\mu b} \\
+&= \frac{1}{2}(F^TF)^{ab} A_\mu^a A^{\mu b}.
+\end{split}
+\end{equation}
+In components,
+\[(F^TF)^{ab} = \frac{v^2}{4} \left( \begin{array}{cccc}
+g^2 & 0 & 0 & 0 \\
+0 & g^2 & 0 & 0 \\
+0 & 0 & g^2 & -gg^\prime \\
+0 & 0 & - gg^\prime & g^{\prime 2} 
+\end{array} \right), \]
+with two $g^2v^2/4$ eigenvalues corresponding to $W^\pm$, one $(g^2 + g^{\prime 2})v^2/4$ eigenvalue corresponding to $Z$, and one $0$ eigenvalue corresponding to $\gamma$.
+
+The equality of the first three diagonal elements is due to the SO(3) custodial symmetry, and ensures that the Veltman parameter
+\begin{equation}
+\rho = \frac{m_W^2}{m_Z^2 \cos^2\theta_w} = 1.
+\end{equation}
+%
+\subsection{Unitarity Gauge}
+%
+As we now have a gauge theory, we need to fix a gauge (just as in QED): the degrees of freedom due to gauge transformations are not physical. One way to do this is to notice that the Goldstone bosons arise because of the SU(2)$_L \otimes$U(1)$_Y$ symmetry: for $\underline{\alpha}, \chi$ small, 
+\begin{equation}
+\begin{split}
+&\text{SU(2)}_L: \quad U\phi \sim \phi^0 + i\underline{\alpha}\cdot \underline{T} \phi^0 + \chi = \frac{1}{\sqrt{2}} \bigg[ 
+\begin{pmatrix}
+0 \\ v
+\end{pmatrix}
++ \frac{v}{2}
+\begin{pmatrix}
+(\alpha_2 + i \alpha_1) \\ -i\alpha_3
+\end{pmatrix}
++ \begin{pmatrix}
+\chi_1 + i \chi_2 \\ h + i \chi_3
+\end{pmatrix} \bigg] \\
+&\text{U(1)}_Y: \quad e^{i\beta /2}\phi \sim \phi^0 + i\frac{\beta}{2}\phi^0 + \chi = \frac{1}{\sqrt{2}} \bigg[ 
+\begin{pmatrix}
+0 \\ v
+\end{pmatrix}
++ \frac{v}{2}
+\begin{pmatrix}
+0 \\ i\beta
+\end{pmatrix}
++ \begin{pmatrix}
+\chi_1 + i \chi_2 \\ h + i \chi_3
+\end{pmatrix} \bigg],
+\end{split}
+\end{equation}
+so we can eliminate $\chi_1, \chi_2, \chi_3$ just by choosing $\alpha_1, \alpha_2, \alpha_3, \beta$. Note that we cannot eliminate $h$: $\alpha_3 + \beta$ has no effect, since
+\begin{equation}
+Q \phi^0 = (T_3 + Y) \phi^0 = 0:
+\end{equation}
+U(1)$_Q$ is unbroken.
+
+This is equivalent to adopting gauge fixing conditions for the broken symmetries:
+\begin{equation}
+\begin{split}
+\chi^\dagger \underline{T} \phi^0 - \phi^{0 \dagger} \underline{T} \chi &= 0 \\
+\chi^\dagger \phi^0 - \phi^{0 \dagger} \chi &= 0,
+\end{split}
+\end{equation}
+i.e. $F_i^T\chi_i=0 \implies \chi_i=0$. With these conditions, the mixing terms between vector bosons and Goldstone bosons disappear, and we can write
+\[\phi = \frac{1}{\sqrt{2}} = \left( \begin{array}{cc}
+0   \\
+v + h  \end{array} \right). \]
+Substituting into the Lagrangian, 
 \end{document}
