@@ -1,0 +1,178 @@
+
+\section{Introduction}
+%
+Imagine a world without electroweak:
+\begin{itemize}
+    \item Still have electromagnetism (EM), massive hadrons, atoms, gravity etc.
+    \item Parity (P) and charge conjugation (C) are still good symmetries
+    \item Flavour is always conserved: everything lasts forever (and always existed)
+    \item No neutrinos (would be non-interacting)
+\end{itemize}
+%
+Neutrinos were first hypothesised by Pauli (1930) to explain the missing energy in $\beta$-decay. They were first observed in 1956 (Cowan-Reines). Parity violation was first directly observed in 1956/7 (Lee-Yang-Wu).
+
+\subsection{Chirality}
+%
+Define the projection operators $P_R \equiv \frac{1}{2}(1 + \gamma^5)$ and $P_L \equiv \frac{1}{2}(1 - \gamma^5)$. Recalling that $(\gamma^5)^2 = 1$ and $(\gamma^5)^\dagger = \gamma^5$, we can deduce the following properties:
+\begin{itemize}
+    \item $P_R^2 = P_R$,
+    \item $P_L^2 = P_L$,
+    \item $P_LP_R = P_RP_L = 0$,
+    \item $P_R + P_L = 1$,
+    \item $P_R - P_L = \gamma^5$.
+\end{itemize}
+% 
+Any Dirac spinor can be split up into a right-handed and a left-handed component, $\psi = \psi_R + \psi_L$, using the projection operators to define $\psi_R = P_R \psi$ and $\psi_L = P_L \psi$. Since $\gamma^\mu P_L = P_R \gamma^\mu$, it follows that $\bar{\psi} P_R \equiv (\bar{\psi})_R = \bar{\psi}_L$ and $\bar{\psi} P_L \equiv (\bar{\psi})_L = \bar{\psi}_R$. So 
+\begin{equation}
+\begin{split}
+    \bar{\psi}\psi = \bar{\psi}(\psi_R + \psi_L) &= \bar{\psi}_L\psi_R + \bar{\psi}_R\psi_L \\
+    &\text{and} \\
+    \bar{\psi}\gamma^\mu \psi = \bar{\psi}\gamma^\mu(\psi_R + \psi_L) &= \bar{\psi}_R\gamma^\mu\psi_R 
+    \bar{\psi}_L\gamma^\mu\psi_L.
+\end{split}
+\end{equation}
+%
+The Dirac Lagrangian splits up like 
+\begin{equation}
+\begin{split}
+\mathcal{L}_D &= \bar{\psi}(i\slashed{\partial}-m)\psi \\ 
+&= \bar{\psi}_R i\slashed{\partial}\psi_R + \bar{\psi}_L i\slashed{\partial}\psi_L
++ m(\bar{\psi}_L\psi_R + \bar{\psi_R}\psi_L),
+\end{split}
+\end{equation}
+so the mass term mixes $\psi_R$ and $\psi_L$: if $m \to 0$, $\psi_R$ and $\psi_L$ are independent. In this scenario they are both 2-component spinors obeying the Weyl equation $i\slashed{\partial}\psi_{R/L} = 0$.
+
+\subsection{Helicity}
+The spin operator can be expressed as $\Sigma^i = \frac{i}{2} \epsilon^{ijk}[\gamma^j, \gamma^k] = \gamma^5\gamma^0\gamma^i$. Then $[P_L, \Sigma^i] = [P_R, \Sigma^i]$: spin and chirality commute. Now consider \textit{helicity}, defined 
+\begin{equation}
+    h \equiv \frac{2\underline{\Sigma} \cdot \underline{p}}{|\underline{p}|}.
+\end{equation}
+$h$ has eigenvalues $\pm1$, which follows from $(\slashed{p} - m)u^\pm = 0 \implies hu^\pm = \pm u^\pm$. But $\slashed{p} = E\gamma^0 - \underline{\gamma}\cdot\underline{p}$ and $h = \gamma^5\gamma^0 (\underline{\gamma}\cdot\underline{p})/|\underline{p}| = \gamma^5\gamma^0(E\gamma^0 - \slashed{p})$. So
+%
+\begin{equation}
+\begin{split}
+\gamma^5(E - \gamma^0\slashed{p})u^\pm &= \pm u^\pm \\
+\implies (P_R-P_L)(E-\gamma^0m)u^\pm &= \pm p(P_R + P_L)u^\pm \\
+\text{ and } (E \mp p)u_R^\pm &= m\gamma^0 u_L^\pm, \\
+             (E \pm p)u_L^\pm &= m\gamma^0 u_R^\pm. 
+\end{split}
+\end{equation}
+Again, the mass term mixes R and L, but if $m \to 0$, $p = E + \mathcal{O}(\frac{m^2}{E})$ and $2E u_R^- = 2E u_L^+ = 0$ so $u_R^- = u_L^+ = 0$, i.e. $u_R$ has helicity +1 and $u_L$ has helicity -1. 
+
+Note that when $m=0$, helicity is Lorentz invariant (no rest frame). For $m \neq 0$, 
+\begin{equation}
+\begin{split}
+    u_R^- = \frac{m\gamma^0}{E+p}u_L^- &\approx \frac{m}{2E}\gamma^0u_L^- \\
+    \text{ and } u_L^+ &\approx \frac{m}{2E}\gamma^0u_R^+.
+\end{split}
+\end{equation}
+You get similar expressions for negative energy solutions:
+\begin{equation}
+\begin{split}
+\text{for $m = 0$:   } &v_R^- = v_L^+ = 0, \\
+\text{for $m \neq 0$:    }  &v_R^- = -\frac{m\gamma^0}{2E}v_L^- \text{ and } v_L^+ = -\frac{m\gamma^0}{2E}v_R^-.
+\end{split}
+\end{equation}
+%
+\subsection{The Chiral Representation}
+%
+In the chiral representation the gamma matrices can be expressed as:
+\[ \gamma^0 = \left( \begin{array}{cc}
+0 & 1  \\
+1 & 0  \end{array} \right), \qquad
+\gamma^i = \left( \begin{array}{cc}
+0 & -\sigma^i  \\
+\sigma^i & 0  \end{array} \right), \qquad
+\gamma^5 = \left( \begin{array}{cc}
+1 & 0 \\
+0 & -1     \end{array} \right).\] 
+%
+So
+%
+\[ P_R = \left( \begin{array}{cc}
+1 & 0  \\
+0 & 0  \end{array} \right), \qquad
+P_L = \left( \begin{array}{cc}
+0 & 0  \\
+0 & 1  \end{array} \right) \qquad
+\implies
+\psi = \left( \begin{array}{c}
+\psi_R  \\
+\psi_L      \end{array} \right).\] 
+%
+Furthermore, the spin operator can be written
+%
+\[ \Sigma^i = \gamma^5\gamma^0\gamma^i = \left( \begin{array}{cc}
+\sigma^i & 0  \\
+0 & \sigma^i  \end{array} \right), \]
+%
+so the helicity eigenstates are $\icol{\psi_R^\pm\\0}$ and $\icol{0\\\psi_L^\pm}$. Now consider the positive and negative energy solutions. 
+%
+$(\slashed{p} - m)u =0 \implies$
+%
+\[ \left( \begin{array}{cc}
+-m & E +\underline{\sigma}\cdot\underline{p}  \\
+  E -\underline{\sigma}\cdot\underline{p}& -m  \end{array} \right)
+\left( \begin{array}{c}
+u_R   \\
+u_L  \end{array} \right) = 0.\] 
+%
+But $\underline{\sigma}\cdot \underline{p}\ u_{L/R} = \pm p\ u_{L/R}^\pm$ so $(E \pm p)u_L^\pm = m\ u_R^\pm$. Using $E^2 = p^2 + m^2$:
+\begin{equation}
+\begin{split}
+(E \pm p)u_L^\pm &= \sqrt{(E+p)(E-p)}u_R^\pm \\
+\implies \sqrt{E\pm p}\ u_L^\pm &= \sqrt{E \mp p}\ u_R^\pm 
+\end{split}
+\end{equation}
+and we can write
+%
+\[ u^\pm =
+\left( \begin{array}{c}
+\sqrt{E \pm p} \ \xi^\pm   \\
+\sqrt{E \mp p} \ \xi^\pm  \end{array} \right), \] 
+%
+where $\xi^+ = \icol{1\\0}$ and $\xi^- = \icol{0\\1}$. 
+\newline
+\newline
+\textit{Exercise: check that the normalisations $\bar{u}u = 2m$, $u^\dagger u = 2E$.}
+\newline
+
+Similarly, $(\slashed{p} +m)v = 0$ and $(\underline{\sigma}\cdot\underline{p})v^\pm = \mp p\ v^\pm$, so 
+\begin{equation}
+\begin{split}
+(E \mp p)v_L^\pm &= -m\ v_R^\pm \\
+\implies \sqrt{E\mp p}\ v_L^\pm &= -\sqrt{E \pm p}\ v_R^\pm 
+\end{split}
+\end{equation}
+and
+%
+\[ v^\pm =
+\left( \begin{array}{c}
+\sqrt{E \mp p} \ \xi^\pm   \\
+-\sqrt{E \pm p} \ \xi^\pm  \end{array} \right). \] 
+%
+You can relate $\xi^\pm$ to $\chi^\pm$ by charge conjugation: $v^\pm = i \gamma^2 u^{\pm *}$, where
+%
+\[ i\gamma^2 = \left( \begin{array}{cc}
+0 & -i \sigma^2  \\
+i\sigma^2 & 0  \end{array} \right), \qquad 
+-i\sigma^2 = \left( \begin{array}{cc}
+0 & -1 \\
+1 & 0 \end{array} \right). \]
+%
+So $\chi^\pm = -i\sigma^2\xi^\pm$ and if $\xi^\pm = \icol{1\\0}, \icol{0\\1}$ then $\chi^\pm = \icol{0\\1}, \icol{-1\\0}$ as before.
+%
+\subsection{Parity}
+%
+Under P, $\psi \to \psi_p = \gamma^0\psi$. We know that $P_L \gamma^0 = \gamma^0 P_R$, so $\psi_L \to \gamma^0 \psi_L =  P_R\gamma^0 \psi_L = (\psi_p)_R$. In other words, $(\psi_L)_p = (\psi_p)_R$, so parity switches L and R.
+
+Note that $[\gamma^0, \Sigma^i] = 0$ but under P $\underline{p} \to - \underline{p}$ so $h \to -h$, as expected. This means $u_R^+ to u_L^-$ etc.: parity flips helicity but not spin.
+%
+\subsection{Charge conjugation}
+%
+Under C, $\psi \to \psi_c = C\overline{\psi}^T$ where $C = i\gamma^2\gamma^0$. Then $P_LC = CP_L$ so $\psi_L \to C(\overline{\psi})_L^T$. 
+This means that charge conjugation leaves the chirality unchanged. Helicity is also unchanged: C just takes particles $\leftrightarrow$ antiparticles.
+%
+\subsection{Time reversal}
+%
+Under T, $\psi \to \psi_T = B\psi$ where $B = i\gamma^1\gamma^3 = -i\gamma^5C$ and $B^\dagger = B = B^{-1}$. Again, $P_LB = BP_L$ so $\psi_L \to B\psi_L$ and time reversal leaves chirality and helicity unchanged (it reverses both spin and momentum). 
