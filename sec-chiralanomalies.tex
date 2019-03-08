@@ -39,3 +39,29 @@ Considering the relevant Ward identities, conservation of vector current implies
 &= +4i\epsilon^{\mu \nu \alpha \beta}((p+l)^2 q_\alpha l_\beta + (l-q)^2 p_\alpha l_\beta),
 \end{split}
 \end{equation}
+so
+\begin{equation}
+(p+q)_\rho \mathcal{M}^{\rho \mu \nu} = -4ig^3 \epsilon^{\mu \nu \alpha \beta}\int \frac{d^4l}{(2\pi)^4} \bigg[ \frac{q_\alpha l_\beta}{l^2(l-q^2)} + \frac{p_\alpha l_\beta}{l^2(p+l)^2} \bigg].
+\end{equation}
+The first term in brackets depends only on $q$, so Lorentz invariance implies that $q_\alpha q_\beta \to 0$ because of the $\epsilon^{\mu\nu\alpha\beta}$ factor out the front.  Likewise with the second term and $p$. So $(p+q)_\rho \mathcal{M}^{\rho \mu \nu} = 0$, meaning that the axial current is conserved. 
+
+We also need to check the vector current:
+\begin{equation}
+\begin{split}
+p_\mu N^{\rho \mu \nu} &= tr \gamma^5 (\slashed{p} + \slashed{l})(\slashed{p}+ \slashed{l} - \slashed{l})\slashed{l} \gamma^\nu (\slashed{l} - \slashed{q}) \gamma^\rho \\
+&= tr \gamma^5\bigg((p+l)^2\slashed{l} - l^2(\slashed{p}+\slashed{l})\bigg)\gamma^\nu (\slashed{l}-\slashed{q})\gamma^\rho \\ 
+&= 4i \epsilon^{\alpha \nu \beta \rho} \bigg((p+l)^2l_\alpha(l-q)_\beta - l^2(p+l)_\alpha(l-q)_\beta \bigg).
+\end{split}
+\end{equation}
+So 
+\begin{equation}
+\begin{split}
+p_\mu \mathcal{M}^{\rho \mu \nu} &= 4ig^3 \epsilon^{\nu \rho \alpha \beta} \int \frac{d^4l}{(2\pi)^4} \bigg[ \frac{l_\alpha(l-q)_\beta}{l^2(l-q^2)} + \frac{(p+l)_\alpha (l-q)_\beta}{(p+l)^2(l-q)^2} \bigg] \\
+&= -4ig^3 \epsilon^{\nu \rho \alpha \beta} \int \frac{d^4l}{(2\pi)^4} \bigg[ \frac{l_\alpha q_\beta}{l^2(l-q^2)} - \frac{(p+l)_\alpha (p+q)_\beta}{(p+l)^2(l-q)^2} \bigg],
+\end{split}
+\end{equation}
+where to go from the first line to the second we note that $l-q=p+l-(p+q)$, and consider the antisymmetry of $\epsilon^{\nu\rho\alpha\beta}$. The first term vanishes like before, but the second term depends on both $p$ and $q$.  We can make a shift of the loop momentum (which is integrated over), $l \to l-p$:
+\begin{equation}
+\frac{(p+l)_\alpha}{(p+l)^2(l+q)^2} \to \frac{l_\alpha}{l^2(l-(p+q)^2)^2},
+\end{equation}
+so now we see that the second term depends on $(p+q)$ only, so must also vanish. However, the loop integral is linearly divergent, so such a shift is not allowed...
