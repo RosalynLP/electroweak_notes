@@ -128,7 +128,7 @@ This means that for renormalisability we need $d_{bf}^p \geq 0$ so that $D$ incr
 \textbf{Corollary: } For a theory with scalar, fermion and vector fields, the only vertices allowed in a renormalisable Lorentz invariant Lagrangian are:
 \begin{table}[h!]
 \begin{tabular}{ll}
- Pure scalar & $\psi^3$, $\psi^4$  \\
+ Pure scalar & $\phi^3$, $\phi^4$  \\
  Yang-Mills &  $\partial_\mu A_\nu A^\mu A^\nu$, $A_\mu A_\nu A^\mu A^\nu$ \\
  Gauge-scalar interactions & $\phi A_\mu A^\mu$, $\phi^2 A_\mu A^\mu$, $\phi \partial_\mu \phi A^\mu$ \\
  Yukawa &  $\phi \bar{\psi} \psi$ \\
@@ -199,9 +199,9 @@ where we have taken the physical solution in the last line. Since $W$ is massive
 \underline{\epsilon}_3 &= (0,0,1). 
 \end{split}
 \end{equation}
-$\underline{\epsilon}_1$ and $\underline{\epsilon}_2$ are the transverse components and can be combined to form $\underline{\epsilon}_\pm = 1/\sqrt{2}(1, \pm i, 0)$, and $\underline{\epsilon}_3$ is the longitudinal component. 
+$\underline{\epsilon}_1$ and $\underline{\epsilon}_2$ are the transverse components and can be combined to form $\underline{\epsilon}_\pm = \frac{1}{\sqrt{2}}(1, \pm i, 0)$, and $\underline{\epsilon}_3$ is the longitudinal component. 
 
-So if $k^\mu = (E, 0, 0, k)$, $\epsilon_3 = 1/m_W(k,0,0,E)$. N.B. for $E \gg m_W$, $\epsilon_3 \approx k^\mu/m_W + \mathcal{O}(m_W/E)$. Now let's evaluate the different polarisation sums: defining $\epsilon_0^\mu = k^\mu/m_W$ (so in the rest frame $\epsilon_0^\mu = (1, \underline{0})$ which is timelike, and therefore unphysical)
+So if $k^\mu = (E, 0, 0, k)$, $\epsilon_3 = \frac{1}{m_W}(k,0,0,E)$. N.B. for $E \gg m_W$, $\epsilon_3 \approx k^\mu/m_W + \mathcal{O}(m_W/E)$. Now let's evaluate the different polarisation sums: defining $\epsilon_0^\mu = k^\mu/m_W$ (so in the rest frame $\epsilon_0^\mu = (1, \underline{0})$ which is timelike, and therefore unphysical)
 \begin{equation}
 \begin{split}
 &\sum_{r=0,1,2,3}\eta^{rr}\epsilon_r^\mu \epsilon_r^{\nu *} = - \eta^{\mu \nu} \qquad \text{completeness: cf RQFT} \\
@@ -297,7 +297,7 @@ But $\slashed{q}u(q)=0$ so
 \text{similarly } \qquad \bar{v}(q^\prime)\slashed{k}^\prime &= \bar{v}(q^\prime)(\slashed{q}-\slashed{k})
 \end{split}
 \end{equation}
-so if $p = q -k$, and recalling $\slashed{q}u(q)=0$)
+since$\slashed{q}u(q)=0$, writing $p = q -k$ ,
 \begin{equation}
 \begin{split}
 \mathcal{M} &= \frac{-ig^2}{4}\frac{1}{m_W^2p^2}\bar{v}(q^\prime)\slashed{p}\slashed{p}\slashed{p}(1-\gamma^5)u(q) \\
@@ -348,12 +348,12 @@ For example, this diagram has contributions
 \sim \int d^4k \bigg(\frac{k^2/m_W^2}{k^2-m_W^2}\bigg)^2 \bigg(\frac{\slashed{k}}{k}\bigg)^2 \sim \int \frac{d^4k}{m_W^4k^2}.
 \end{equation}
 Unitarity and renormalisability of theories with vectors requires \textit{gauge invariance} under $W_\mu \to W_\mu + \partial_\mu \alpha \implies \epsilon_\mu \to \epsilon_\mu + \alpha k_\mu$. 
-Remember that this problem doesn't arise in QED because for the comparitive process $\gamma e^- \to \gamma e^-$ we have two contributing diagrams:
+Remember that this problem doesn't arise in QED because for the comparative process $\gamma e^- \to \gamma e^-$ (or, by crossing, $e^+e^- \to \gamma \gamma$) we have two contributing diagrams:
 
 %
 %\begin{wrapfigure}{r}{0.7\linewidth}
 %  \centering
-  \includegraphics[width=\linewidth]{figs/18c.png}
+  \includegraphics[width=0.8\linewidth]{figs/18c.png}
 %\end{wrapfigure}
 %
 \newline
@@ -362,6 +362,6 @@ whereas for EW, $W^+ \neq W^-$ so there is only one.
 %
 %\begin{wrapfigure}{r}{0.7\linewidth}
 %  \centering
-  \includegraphics[width=0.4\linewidth]{figs/18d.png}
+  \includegraphics[width=0.3\linewidth]{figs/18d.png}
 %\end{wrapfigure}
 %

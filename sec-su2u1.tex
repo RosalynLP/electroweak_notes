@@ -6,7 +6,7 @@ In the previous section we saw that in order to avoid unitarity violation we nee
 \item non-abelian, because abelian gauge bosons ($\gamma$) are neutral,
 \item massive (how do we achieve this?).
 \end{itemize}
-The weak current $1/2 J_\mu = \bar{\nu}_e\gamma_\mu e_L + ...$ is built out of left-handed doublets:
+The weak current $\frac{1}{2} J_\mu = \bar{\nu}_e\gamma_\mu e_L + ...$ is built out of left-handed doublets:
 
 \[ \psi_L \equiv \left( \begin{array}{cc}
 \nu_e   \\
@@ -331,7 +331,7 @@ with an effective Lagrangian
 \begin{equation}
 \mathcal{L}_{4F} \to \frac{-g^2}{8m_W^2}(J_\mu^\dagger J^\mu + \rho J_\mu^{NC}J^\mu_{NC}),
 \end{equation}
-where $\rho = m_W^2/\cos^2\theta_w m_Z^2 =1$ is the Veltman parameter. Neutral current interactions are very difficult to see at low energy because of the  presence of the neutral electromagnetic current $\gamma$. Neutral current interactions were first observed at Garganelle (CERN) in 1973, in neutrino scattering off a nucleus: $\nu_\mu N \to \nu_\mu N$. These experiments are very difficult as the neutrino beam comes from pion decays at a rate of just 3 events in 2 years!
+where $\rho = m_W^2/\cos^2\theta_w m_Z^2 =1$ is the Veltman parameter. Neutral current interactions are very difficult to see at low energy because of the  presence of the neutral electromagnetic current $\gamma$. Neutral current interactions were first observed at Garganelle (CERN) in 1973, in neutrino scattering off a nucleus: $\nu_\mu N \to \nu_\mu N$. These experiments are very difficult. The neutrino beam comes from pion decays. Early experiments found just 3 events in 2 years!
 %
 \subsubsection{Example: $\nu_\mu e^- \to \nu_\mu e^-$}
 %
@@ -347,12 +347,12 @@ Let's first consider the process at low energy, as an effective theory.
 so averaging over initial spins and summing over final spins gives
 \begin{equation}
 \begin{split}
-\frac{1}{2}\sum_{spins}|\mathcal{M}|^2 &= \frac{G_F^2\rho^2}{2}\ tr \bigg(\slashed{p}^\prime \gamma_\mu(c_V-c_A\gamma^5)\slashed{p}\gamma_\nu(c_V-c_A \gamma^5)\bigg)\ tr \bigg(\slashed{q}^\prime \gamma^\mu(1-\gamma^5)\slashed{q}\gamma^\nu(1-\gamma^5)\bigg) \\
-&= 32G_F^2 \rho^2 \bigg( (c_V^2+c_A^2)(p_\mu p^\prime_\nu + p^\prime_\mu p_\nu - \eta_{\mu \nu} p\cdot p^\prime) - 2ic_Vc_A \epsilon_{\mu \nu \alpha \beta}p^\alpha p^{\prime \beta}\bigg) \\
+\frac{1}{2}\sum_{spins}|\mathcal{M}|^2 &= \frac{G_F^2\rho^2}{4}\ tr \bigg(\slashed{p}^\prime \gamma_\mu(c_V-c_A\gamma^5)\slashed{p}\gamma_\nu(c_V-c_A \gamma^5)\bigg)\ tr \bigg(\slashed{q}^\prime \gamma^\mu(1-\gamma^5)\slashed{q}\gamma^\nu(1-\gamma^5)\bigg) \\
+&= 8G_F^2 \rho^2 \bigg( (c_V^2+c_A^2)(p_\mu p^\prime_\nu + p^\prime_\mu p_\nu - \eta_{\mu \nu} p\cdot p^\prime) - 2ic_Vc_A \epsilon_{\mu \nu \alpha \beta}p^\alpha p^{\prime \beta}\bigg) \\
 &\times \bigg(q^\mu q^{\prime \nu} + q^{\prime \mu} q^\nu -\eta^{\mu \nu} q \cdot q^\prime - i\epsilon^{\mu \nu \rho \sigma}q_\sigma q^\prime_\rho \bigg) \\
-&= 64G_F^2 \rho^2 \bigg( (c_V^2+c_A^2)(p \cdot q p^\prime \cdot q^\prime + p\cdot q^\prime p^\prime \cdot q) + 2c_Vc_A(p \cdot q p^\prime \cdot q^\prime - p\cdot q^\prime p^\prime \cdot q) \bigg) \\
-&= 64G_F^2 \rho^2 \bigg((c_V+c_A)^2 p \cdot q p^\prime \cdot q^\prime + (c_V-c_A)^2 p \cdot q^\prime p^\prime \cdot q \bigg) \\
-&= 16 G_F^2\rho^2(c_L^2s^2 + c_R^2u^2)
+&= 16G_F^2 \rho^2 \bigg( (c_V^2+c_A^2)(p \cdot q p^\prime \cdot q^\prime + p\cdot q^\prime p^\prime \cdot q) + 2c_Vc_A(p \cdot q p^\prime \cdot q^\prime - p\cdot q^\prime p^\prime \cdot q) \bigg) \\
+&= 16G_F^2 \rho^2 \bigg((c_V+c_A)^2 p \cdot q p^\prime \cdot q^\prime + (c_V-c_A)^2 p \cdot q^\prime p^\prime \cdot q \bigg) \\
+&= 4 G_F^2\rho^2(c_L^2s^2 + c_R^2u^2)
 \end{split}
 \end{equation}
 where we have used $c_L = c_V + c_A$ and $c_R = c_V-c_A$, and the Mandelstam variables $s=2 p \cdot q = 4E^2$ and $u=-2p \cdot q^\prime = -2E^2(1+ \cos\theta)$. We can now calculate the total cross section by integrating first over $\phi$ and then over $\theta$:
@@ -367,7 +367,7 @@ You can infer $\sigma(\bar{\nu}_\mu e)$ from crossing symmetry $q \leftrightarro
 \begin{equation}
 \frac{\sigma(\bar{\nu}_\mu e)}{\sigma(\nu_\mu e)} = \frac{c_V^2 + c_A^2 - c_Vc_A}{c_V^2 + c_A^2 + c_V c_A},
 \end{equation}
-where in this instance $c_V = 2 \sin^2\theta_w -1/2$ and $c_A = -1/2$. From this we can deduce that $\sin^2\theta_w \approx 0.23$. 
+where in this instance $c_V = 2 \sin^2\theta_w -1/2$ and $c_A = -1/2$. From measuring their rate experimentally, we can deduce that $\sin^2\theta_w \approx 0.23$. 
 
 For the high-energy cross section we need to take account of the $Z^0$ propagator.
 \begin{wrapfigure}{l}{0.3\linewidth}
@@ -454,7 +454,7 @@ and
 \end{equation}
 The bracketed term on the right can be re-expressed as $-m_Z^2/(p^2-m_Z^2) = -m_Z^2/(s-m_Z^2)$, so 
 \begin{equation}
-\mathcal{M}_t + \mathcal{M}_s = -{ig^2}{4\cos^2\theta_w}\frac{1}{s-m_Z}^2\bar{v}(q^\prime)\slashed{k}(-\gamma^5)u(q).
+\mathcal{M}_t + \mathcal{M}_s = -{ig^2}{4\cos^2\theta_w}\frac{1}{s-m_Z^2}\bar{v}(q^\prime)\slashed{k}(-\gamma^5)u(q).
 \end{equation}
 Squaring as before, we arrive at
 \begin{equation}
@@ -571,4 +571,4 @@ The $W$ and $Z$ were discovered at SPS and CERN in 1983. They are easiest to pro
   \hfill
   \subfloat[$Z$]{\includegraphics[width=0.4\textwidth]{figs/27c.png}}
 \end{figure}
-The partonic cross-sections are easy to calculate, allowing the properties of the $Z^0$ in particular to be explored with great precision at LEP (an $e^+ e^-$ collider operating from 1989-2001). This is because the $Z^0$ has a very clean final state signature, unlike the $W$ where the neutrino is not visible to the detectors. 
+The partonic cross-sections are easy to calculate. The properties of the $Z^0$ in particular were explored with great precision at LEP (an $e^+ e^-$ collider operating from 1989-2001). The $Z^0$ has a very clean final state signature, unlike the $W$ where the neutrino is not visible to the detectors. 
