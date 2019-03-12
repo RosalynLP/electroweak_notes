@@ -65,3 +65,104 @@ where to go from the first line to the second we note that $l-q=p+l-(p+q)$, and 
 \frac{(p+l)_\alpha}{(p+l)^2(l+q)^2} \to \frac{l_\alpha}{l^2(l-(p+q)^2)^2},
 \end{equation}
 so now we see that the second term depends on $(p+q)$ only, so must also vanish. However, the loop integral is linearly divergent, so such a shift is not allowed...
+
+As an aside, consider 
+\begin{equation}
+\mathcal{I}(a) = \int_{-\infty}^{\infty} dx\ f(x+a).
+\end{equation}
+If the function is convergent, $\mathcal{I}(a) = \mathcal{I}(0)$. Assume that $f(x) \to c_\pm$ as $x \to \pm \infty$, i.e. that it is linearly divergent. Then
+\begin{equation}
+\begin{split}
+\mathcal{I}(a) - \mathcal{I}(0) &= \int_{-\infty}^{\infty} dx\ \big( f(x+a) - f(x) \big) \\
+&= \int_{-\infty}^{\infty} dx\ \big( a f^\prime(x) + \frac{1}{2} a^2 f^{\prime \prime}(x) + ... \big) \\
+&= a f^\prime(x)|^{+\infty}_{-\infty} \\
+&= a(c_+ - c_-),
+\end{split}
+\end{equation}
+where the $f^{\prime \prime}$ term integrates to 0 because $f^\prime(x) \to 0$ as $x \to \pm \infty$. This works for linearly divergent integrals in four dimensions too: consider
+\begin{equation}
+\Delta^\alpha(k) = \int \frac{d^4l}{(2 \pi)^4} \big( F^\alpha (l+k) - F^\alpha(l) \big),
+\end{equation}
+Wick rotate, sending $l \to \tilde{l}$, and Taylor expand:
+\begin{equation}
+\Delta^\alpha(k) = \int \frac{d^4\tilde{l}}{(2 \pi)^4} \bigg( k^\mu \frac{\partial F^\alpha}{\partial \tilde{l}^\alpha} + ... \bigg).
+\end{equation}
+Assume at large $\tilde{l}^\mu$ that $F^\alpha(\tilde{l}) \sim A\frac{\tilde{l}^\alpha}{\tilde{l}^4}$, so the integral over $F$ is linearly divergent. Only the first term survives: using the divergence theorem
+\begin{equation}
+\Delta^\alpha(k) = ik^\mu \int \frac{d^3 S_\mu}{(2\pi)^4} F^\alpha(\tilde{l}),
+\end{equation}
+where the surface element $d^3 S_\mu = \tilde{l}^2 \tilde{l}_\mu d\Omega_4$, and $d\Omega_4 = 2\pi^2$ is the 4-dimensional solid angle. Expressing $\tilde{l}_\mu \tilde{l}^\alpha \to \frac{1}{4}\delta_\mu^\alpha \tilde{l}^2$,
+\begin{equation}
+\begin{split}
+\Delta^\alpha(k) &= ik^\mu \int \frac{d\Omega_4}{(2\pi)^4} A \frac{\tilde{l}_\mu \tilde{l}^\alpha}{ \tilde{l}^2} \\
+&= \frac{i}{32\pi^2} A k^\alpha.
+\end{split}
+\end{equation}
+So shifts in the loop momenta of linearly divergent integrals can give (finite) non-zero terms. Applying this to our integral,
+\begin{equation}
+\int \frac{d^4l}{(2\pi)^4} \frac{(p+l)_\alpha}{(p+l)^2(l-q)^2} - \int \frac{d^4l}{(2\pi)^4} \frac{l_\alpha}{l^2(l-p-q)^2} = \frac{i}{32\pi^2}p_\alpha \qquad \text{for } A=1,
+\end{equation}
+so 
+\begin{equation}
+\begin{split}
+p_\mu \mathcal{M}^{\rho \mu \nu} &= -\frac{g^3}{8\pi^2} \epsilon^{\nu \rho \alpha \beta}p_\alpha(p+q)_\beta \\
+&= - \frac{g^3}{8 \pi^2} \epsilon^{\nu \rho \alpha \beta}p_\alpha q_\beta \neq 0.
+\end{split}
+\end{equation}
+So the vector current is \textit{not} conserved! This is an anomaly. However, $\mathcal{M}^{\rho \mu \nu}$ clearly depends on how we choose $l$: perhaps there is a better way?
+
+Consider $l^\mu \to l^\mu + k^\mu$ in the integral for $\mathcal{M}^{\rho \mu \nu}$. We end up with
+\begin{equation}
+\Delta^{\rho \mu \nu} = (-g)^3 ik^\alpha \int \frac{d^3 S_\alpha}{(2\pi)^4} \frac{tr(\gamma^5 \slashed{\tilde{l}}\gamma^\mu \slashed{\tilde{l}}\gamma^\nu \slashed{\tilde{l}}\gamma^\rho)}{\tilde{l}^6},
+\end{equation}
+and, using $\slashed{\tilde{l}}\gamma^\mu \slashed{\tilde{l}} = -2\tilde{l}^2\gamma^\mu$,
+\begin{equation}
+\begin{split}
+\Delta^{\rho \mu \nu} &= 2ig^3 k^\alpha \int \frac{d\Omega_4}{(2\pi)^4} \tilde{l}^\alpha \frac{4i\epsilon^{\mu \nu \sigma \rho} \tilde{l}_\sigma}{\tilde{l}^2} \\
+&= - 8 g^3 k^\alpha \epsilon^{\mu \nu \sigma \rho} \frac{1}{4} \eta_{\alpha \sigma} \frac{\Omega_4}{(2\pi)^4} \\
+&= + \frac{g^3}{4\pi^2} \epsilon^{\rho \mu \nu \sigma} k_\sigma.
+\end{split}
+\end{equation}
+So we can shift the anomaly around. Take $k^\mu = \frac{1}{2}(\alpha q^\mu - \beta p^\mu)$: then
+\begin{equation}
+\begin{split}
+p_\mu\mathcal{M}^{\rho \mu \nu} &\to - \frac{g^3}{8\pi^2} \epsilon^{\nu \rho \alpha \beta}p_\alpha q_\beta + \frac{g^3}{4\pi^2} p_\mu\frac{1}{2}(\alpha q_\sigma - \beta p_\sigma) \\
+&= -\frac{g^2}{8\pi^2} (1-\alpha) \epsilon^{\nu \rho\alpha \beta}p_\alpha q_\beta, \\
+q_\mu\mathcal{M}^{\rho \mu \nu} &\to -\frac{g^2}{8\pi^2} (1-\beta) \epsilon^{\nu \rho\alpha \beta}p_\alpha q_\beta.
+\end{split}
+\end{equation}
+So if we choose $\alpha = \beta = 1$, the vector current is conserved. But watch out:
+\begin{equation}
+\begin{split}
+-(p+q)\mathcal{M}^{\rho \mu \nu} &\to - \frac{g^3}{4\pi^2} \epsilon^{\rho \mu \nu \sigma}(p+q)_\rho \frac{1}{2}(\alpha q_\sigma - \beta p_\sigma) \\
+&= -\frac{g^3}{8\pi^2}(\alpha + \beta) \epsilon^{\mu \nu \alpha \beta}p_\alpha q_\beta,
+\end{split}
+\end{equation}
+so now the axial current is anomalous! In other words we can have $\partial^\mu j_\mu = 0$ or $\partial^\mu j_\mu^5 = 0$, but not both. 
+
+So in QED (or QCD), we choose $\partial^\mu j_\mu = 0$ in order that gauge symmetry is exact. But 
+\begin{equation}
+\partial^\mu j_\mu^5 = - \frac{1}{16 \pi^2} \epsilon^{\mu \nu \alpha \beta} F_{\mu \alpha} F_{\nu \beta} = \frac{1}{8 \pi^2} F_{\mu \nu}^* F^{\mu \nu},
+\end{equation}
+where $F_{\mu \nu}^* = \frac{1}{2} \epsilon_{\mu \nu \alpha \beta} F^{\alpha \beta}$.
+\subsubsection{Notes:}
+\begin{enumerate}
+\item The right hand side is a topological invariant: the anomaly is not renormalised.
+\item The above derivation is regulator-independent. There are problems with $\gamma^5$ in dimensional regularisation and in Pauli-Villars regularisation, but axial symmetry is broken explicitly here.
+\item Path integral derivation ????
+\item For non-abelian symmetries, there are related anomalies in the box and pentagon diagrams.
+\item A practical application is $\pi^0 \to 2\gamma$ (Steinberger, 1951).
+\end{enumerate}
+%
+\subsection{Gauge Anomalies}
+%
+Consider the left-handed and right-handed currents: $\gamma_5 = P_R - P_L$, $P_R^2=P_R$, $P_L^2=P_L$, $P_RP_L=0$, so $AVV = (R-L)VV = RRR - LLL$. Given that $VVV=0$, $RRR = \frac{1}{2}AVV$ and $LLL = -\frac{1}{2}AVV$.
+
+For $LLL$, we want to have symmetry between each leg of the triangle: choose $1-\alpha$ = $1-\beta$ = $\alpha + \beta$, so $\alpha=\beta=\frac{1}{3}$.
+\begin{equation}
+\begin{split}
+(p+q)_\rho \mathcal{M}_L^{\rho \mu \nu} = - \frac{g^3}{24\pi^2} \epsilon^{\mu \nu \alpha \beta} p_\alpha q_\beta, \\
+\text{i.e. } \partial^\mu J_\mu^L = + \frac{1}{96\pi^2}\epsilon^{\mu \nu \alpha \beta}F_{\mu \alpha}^L F_{\nu \beta}^L = - \frac{1}{48 \pi^2}F_{\mu \nu}^{L *} F^{L \mu \nu}.
+\end{split}
+\end{equation}
+So the abelian gauge theory of a single left-handed (or right-handed) chiral fermion is inconsistent: the U(1)$_L$ current is not conserved, so unitarity and renormalisability are spoilt. For consistency, we need $\sum (Q_L^3 - Q_R^3)=0$, e.g. $Q_L=Q_R$ for QED. (There are some weird alternatives possible, such as $Q_L=2$, then 8  with $Q_R=1$.) But what about non-abelian theories, such as SU(2)$_L \otimes$U(1)$_Y$? For a non-abelian gauge theory, there is an additional factor $T_a$ at each vertex.
