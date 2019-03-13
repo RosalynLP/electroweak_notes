@@ -166,3 +166,43 @@ For $LLL$, we want to have symmetry between each leg of the triangle: choose $1-
 \end{split}
 \end{equation}
 So the abelian gauge theory of a single left-handed (or right-handed) chiral fermion is inconsistent: the U(1)$_L$ current is not conserved, so unitarity and renormalisability are spoilt. For consistency, we need $\sum (Q_L^3 - Q_R^3)=0$, e.g. $Q_L=Q_R$ for QED. (There are some weird alternatives possible, such as $Q_L=2$, then 8  with $Q_R=1$.) But what about non-abelian theories, such as SU(2)$_L \otimes$U(1)$_Y$? For a non-abelian gauge theory, there is an additional factor $T_a$ at each vertex.
+\begin{figure}[!h]
+  \subfloat[]{\includegraphics[width=0.3\textwidth]{figs/42a.png}}
+ % \hfill
+  \subfloat[]{\includegraphics[width=0.3\textwidth]{figs/42b.png}}
+\end{figure}
+The combination of (a) and (b) gives
+\begin{equation}
+trT_aT_cT_b + trT_aT_bT_c = trT_a\{T_b,T_c\},
+\end{equation}
+so for a consistent theory (with no anomaly), we require
+\begin{equation}
+A_{abc} \equiv trT_a^L\{T_b^L,T_c^L\} - trT_a^R\{T_b^R,T_c^R\} = 0.
+\end{equation}
+This is automatic for a vector-like theory like QCD, SU(3)$_c$.
+%
+\subsection{Anomaly Cancellation in the Standard Model (Gross \& Jackiw, 1972)}
+%
+We require
+\begin{equation}
+A_{abc} \equiv trT_a^L\{T_b^L,T_c^L\} - trT_a^R\{T_b^R,T_c^R\} = 0
+\end{equation}
+for $T_a \in$ U(1)$_Y$ or SU(2)$_L$ (both are chiral).
+\begin{enumerate}
+\item \textbf{SU(2)$_L$:}
+
+$tr \tau_a \{\tau_b, \tau_c \} = 0$ for SU(2), so there is no anomaly. Note that for SU(3)$_L$, $trT_a\{T_b,T_c\}=d_{abc} \neq 0$, so there is no cancellation. In fact SU(N)$_L$ is anomalous for all $N >2$.
+\item \textbf{U(1)$_Y$:} 
+
+We need $tr Y_L^3 = tr Y_R^3$.
+
+For leptons, the left-handed leptons have $Y_L = - \frac{1}{2}$, and the right-handed leptons have $Y_e = -1$ and $Y_\nu = 0$. So $tr Y_L^3 = 2 \times (\frac{-1}{2})^3 = -\frac{1}{4}$ (the factor of 2 is because left-handed leptons are in a doublet) and $tr Y_R^3 = (-1)^3 = -1$, so the two don't cancel.
+
+For quarks, left-handed quarks have $Y_Q = \frac{1}{6}$ and right-handed quarks have $Y_u = \frac{2}{3}$ and $Y_d = - \frac{1}{3}$, so $tr Y_L^3 = 2\times 2 \times (\frac{1}{6})^3 = \frac{1}{36}$ (where the factor of 3 comes from the 3 colours). $tr Y_R^3 = = 3 \times ((\frac{2}{3})^3 + (\frac{-1}{3})^3) = \frac{7}{9}$, so again the two don't cancel.
+
+But altogether $-\frac{1}{4} + \frac{1}{36} = -1 + \frac{7}{9}$, so the combination of leptons and quarks cancels! This means that we need three colours of quark in order for the standard model to be consistent. 
+
+\item \textbf{Mixed: }
+
+For SU(N), $tr T_a=0$, so there are no anomalies for $tr T_a Y^2$. But for two SU(N) generators, $tr T_a T_b \propto \delta_{ab}$.
+\end{enumerate}
