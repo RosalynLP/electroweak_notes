@@ -204,5 +204,50 @@ But altogether $-\frac{1}{4} + \frac{1}{36} = -1 + \frac{7}{9}$, so the combinat
 
 \item \textbf{Mixed: }
 
-For SU(N), $tr T_a=0$, so there are no anomalies for $tr T_a Y^2$. But for two SU(N) generators, $tr T_a T_b \propto \delta_{ab}$.
+For SU(N), $tr T_a=0$, so there are no anomalies for $tr T_a Y^2$. But for two SU(N) generators, $tr T_a T_b \propto \delta_{ab}$, and the $tr Y$ part factors out. Considering two cases:
+\begin{enumerate}
+\item (SU(2)$_L$)$^2_Y$: we only consider the left-handed components, so $tr Y_L = 2\times (-\frac{1}{2} + 3\times \frac{1}{6}) = 0$.
+\item (SU(3)$_c$)$^2_Y$: we only consider the quark sector ($q$), so $tr_q Y_L - tr_q Y_R = 3 \times (2 \times \frac{1}{6}) - 3 \times(\frac{2}{3} - \frac{1}{2}) = 0$.
 \end{enumerate}
+
+\item  \textbf{Gravitational anomalies (Witten \& Alvarez-Gaum\'e , 1984)}
+
+In this case the external lines are gravitons, and we require $tr Y_L = tr Y_R$. We already worked out $tr Y_L = 0$ for (SU(2)$_L$)$^2_Y$, so this means we need $tr Y_R=0$. Putting in the numbers: $trY_R = -1 + 0 + 3\times(\frac{2}{3} - \frac{1}{3}) = 0$, as required.
+\end{enumerate}
+
+\subsubsection{Summary}
+We need:
+\begin{itemize}
+\item $Y_L + 3 Y_Q = 0$, so $Q_e = -Q_p$; the hydrogen atom is netural.
+\item $2Y_Q - Y_u - Y_d = 0$ and $2Y_L - Y_e - Y_\nu=0$, so the left-handed doublets match the right-handed singlets.
+\item $2Y_L^3 - Y_e^3 - Y_\nu^3 + 3(2Y_Q^3 - Y_u^3 - Y_d^3) = 0$ for each generation.
+\end{itemize}
+Note that we must have $Y_\nu=0$, because $\nu$ is purely left-handed and there is no coupling of right-handed particles to U(1)$_Y$. We can choose $Y_e =-1$ without loss of generality, by rescaling $g^\prime$ appropriately. So $Y_L = \frac{-1}{2}$, $Y_Q=\frac{1}{6}$, which fixes $Y_u + Y_d = \frac{1}{3}$.  We can then apply $2Y_L^3 - Y_e^3 - Y_\nu^3 + 3(2Y_Q^3 - Y_u^3 - Y_d^3) = 0$:
+\begin{equation}
+\begin{split}
+2\times(-\frac{1}{2})^3 - (-1)^3 + 3(2(\frac{1}{6})^3 - Y_u^3 - (\frac{1}{3} - Y_u)^3) = 0 \\
+\implies 3Y_u^2 - Y_u + \frac{2}{3} = 0 \\
+\implies Y_u = \frac{2}{3}, \frac{-1}{3}.
+\end{split}
+\end{equation} 
+This is because $u$ and $d$ have been treated on an equal footing. ????
+%
+\subsection{The Witten SU(2) Anomaly (1983)}
+%
+The SU(2) gauge theory of a single Weyl fermion (doublet) is not well-defined. The reason for this is topology: there are configurations which take $\mathcal{D} \psi \to - \mathcal{D} \psi $. The anomaly is cancelled in the standard model: each generation has one doublet of leptons and $N_c$ doublets of quarks, so there is no Witten anomaly if $N_c$ is odd. The simplest solution is that $N_c=3$.
+%
+\subsection{Global Anomalies}
+%
+There are chiral anomalies in global symmetries (rather than local gauge symmetries). The associated Noether current is no longer conserved, but there is no inconsistency. An important example is baryon number, $B$. The global symmetry is under the transformation $u \to \exp(\frac{i\alpha}{3})u$, $d \to \exp(\frac{i\alpha}{3})d$, $e \to e$, $\nu \to \nu$ etc.
+
+The mixed anomalies $B$(U(1)$_Q$)$^2$ and $B$(SU(3)$_c$)$^2$ cancel, because they are vector-like. But $B$(SU(2)$_L$)$^2$ doesn't cancel:
+\begin{equation}
+\partial_\mu J^{\mu B} = - \frac{3g^2}{16 \pi^2} \epsilon_{\mu \nu \alpha \beta}\ tr \mathcal{W}^{\mu \nu} \mathcal{W}^{\alpha \beta}.
+\end{equation}
+The anomaly has no effect in perturbation theory ($tr\mathcal{W}_{\mu \nu}^* \mathcal{W}^{\mu \nu}  = \partial_\mu K^\mu$ for some gauge non-invariant $K^\mu$). However, there are topologically non-trivial fields (known as sphalerons) that can cause violation of baryon number conservation ('t Hooft, 1976). But the effect is very small: $\frac{\Gamma}{V} \sim m_W^4 \exp(\frac{-8\pi^2}{g^2}) \sim 10^{-180}$. This is good, otherwise protons would decay. This effect can be significant, however, at temperatures $\sim m_W$, such as in the early Universe.
+
+There is a similar anomaly in the lepton number $L$, for the symmetry  $u \to u$, $d \to d$, $e \to \exp{(i\alpha)}e$, $\nu \to \exp{(i\alpha)}\nu$. Clearly
+\begin{equation}
+\partial_\mu J^{\mu L} = \partial_\mu J^{\mu B}
+\end{equation}
+for each generation. So $B + L$ is anomalous but $B-L$ is conserved (the anomalies cancel). Conservation of $B-L$ + charge conservation implies that the number of protons and the number of electrons were the same in the early Universe, leading to the formation of hydrogen atoms.
