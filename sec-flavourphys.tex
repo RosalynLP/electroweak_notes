@@ -174,4 +174,46 @@ where we have used the notation $c_i = \cos\theta_i$, $s_i = \sin\theta_i$, with
 \textbf{Notes: }
 \begin{itemize}
 \item We can put the mixing into down-type quarks (as is convention) $d_L^{i \prime} = V^{* ij} d_L^j$ or into up-type quarks $\bar{u}_L^{j \prime} = \bar{u}_L^iV^{ij}$, and the physics is unchanged.
+\item $V$ depends on only $L^u$ and $L^d$ (not $R^u$ and $R^d$), because charged current is left-handed.
+\item For leptons, because up-type leptons (i.e. neutrinos) are massless, we can absorb $V$ into $\nu_L$ with impunity; there is no mixing. We see that mixing and mass are intimately related.
+\item Mixing follows directly from spontaneous symmetry breaking for quark masses, but it's not pretty... we have 10 new parameters (6 masses, 3 angles and 1 phase).
+\item The charged current Feynman rules pick up factors of elements of $V$ and $V^\dagger$, e.g.
+\newline
+\includegraphics[width=0.4\linewidth]{figs/46a.png}
+\includegraphics[width=0.4\linewidth]{figs/46b.png}
 \end{itemize}
+%
+\subsection{Unitarity Triangles}
+%
+Testing for unitarity is equialent to testing for the condition $VV^\dagger =1$. There are different ways of doing this:
+\begin{enumerate}
+\item \textbf{Universality tests: }
+There are three tests of the form $(V^\dagger V)_{ii}=1$, e.g.
+$|V_{ud}|^2 +|V_{us}|^2 +|V_{ub}|^2 = 1$.
+\item \textbf{Triangle tests: }
+There are six tests of the form $(V^\dagger V)_{ij}=0$ for $i \neq j$, e.g.
+$V^*_{ub}V_{ud} + V^*_{cb}V_{cd} + V^*_{tb}V_{td} = 0$. 
+
+This is a triangle because it is a sum of three complex numbers. The diagram on the right shows the different connections between the quark types.
+\newline
+\includegraphics[width=0.6\linewidth]{figs/47a.png}
+\includegraphics[width=0.3\linewidth]{figs/47b.png}
+\end{enumerate}
+\textbf{Determining $|V_{ij}|$: }
+\begin{itemize}
+\item The top left part of $V$ (which doesn't involve $t$ or $b$ quarks) is determined by measuring $\theta_c$ as above. More specifically: $|V_{ud}|$ is determined through $\beta$ and pion decay, $|V_{us}|$ through kaon and tau decays, and $|V_{cd}|$ and $|V_{cs}|$ are determined through $D$ semileptonic decays such as $D \to \pi l \nu$ and $D \to K l \nu$.
+\item Additional elements involving the $b$ quark but not the $t$ quark (i.e. "B physics") are determined by $B$ semileptonic decays such as $B \to \pi l \nu$ and $B \to D l \nu$. 
+\item $|V_{tb}|$ is determined through single top producgion $t \to bW$, but $|V_{ts}|$ and $|V_{td}|$ are very hard to measure directly. We can use corrections to loop calculations to find these (see later).
+\end{itemize}
+The results of the combined fits are usefully summarised by the Wolfenstein parametrisation (1983):
+\begin{equation}
+V = \begin{pmatrix}
+1-\frac{\lambda^2}{2} & \lambda & A\lambda^3(\rho - i\eta) \\
+-\lambda &  1-\frac{\lambda^2}{2} & A \lambda^2\\
+A\lambda^3(1-\rho-i\eta) & -A\lambda^2 & 1 
+\end{pmatrix} + \mathcal{O}(\lambda^4),
+\end{equation}
+where $\lambda \approx \sin\theta_c \approx\ 0.225$, $A \approx\ 0.8$, $\rho \approx\ 0.12$ and $\eta \approx 0.36$ are $\mathcal{O}(1)$. Since $\lambda \gg \lambda^2 \gg \lambda^3$, this expresses a curious hierarchy of the off-diagonal elements, which is not understood! 
+
+Considering the various universality tests and triangles, we can see that in this parametrisation $V$ is unitary.
+
