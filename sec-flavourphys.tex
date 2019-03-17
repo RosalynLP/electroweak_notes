@@ -216,4 +216,113 @@ A\lambda^3(1-\rho-i\eta) & -A\lambda^2 & 1
 where $\lambda \approx \sin\theta_c \approx\ 0.225$, $A \approx\ 0.8$, $\rho \approx\ 0.12$ and $\eta \approx 0.36$ are $\mathcal{O}(1)$. Since $\lambda \gg \lambda^2 \gg \lambda^3$, this expresses a curious hierarchy of the off-diagonal elements, which is not understood! 
 
 Considering the various universality tests and triangles, we can see that in this parametrisation $V$ is unitary.
+%
+\subsection{CP Violation}
+%
+Up until now, every term in the electroweak Lagrangian has been CP invariant. In particular, under CP $W_\mu^+ \to - W^{\mu -}$, so that the charged current interaction for leptons transforms as 
+\begin{equation}
+\begin{split}
+\frac{g}{\sqrt{2}}(W_\mu^+\bar{\psi}_LT^-\gamma^\mu \psi_L + W_\mu^-\bar{\psi}_L T^+ \gamma^\mu \psi_L) &\to \frac{g}{\sqrt{2}}(-W^{\mu -}(-\bar{\psi}_L(T^-)^T \gamma_\mu \psi_L) - W^{\mu +}\bar{\psi}_L(T^+)^T \gamma_\mu \psi_L) \\
+&= \frac{g}{\sqrt{2}}(W_\mu^- (\bar{\psi}_L T^+ \gamma^\mu \psi_L) + W_\mu^+ \bar{\psi}_L T^- \gamma^\mu \psi_L),
+\end{split}
+\end{equation}
+since $(T^+)^T = T^-$. However, we now need to include the effects of the CKM matrix in the charged-current interaction for quarks:
+\begin{equation}
+\begin{split}
+&\frac{g}{\sqrt{2}}(W_\mu^+\bar{d}_L\gamma^\mu V^\dagger u_L + W_\mu^-\bar{u}_L \gamma^\mu  V d_L)\\
+= &\frac{g}{\sqrt{2}}(W_\mu^+\bar{Q}_L T^-\gamma^\mu V^\dagger Q_L + W_\mu^- \bar{Q}_L T^+ \gamma^\mu V Q_L)\\
+\to &\frac{g}{\sqrt{2}}(W_\mu^-\bar{Q}_L (T^-)^T\gamma^\mu (V^\dagger)^T Q_L + W_\mu^+ \bar{Q}_L (T^+)^T \gamma^\mu V^T Q_L)\\
+= &\frac{g}{\sqrt{2}}(W_\mu^+\bar{Q}_L T^-\gamma^\mu V^{*\dagger} Q_L + W_\mu^- \bar{Q}_L T^+ \gamma^\mu V^* Q_L).
+\end{split}
+\end{equation}
+So we have CP invariance only if $V = V^*$. This means that the electroweak sector is CP invariant for two generations ($N=2$), but not for three generations ($N=3$) if $\delta \neq 0$. In other words, this complex phase, $\delta$, is CP-violating. Note that from the CPT theorem, which states invariance of CPT, that CP violation implies T violation. T is equivalent to complex conjugation, i.e. $\exp(iHt) \to \exp(-iHt)$.
 
+A useful measure of the amount of CP violation is given by the area of the unitarity triangle. For example, if we consider the $bd$ triangle,
+\newline
+\begin{wrapfigure}{l}{0.4\linewidth}
+  \centering
+  \includegraphics[width=\linewidth]{figs/48a.png}
+\end{wrapfigure}
+where we have defined $\lambda_i = V_{ib}^* V_{id} = \lambda_i^1 + i \lambda_i^2$. The total area of the triangle is given by
+\begin{equation}
+\begin{split}
+A &= \frac{1}{2}|\underline{\lambda}_u \wedge \underline{\lambda}_c| \\
+&= \frac{1}{2}|\lambda_u^1 \lambda_c^2 - \lambda_u^2 \lambda_c^1| \\
+&=\frac{1}{2}|\Im(\lambda_u^* \lambda_c)| \\
+&= \frac{1}{2}|\Im(V_{ub}V^*_{ud} V_{cb} V^*_{cd})|.
+\end{split}
+\end{equation}
+In fact, all the triangles have the same area (\textit{Exercise:} prove this). We can thus define the \textit{Jarlskog invariant} (Jarlskog, 1983) as
+\begin{equation}
+\begin{split}
+J &= |\Im(V_{ik}V^*_{jk}V_{il}V^*_{jl})| \qquad \text{no sum, } i\neq j \neq k \neq l \\
+&=c_1s_1c_2^2s_2c_3s_3\sin\delta \\
+&\approx A^2\lambda^6\eta \qquad  \qquad  \qquad \text{in the Wolfenstein parametrisation}.
+\end{split}
+\end{equation}
+For $J=0$, there is no CP violation. Even though $\delta$ is large, CP violation is very small, as $\lambda^6 \approx 0.0001$. It is very difficult to get CP violation. You need:
+\begin{itemize}
+\item $\delta \neq 0,\ \frac{\pi}{2}$ complex phase;
+\item $\theta_1$, $\theta_2$, $\theta_3$ $\neq 0,\ \frac{\pi}{2}$, no trivial angles (otherwise you can rotate the phase away);
+\item all masses $\neq 0$, otherwise $N=3$ reduces to $N=2$ and you can rotate the phase away;
+\item the masses must be different between up-type and down-type quarks, otherwise $N=3$ reduces to $N=2$ and you can rotate the phase away;
+\item at least two interfering amplitudes (because physics $\sim |\mathcal{M}|^2)$;
+\item a flavour changing loop, involving all three generations.
+\end{itemize}
+%
+\subsection{$K-\bar{K}$ Mixing and Decay}
+%
+Remarkably, CP violation was observed already in 1964 (Cronin \& Fitch) through study of decays of neutral $K$ mesons, $K^0=(d\bar{s})$ and $\bar{K}^0=(s\bar{d})$. (CP violation has also been observed in B physics in 2001.) Under CP, $K^0 \leftrightarrow \bar{K}^0$, conventially written as:
+\begin{equation}
+CP|K^0\rangle = -|\bar{K}^0 \rangle, \qquad CP|\bar{K}^0 \rangle = -|K^0\rangle.
+\end{equation}
+The CP eigenstates are
+\begin{equation}
+|K_1\rangle = \frac{1}{\sqrt{2}}(|K^0\rangle - |\bar{K}^0\rangle), \qquad |K_2\rangle = \frac{1}{\sqrt{2}}(|K^0\rangle + |\bar{K}^0\rangle),
+\end{equation}
+with eigenvalues $+1$ and $-1$ respectively. Kaons decay to combinations of pions:
+\begin{equation}
+\begin{split}
+|\pi^0\pi^0\rangle\ \text{and} \ |\pi^+\pi^-\rangle \qquad &\text{with }CP=+1, \\
+|\pi^0\pi^0\pi^0\rangle\ \text{and} \ |\pi^+\pi^-\pi^0\rangle \qquad &\text{with }CP=-1,
+\end{split}
+\end{equation}
+because the pion has odd parity. So if there is no CP violation, $K_1 \to \pi\pi$ and $K_2 \to \pi\pi\pi$. The two pion state has a large phase space so the decay is quick. Converseley, the three pion state has a smaller phase space and the decay is slow ($m_K \approx 495$ MeV whilst $m_\pi \approx 140$ MeV. In reality, there are two \textit{physical} states, which we can observe: $K_S$ ("$K$-short") and $K_L$ ("$K$-long"). Usually, these correspond to 
+\begin{equation}
+\begin{split}
+K_S \to \pi\pi \qquad \textit{i.e. } &K_S \approx K_1, \\
+K_L \to \pi\pi\pi \qquad \textit{i.e. } &K_L \approx K_2.
+\end{split}
+\end{equation}
+However, sometimes $K_L \to 2\pi$ and $K_S \to 3\pi$:
+\begin{equation}
+\eta_{+-} = \frac{\langle\pi^+\pi^-|\mathcal{H}|K_L\rangle}{\langle \pi^+\pi^- |\mathcal{H}|K_S \rangle}, \qquad 
+\eta_{00} = \frac{\langle\pi^0\pi^0|\mathcal{H}|K_L\rangle}{\langle \pi^0\pi^0 |\mathcal{H}|K_S \rangle},
+\end{equation}
+and $\eta_{00} \sim \eta_{+-} \sim 10^{-3}$. Clearly this violates CP. There are two possibilities to explain the observation:
+\begin{enumerate}
+\item \textbf{Direct CP Violation: }
+
+$K_S,\ K_L$ are CP eigenstates, but the decay process is CP violating.
+\begin{figure}[H]
+  \subfloat[$\Delta S =1,\ CP$]{\includegraphics[width=0.5\textwidth]{figs/49a.png}}
+  \hfill
+  \subfloat[$\Delta S =1, \ CP$ violating if $J\neq 0$]{\includegraphics[width=0.5\textwidth]{figs/49b.png}}
+  \end{figure}
+\item \textbf{Indirect CP Violation: }
+
+$K_S$ and $K_L$ are mixtures of $K_1$ and $K_2$, through interactions given by box diagrams. 
+\begin{figure}[H]
+  \subfloat[$\Delta S =2,\ CP$ violating if  $J\neq 0$]{\includegraphics[width=0.5\textwidth]{figs/49c.png}}
+  \hfill
+  \subfloat[$\Delta S =2,\ CP$ violating if  $J\neq 0$]{\includegraphics[width=0.5\textwidth]{figs/49d.png}}
+  \end{figure}
+\end{enumerate}
+Let's focus on indirect CP violation, via kaon mixing. From the CPT theorem,
+\begin{equation}
+\begin{split}
+&\langle K^0 | \mathcal{H} | K^0 \rangle = \langle \bar{K^0} | \mathcal{H} | \bar{K^0} \rangle \\
+&\langle K^0 | \mathcal{H} | \bar{K^0} \rangle = \langle \bar{K^0} | \mathcal{H} | K^0 \rangle,
+\end{split}
+\end{equation}
+where the first line is determined by QCD and the second line is determined by electroweak for $\Delta S = 2$.
