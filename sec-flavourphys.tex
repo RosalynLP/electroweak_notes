@@ -325,4 +325,63 @@ Let's focus on indirect CP violation, via kaon mixing. From the CPT theorem,
 &\langle K^0 | \mathcal{H} | \bar{K^0} \rangle = \langle \bar{K^0} | \mathcal{H} | K^0 \rangle,
 \end{split}
 \end{equation}
-where the first line is determined by QCD and the second line is determined by electroweak for $\Delta S = 2$.
+where the first line is determined by QCD and the second line is determined by electroweak for $\Delta S = 2$. We can write the mass matrix
+\begin{equation}
+\begin{pmatrix}
+M & M_X \\
+M_X^* & M 
+\end{pmatrix},
+\qquad |M_X| \ll M \equiv m_K,
+\end{equation}
+where $m_K \sim 495$ MeV is the mass of the kaon. The matrix is hermitian so has real eienvalues $M \pm |M_X|$, with eigenvectors
+\begin{equation}
+\frac{1}{\sqrt{2}} (e^{i\frac{\phi}{2}}|K^0\rangle \pm e^{-i\frac{\phi}{2}}|\bar{K^0}\rangle),
+\end{equation}
+where $M_X = |M_X|e^{i\phi}$. 
+
+So if there is no CP violation, then $\phi=0$, which means: $|K_L\rangle = |K_2\rangle$ with mass $M+|M_X|$, and $|K_S\rangle = |K_1\rangle$ with mass $M-|M_X|$. We can write $\Delta m_K = m_{K_L} - m_{K_S} = 2|M_X| = 2 \Re M_X$.
+
+If there is CP violation, then $\phi\neq 0$, but we assume it is small. Then we can write
+\begin{equation}
+\begin{split}
+|K_L\rangle &= |K_2\rangle + \frac{i\phi}{2}|K_1\rangle \\
+|K_S\rangle &= |K_1\rangle + \frac{i\phi}{2}|K_2\rangle,
+\end{split}
+\end{equation}
+so $|K_L\rangle$ has an admixture of $|K_1\rangle$, and can therefore decay to $\pi\pi$. We can define the parameter $\epsilon$ as a measure of indirect CP violation:
+\begin{equation}
+\epsilon = \frac{i\phi}{2} = \frac{i\Im M_X}{2\Re M_X} = \frac{i\Im M_X}{\Delta m_K}.
+\end{equation}
+\subsubsection{Notes:}
+\begin{itemize}
+\item This analysis is \textit{very} oversimplified! In practice we need to account also for the width $\Gamma$, so $M\to M + \frac{i\Gamma}{2}$, making things rather more complicated. In this case we find
+\begin{equation}
+\epsilon \approx e^{i\theta_\epsilon}\sin\theta_\epsilon \frac{\Im M_X}{\Delta m_K}, \qquad \tan\theta_\epsilon = \frac{2\Delta m_K}{\Gamma_s - \Gamma_L}, \qquad \theta_\epsilon \approx 45 \degree.
+\end{equation}
+\item We can compute $M_X$, and thus $\Delta m_K$ and $\epsilon$, from the box diagram:
+\begin{equation}
+M_X = \frac{\langle K^0 | \mathcal{H} | \bar{K}^0 \rangle}{2m_K},
+\end{equation}
+where the denominator is a normalisation factor due to density of state arguments (see the QFT course from last term). Calculating the phase of $\epsilon$, and the equivalent parameter $\epsilon^\prime$ from \textit{direct} CP violation is rather harder.
+\item In B physics, direct CP violation is more important.
+\end{itemize}
+%
+\subsection{Box Diagrams}
+%
+Let's revisit the box diagrams we saw before.
+\begin{figure}[H]
+  \subfloat[]{\includegraphics[width=0.5\textwidth]{figs/49c.png}}
+  \hfill
+  \subfloat[]{\includegraphics[width=0.5\textwidth]{figs/49d.png}}
+  \end{figure}
+We consider the incoming momenta $p=0$ (because we want to calculate the mass). We will work in the Feynman-'t Hooft gauge, so we also need to consider the Goldstone boson contributions: there are three for each diagram, for example the additions to the first diagram are depicted below.
+\newline
+  \includegraphics[width=0.4\linewidth]{figs/51a.png}
+\newline
+Let's concentrate on the first diagram, with two $W$s. The matrix element can be written
+\begin{equation}
+\begin{split}
+\mathcal{M}_{WW} = &\sum_{(a,b)=u,c,t} \bigg(\frac{-ig}{\sqrt{2}}\bigg)^4 V_{as}V^*_{ad} V^*_{bd}V_{bs} \int \frac{d^4l}{(2\pi)^4}\frac{i^4}{(l^2-m_W^2)^2(l^2-m_a^2)(l^2-m_b^2)} \\
+&\times \bar{u}_d \gamma^\mu\frac{1}{2}(1-\gamma^5)(\slashed{l}+m_a)\gamma^\nu \frac{1}{2}(1-\gamma^5) u_s \bar{v}_d \gamma_\nu \frac{1}{2}(1-\gamma^5)(-\slashed{l}+m_b)\gamma_\mu \frac{1}{2}(1-\gamma^5)v_s
+\end{split}
+\end{equation}
