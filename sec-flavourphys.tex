@@ -312,10 +312,10 @@ $K_S,\ K_L$ are CP eigenstates, but the decay process is CP violating.
 \item \textbf{Indirect CP Violation: }
 
 $K_S$ and $K_L$ are mixtures of $K_1$ and $K_2$, through interactions given by box diagrams. 
-\begin{figure}[H]
-  \subfloat[$\Delta S =2,\ CP$ violating if  $J\neq 0$]{\includegraphics[width=0.5\textwidth]{figs/49c.png}}
+\begin{figure}[H] 
+  \subfloat[$\Delta S =2,\ CP$ violating if  $J\neq 0$]{\includegraphics[width=0.5\textwidth]{figs/49c.png}\label{boxdiags1}}
   \hfill
-  \subfloat[$\Delta S =2,\ CP$ violating if  $J\neq 0$]{\includegraphics[width=0.5\textwidth]{figs/49d.png}}
+  \subfloat[$\Delta S =2,\ CP$ violating if  $J\neq 0$]{\includegraphics[width=0.5\textwidth]{figs/49d.png}\label{boxdiags2}}
   \end{figure}
 \end{enumerate}
 Let's focus on indirect CP violation, via kaon mixing. From the CPT theorem,
@@ -420,4 +420,15 @@ Note that $\mathcal{M}$ vanishes if we ignore the quark masses, because $\sum_a 
 \text{where } \qquad &A_1(x) = -\bigg(\frac{1}{1-x} + \frac{x \ln x}{(1-x)^2}\bigg), \qquad A_2(x) = \frac{1}{1-x} + \frac{x^2 \ln x}{(1-x)^2}.
 \end{split}
 \end{equation}
-Since the process is non-leptonic, we have trouble with the matrix elements.
+Since the process is non-leptonic, we have trouble with the matrix elements: we need
+\begin{equation}
+\begin{split}
+&\langle K^0 | (\bar{d}\gamma^\mu (1-\gamma^5)s)^2| \bar{K}^0 \rangle \\
+= &\sum_X 2 \langle K^0 | \bar{d}_i \gamma^\mu (1-\gamma^5) s_i | X \rangle \langle X| \bar{d}_j \gamma_\mu (1-\gamma^5) s_j | \bar{K}^0 \rangle \\
+&+\sum_X 2 \langle K^0 | \bar{d}_i \gamma^\mu (1-\gamma^5) s_j | X \rangle \langle X| \bar{d}_j \gamma_\mu (1-\gamma^5) s_i | \bar{K}^0 \rangle,
+\end{split}
+\end{equation}
+where $i,j$ label colour and we have inserted a complete set of states $X$. Note that this includes contributions from both box graphs: the first term corresponds to Fig. \ref{boxdiags2}, and the second term corresponds to Fig. \ref{boxdiags1}.
+
+In order to proceed further, we make the "vacuum saturation" approximation, which consists of
+
