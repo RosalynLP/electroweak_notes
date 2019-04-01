@@ -379,14 +379,14 @@ We consider the incoming momenta $p=0$ (because we want to calculate the mass). 
 The matrix element for the $WW$ diagram can be written:
 \begin{equation}
 \begin{split}
-\mathcal{M}_{WW} = &\sum_{a=u,c,t;\ b=\bar{u},\bar{c},\bar{t}} \bigg(\frac{-ig}{\sqrt{2}}\bigg)^4 V_{as}V_{ad} V^*_{bd}V^*_{bs} \int \frac{d^4l}{(2\pi)^4}\frac{i^4}{(l^2-m_W^2)^2(l^2-m_a^2)(l^2-m_b^2)} \\
+\mathcal{M}_{WW} = &\sum_{a=u,c,t;\ b=\bar{u},\bar{c},\bar{t}} \bigg(\frac{-ig}{\sqrt{2}}\bigg)^4 V_{as}V_{ad}^* V^*_{bd}V_{bs} \int \frac{d^4l}{(2\pi)^4}\frac{i^4}{(l^2-m_W^2)^2(l^2-m_a^2)(l^2-m_b^2)} \\
 &\times \bar{u}_d \gamma^\mu\frac{1}{2}(1-\gamma^5)(\slashed{l}+m_a)\gamma^\nu \frac{1}{2}(1-\gamma^5) u_s \bar{v}_d \gamma_\nu \frac{1}{2}(1-\gamma^5)(-\slashed{l}+m_b)\gamma_\mu \frac{1}{2}(1-\gamma^5)v_s.
 \end{split}
 \end{equation}
-Defining $\xi_a = V_{as}V_{ad}$ and ignoring quark masses in the numerator,
+Defining $\xi_a = V_{as}V_{ad}^*$ and ignoring quark masses in the numerator,
 \begin{equation}
 \begin{split}
-\mathcal{M}_{WW} = -&\sum_{a,b} \frac{g^4}{16} \xi_a \xi^*_b \bar{u}_d \gamma^\mu \gamma^\alpha \gamma^\nu (1-\gamma^5) u_s \bar{v}_d \gamma_\nu \gamma_\beta \gamma_\mu(1-\gamma^5)v_s \\
+\mathcal{M}_{WW} = -&\sum_{a,b} \frac{g^4}{16} \xi_a \xi_b \bar{u}_d \gamma^\mu \gamma^\alpha \gamma^\nu (1-\gamma^5) u_s \bar{v}_d \gamma_\nu \gamma_\beta \gamma_\mu(1-\gamma^5)v_s \\
 &\times \int \frac{d^4l}{(2\pi^4)} \frac{l_\alpha l^\beta}{(l^2-m_W^2)^2(l^2-m_a^2)(l^2-m_b^2)}. 
 \end{split}
 \end{equation}
@@ -430,5 +430,65 @@ Since the process is non-leptonic, we have trouble with the matrix elements: we 
 \end{equation}
 where $i,j$ label colour and we have inserted a complete set of states $X$. Note that this includes contributions from both box graphs: the first term corresponds to Fig. \ref{boxdiags2}, and the second term corresponds to Fig. \ref{boxdiags1}.
 
-In order to proceed further, we make the "vacuum saturation" approximation, which consists of
+In order to proceed further, we make the "vacuum saturation" approximation, which consists of sending $|X\rangle \langle X| \to |0 \rangle \langle 0|$. We hope that this makes up the most significant contribution. We can write
+\begin{equation}
+\langle 0 | \bar{d}_i \gamma_\mu (1-\gamma^5)s_j | \bar{K}^0 \rangle = i p_\mu \frac{1}{3} \delta_{ij} f_K,
+\end{equation}
+where $f_K$ is the Kaon decay constant. This means we can approximate
+\begin{equation}
+\langle K^0 | (\bar{d}\gamma^\mu (1-\gamma^5)s)^2| \bar{K}^0 \rangle \approx \frac{2}{9} m_K^2 f_K^2 (\delta_{ii}\delta_{jj} + \delta_{ij}\delta_{ij}) = \frac{8}{3}m_K^2 f_K^2.
+\end{equation}
+To account for the fact we made the vacuum stauration approximation, we introduce a "fudge factor" $B_K$. From lattice calculations, this has been determined as $B_K \approx 0.8$. So all in all,
+\begin{equation}
+\langle K^0 | \mathcal{H} | \overline{K}^0 \rangle = \frac{G_f^2 m_W^2}{16\pi^2} \frac{8}{3}m_K^2 f_K^2 B_K \sum_{ab} \xi_a \xi_b \bigg( (1+\frac{1}{4} x_a x_b) \mathcal{I}_2 + 2 x_a x_b \mathcal{I}_1\bigg).
+\end{equation}
+We need to compute $\sum_{ab}\xi_a \xi_b^* F_{ab}$, where $F_{ab}$ is equivalent to the bracketed term in the above equation. First we note that $\xi_u = -\xi_c -\xi_t$, from the unitarity triangle, so
+\begin{equation}
+\sum_{ab} \xi_a \xi^*_b F_{ab} = \xi_c^2(F_{cc} + F_{uu} - 2F_{uc}) + 2 \xi_c \xi_t (F_{ct} - F_{ut} + F_{uu} - F_{uc}) + 3 \xi_t^2(F_{tt} + F_{uu} - 2 F_{ut}).
+\end{equation}
+Now, $x_u \ll x_c \ll 1$, $x_t >1$. As an exercise, you can show that $F_{uu} \approx 1$, $F_{uc} \approx 1 + x_c \ln x_c + x_c$,  $F_{cc} \approx 1 + 2x_c \ln x_c + 3x_c$: so $F_{cc} + F_{uu} -2F_{uc} \approx x_c$, etc. Using the Wolfenstein parametrisation:
+\begin{equation}
+\begin{split}
+\xi_c = V_{cs}V_{cd}^* = \bigg(1-\frac{\lambda^2}{2}\bigg)(-\lambda), \\
+\xi_t = V_{ts}V_{td}^* = (-A\lambda^2)A\lambda^3(1-\rho+i\eta).
+\end{split}
+\end{equation}
+So 
+\begin{itemize}
+\item the $\xi_c^2$ term is $\mathcal{O}(m_c^2)O(\lambda^2) \sim 2 \times 10^{-5}$: largest, but no CP violation,
+\item the $2\xi_c \xi_t$ term is $\mathcal{O}(m_c^2)\mathcal{O}(\lambda^6) \sim 1 \times 10^{-7}$,
+\item the $\xi_t^2$ term is $\mathcal{O}(m_t^2)O(\lambda^10) \sim 2 \times 10^{-6}$: the largest CP violating term, because $m_t$ is so large.
+\end{itemize}
+So 
+\begin{equation}
+\begin{split}
+\Delta m_K = 2\frac{|\langle K^0|\mathcal{H}|\bar{K}^0\rangle |}{2m_K}&= 2M_X \\ &\approx \frac{G_F^2}{6\pi^2}m_K f_K^2 B_K\sin^2\theta_c m_c^2 \\
+&\sim 3\times 10^{-5} \text{ GeV}.
+\end{split}
+\end{equation}
+Experimentally, this is measured to be $3.5 \times 10^{-6}$ eV. This calculation was used by GIM in 1970 to predict the charm mass, $m_c \sim 1.5$ GeV. 
 
+Now looking at the CP violating terms, the dominant contribution is $\xi_t^2$. Define
+\begin{equation}
+E_{tt} \equiv F_{tt} + F_{uu} - 2F_{ut} = + \frac{3}{2} \frac{x_t^3 \ln x_t}{(x_t-1)^3} + \frac{x_t^3 - 11x_t^2 + 4x_t}{4(x_t-1)^2},
+\end{equation}
+known as the Inami-Lim function (1981). We know that
+\begin{equation}
+\Im \xi_t^2 = 2\Im \xi_t \Re \xi_+ = -2A^4 \lambda^{10}(1-\rho)\eta,
+\end{equation}
+so
+\begin{equation}
+\begin{split}
+\Re \epsilon &= \frac{\Im M_X}{2 \Delta m_K} = \frac{2 A^4 \lambda^{10}(1-\rho)\eta}{4\lambda^2 x_t} E_{tt}\\
+&= \frac{1}{2} A^4 \lambda^8 (1-\rho) \eta x_c^{-1} E_{tt} \\
+&\approx 3\times 10^{-3}.
+\end{split}
+\end{equation}
+Experimentally, this was measured as 1.5$\times 10^{-3}$. So this is indeed the origin of CP violation in $K-\bar{K}$ mixing! Note that a heavy top is essential. The most remarkable facet is that a top quark of mass 175 GeV gives CP violation in $K-\bar{K}$, which has a natural scale of $\Delta m_K$: an effect crossing over 17 orders of magnitude!
+%
+\subsection{Neutrinos}
+%
+So far we have assumed $m_\nu \equiv 0$. Indeed, no neutrino mass has yet been measured, and we have limits $m_\nu \leq 0.3$ eV. However, neutrinos are observed to "oscillate", or "mix":
+\begin{itemize}
+\item atmospheric neutrions undergo processes like $\pi^- \to \mu^- \bar{\nu}_\mu \to e^- \nu_e \nu_\mu \bar{\nu}_\mu$, 
+\end{itemize}
