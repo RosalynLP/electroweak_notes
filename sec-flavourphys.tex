@@ -490,5 +490,70 @@ Experimentally, this was measured as 1.5$\times 10^{-3}$. So this is indeed the 
 %
 So far we have assumed $m_\nu \equiv 0$. Indeed, no neutrino mass has yet been measured, and we have limits $m_\nu \leq 0.3$ eV. However, neutrinos are observed to "oscillate", or "mix":
 \begin{itemize}
-\item atmospheric neutrions undergo processes like $\pi^- \to \mu^- \bar{\nu}_\mu \to e^- \nu_e \nu_\mu \bar{\nu}_\mu$, 
+\item atmospheric neutrions undergo processes like $\pi^- \to \mu^- \bar{\nu}_\mu \to e^- \nu_e \nu_\mu \bar{\nu}_\mu$, interchanging $\nu_e$ and $\nu_\mu$. These oscillations were observed by Kamiokande in 1998;
+\item solar neutrinos are produced during $\beta$-decay to $\nu_e$, but $\nu_\mu$ and $\nu_\tau$ have also been seen, at Sudbury in the early 2000s;
+\item reactor neutrinos are now observed at many experiments, where neutrino beams can be viewed in the lab.
 \end{itemize}
+Mixing naturally arises through the presence of mass terms. The easiest way to include such terms in electroweak theory is through Yukawa terms, just like for quarks.
+\begin{equation}
+\mathcal{L}^L_{Y} = - \bigg(Y_{ij}^e \bar{L}_L^i \phi e_R^j + h.c. \bigg) - \bigg(Y_{ij}^\nu \bar{L}_L^i \phi^c \nu_R^j + h.c. \bigg),
+\end{equation}
+where the first bracket gives mass to the electrons and the second bracket gives mass to the neutrinos. Note that:
+\begin{equation}
+\begin{split}
+L_L = &\begin{pmatrix} \nu_{eL} \\ e_L \end{pmatrix}, 
+\begin{pmatrix} \nu_{\mu L} \\ \mu_L \end{pmatrix},
+\begin{pmatrix} \nu_{\tau L} \\ \tau_L \end{pmatrix}
+\qquad Y=-\frac{1}{2} \ \text{as before}; \\
+&e_R, \mu_R, \tau_R \qquad \qquad \qquad \qquad Y=-1 \ \text{as before}; \\
+&\nu_{eR}, \nu_{\mu R}, \nu_{\tau R}\qquad \qquad \qquad Y=0\ \text{new: need } Y=0 \text{ because } Q=0.
+\end{split}
+\end{equation}
+This works because the complex doublet $\phi$ has $Y=+\frac{1}{2}$ and $\phi^c$ has $Y=-\frac{1}{2}$.  As for quarks, we can rotate into the mass basis. The mass terms are then
+\begin{equation}
+-\sum_{l=e, \mu\,\tau} m_l \bar{l}l\ - \sum_{\nu=\nu_e,\nu_\mu, \nu_\tau} m_\nu \bar{\nu}\nu,
+\end{equation}
+but the charged current becomes
+\begin{equation}
+\frac{1}{2}J_\mu^l = \sum_i \bar{\nu}_L^i \gamma_\mu e_L^i \to \sum_{ij} \bar{\nu}_L^i \gamma_\mu U^{ij}e_L^j,
+\end{equation}
+where $U$ is the PMNS matrix, developed by Pontecorvo and Maki (1957), and Nakagawa and Sakata (1962). The $\bar{\nu}_L^i$ terms are changed from being flavour eigenstates to being mass eigenstates.
+
+There are three mixing angles (now all measured) and a CP violating phase (not yet measured).
+\subsubsection{Notes}
+\begin{itemize}
+\item It is usual to attach the mixing to "up-type" leptons, i.e. the neutrinos. This is the opposite of what we did for quarks, and is down to historical convention.
+\item It is usual to use the flavour basis (where the charged current is diagonal and mixing is in the masses) rather than the mass basis (where mixing is in the charged current, and the masses are diagonal). Again, this is historical: the neutrino flavour is labelled due to production and measurement, whereas the masses are still not yet measured.
+\item Because the masses are only observed via mixing, we can so far only observe mass differences. These are $\Delta m_{12} \approx 10^{-2}$ eV between the first and second generations, and $\Delta m_{13} \approx \Delta m_{23} \approx 0.05$ eV between the first and third and second and third generations. Remember that $m_e =0.5$ MeV, which is $10^8$ times larger.
+\end{itemize}
+\subsection{Majorana Masses}
+We call $\nu_R$ a "sterile" neutrino, in that it has no quantum numbers (except lepton number), so it can only be seen due to a mass, i.e. through neutrino mixing. We can use the charge conjugation operator $C=i \gamma^2 \gamma^0$, to define $\nu_R^C = C\bar{\nu}_R^T$, $\bar{\nu}_R^C = \nu_R^T C$, and write down a "Majorana mass term":
+\begin{equation}
+-\frac{M}{2}\bigg( \bar{\nu}_R^C \nu_R + \bar{\nu}_R \nu_R^C \bigg) = -M \nu_R^T C \nu_R.
+\end{equation}
+This is Lorentz invariant and also SU(2)$_L \otimes$U(1)$_Y$ invariant, because $\nu_R$ is a singlet. However, it explicitly violates lepton number. If there are both Dirac and Majorana masses present, we have terms
+\begin{equation}
+\sim -m(\bar{\nu}_L\nu_R + \bar{\nu}_R \nu_L) - M \nu_R^C \nu_R,
+\end{equation}
+so the mass matrix is of the form
+\begin{equation}
+\begin{pmatrix}
+0 & m \\
+m & M
+\end{pmatrix},
+\end{equation}
+with eigenvalues
+\begin{equation}
+\frac{M}{2} \pm \frac{1}{2} \sqrt{M^2 + 4m^2}.
+\end{equation}
+So for $M \gg m$, we have masses $M$ and $\frac{m^2}{M} \ll m$. This is called the "see-saw mechanism". For example, if $M \sim 10^{19}$ GeV at the Plank scale, and $m \sim 100$ GeV at the electroweak scale, then $\frac{m^2}{M} \sim 10^{-6}$ eV, which is very small.
+
+If we include a Majorana mass term like this we get two extra CP violating phases in the PMNS matrix, which can no longer be roatated away. This could be how nature works, but there are many other possibilities. 
+\subsection{Baryogenesis}
+To create matter (i.e. baryons) in the early universe, we need (Sakharov, 1967):
+\begin{itemize}
+\item B-violating processes. These could be due to anomalies in electroweak physics, but are the effects too small?;
+\item CP-violating processes, to create matter-antimatter asymmetry. These could be due to the CKM matrix in electroweak physics, but again are the effects too small?;
+\item A first order phase transition, in order to avoid washing out the asymmetry. This could be from spontaneous symmetry breaking in electroweak physics, but this is only first order for $m_h < 70$ GeV, and experimentally $m_h = 125$ GeV.
+\end{itemize}
+In other words, electroweak theory almost needs all three of these conditions, but not quite. There are many alternatives, one of which is leptogenesis, which uses CP-violation in the lepton sector along with Majorana mass terms.
