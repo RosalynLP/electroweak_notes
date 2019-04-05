@@ -67,11 +67,11 @@ We still have no fermion masses. But because $\phi^0$ has $Q=0$ we can have spon
 V(\phi^\dagger \phi) = \lambda \bigg(\phi^\dagger \phi - \frac{1}{2}v^2\bigg)^2.
 \end{equation}
 The minimum of $V$ is when $\phi^\dagger \phi = v^2/2$, so it's helpful to pick 
-\[\phi^0 = \frac{1}{\sqrt{2}} = \left( \begin{array}{cc}
+\[\phi^0 = \frac{1}{\sqrt{2}}\left( \begin{array}{cc}
 0   \\
 v   \end{array} \right). \]
 We can make this choice without loss of generality, due to global symmetry: we could have chosen e.g.
-\[\phi^0 = u_0\frac{1}{\sqrt{2}} = \left( \begin{array}{cc}
+\[\phi^0 = u_0\frac{1}{\sqrt{2}} \left( \begin{array}{cc}
 0   \\
 v   \end{array} \right), \]
 but then let $\psi_L \to u_0 \psi_L$ and $\mathcal{W}_\mu \to u_0 \mathcal{W}_\mu u_0^\dagger$, and the Lagrangian would be unchanged.
@@ -190,7 +190,7 @@ So the mixing is between the vector bosons $A_\mu^a$ and the Goldstone bosons $\
 \begin{equation}
 <0|\tilde{J}_\mu^a|\chi_i> = p_\mu F^a_i,
 \end{equation}
-so $F_i^a$ are the decay constants of the Goldstone bosons. $\partial^\mu \tilde{J}_\mu^a = 0 \implies p^2=0$ (i.e. the Goldstone bosons are massless: this is another derivation of Goldstone's theorem). It is easy to see that "$F^a = \tilde{T}^a \phi^0$ is the basis for the Goldstone bosons.
+so $F_i^a$ are the decay constants of the Goldstone bosons. $\partial^\mu \tilde{J}_\mu^a = 0 \implies p^2=0$ (i.e. the Goldstone bosons are massless: this is another derivation of Goldstone's theorem). It is easy to see that "$F^a = \tilde{T}^a \phi^0$ in the basis for the Goldstone bosons.
 
 The mass term of the vector bosons is given by
 \begin{equation}
@@ -289,7 +289,7 @@ Each of these diagrams goes like $\sim (E/m_W)^4$. Added together, the leading s
 \end{equation}
 For unitarity to be retained, we also need to include the Higgs contributions.
 \newline
-\includegraphics[width=\linewidth]{figs/32b.png}
+\includegraphics[width=0.7\linewidth]{figs/32b.png}
 \begin{equation}
 \begin{split}
 \mathcal{M}_h &= \bigg(-\frac{2im_W^2}{v}\bigg)^2\bigg(\frac{p \cdot p^\prime}{m_W^2} \frac{i}{(p+p^\prime)^2 -  m_h^2}\frac{q \cdot q^\prime}{m_W^2} + \frac{p \cdot q}{m_W^2} \frac{i}{(p-q)^2 - m_h^2}\frac{p^\prime \cdot q^\prime}{m_W^2} \bigg) \\
@@ -309,7 +309,7 @@ It is easy to see that:
 %
 \subsection{Renormalisability ('t Hooft, 1971)}
 % 
-Our Lagrangian $\mathcal{L}_{YM} + \mathcal{L}_D + \mathcal{L}_Y + \mathcal{L}_h$ is fully gauge invariant under SU(2)$_L \otimes$U(1)$_Y$. Spontaneous symmetry breaking chooses the vacuum, but does not break gauge invariance. We need gauge fixing to absor the redundant degrees of freedom. For example, in electromagnetism, we require a choice such as the Lorentz gauge condition $\partial_\mu A^\mu = 0$. We can do this either by hand, or by using a Lagrange multiplier:
+Our Lagrangian $\mathcal{L}_{YM} + \mathcal{L}_D + \mathcal{L}_Y + \mathcal{L}_h$ is fully gauge invariant under SU(2)$_L \otimes$U(1)$_Y$. Spontaneous symmetry breaking chooses the vacuum, but does not break gauge invariance. We need gauge fixing to absorb the redundant degrees of freedom. For example, in electromagnetism, we require a choice such as the Lorentz gauge condition $\partial_\mu A^\mu = 0$. We can do this either by hand, or by using a Lagrange multiplier:
 \begin{equation}
 \mathcal{L} = - \frac{1}{4}F_{\mu \nu}F^{\mu \nu} - \frac{1}{2\xi}({\partial_\mu A^\mu})^2,
 \end{equation}
@@ -325,21 +325,23 @@ The clearest way of seeing this is through the path integral approach, which is 
 \end{equation}
 Using the notation $A_\mu^\alpha = A_\mu - \partial_\mu \alpha$ to denote a gauge transformed field, we make an insertion of $\mathds{1}$ in the form
 \begin{equation}
-\mathds{1} = \int \mathcal{D}\alpha\ \delta ( G[A^\alpha]) det\bigg(\frac{\delta G}{\delta \alpha} \bigg),
+\mathds{1} = \int \mathcal{D}\alpha\ \delta ( G[A^\alpha]) \text{det}\bigg(\frac{\delta G}{\delta \alpha} \bigg),
 \end{equation}
 where $G[A^\alpha]$ are possible gauge-fixing conditions, e.g. for the Lorenz gauge $G[A^\alpha] = \partial_\mu A^{\alpha \mu}$. Making the change of variables $A_\mu \to A_\mu^\alpha$:
 \begin{equation}
-\mathcal{Z}[J] = \bigg( \int \mathcal{D}\alpha\ \delta ( G[A^\alpha]) det\bigg(\frac{\delta G}{\delta \alpha} \bigg)\bigg) \mathcal{D}A^\alpha_\mu e^{i S[A^\alpha,J]}.
+\mathcal{Z}[J] = \bigg( \int \mathcal{D}\alpha\ \delta ( G[A^\alpha]) \text{det}\bigg(\frac{\delta G}{\delta \alpha} \bigg)\bigg) \mathcal{D}A^\alpha_\mu e^{i S[A^\alpha,J]}.
 \end{equation}
 Gauge invariance implies $\mathcal{D}A_\mu^\alpha$ = $\mathcal{D}A_\mu$ and $S[A^\alpha, J] = S[A,J]$, so
 \begin{equation}
-\mathcal{Z}[J] = \bigg( \int \mathcal{D} \alpha \bigg) \int \mathcal{D} A_\mu \delta(G[A]) det \bigg(\frac{\delta G}{\delta \alpha} \bigg) e^{iS[A,J]}.
+\mathcal{Z}[J] = \bigg( \int \mathcal{D} \alpha \bigg) \int \mathcal{D} A_\mu \delta(G[A]) \text{det} \bigg(\frac{\delta G}{\delta \alpha} \bigg) e^{iS[A,J]}.
 \end{equation}
-$\int \mathcal{D} \alpha$ is now a decoupled factor which we can drop, as we will later be normalising the path integral. Now, considering a general gauge fixing condition $G[A] = -w(x)$ rather than $G[A] = 0$. We can investigate this by letting $G[A] \to G[A] + w(x)$ for some $w(x)$, then integrate over $w(x)$ with Gaussian weight $\exp(-i\int d^4x \ w(x)/2\xi)$. Then
+$\int \mathcal{D} \alpha$ is now a decoupled factor which we can drop, as we will later be normalising the path integral. 
+
+Now, considering a general gauge fixing condition $G[A] = -w(x)$ rather than $G[A] = 0$. We can investigate this by letting $G[A] \to G[A] + w(x)$ for some $w(x)$, then integrate over $w(x)$ with Gaussian weight $\exp(-i\int d^4x \ w(x)/2\xi)$. Then
 \begin{equation}
 \begin{split}
-\mathcal{Z}[J] &= \int \mathcal{D} w\ \mathcal{D} A_\mu \ \delta(G[A] - w) det \bigg(\frac{\delta G}{\delta \alpha}\bigg) e^{i S [A,J]} e^{-i \int d^4x \frac{1}{2\xi}w^2} \\
-&= \int \mathcal{D} A_\mu\ det\bigg(\frac{\delta G}{\delta \alpha}\bigg) e^{iS_\xi [A,J]} \\
+\mathcal{Z}[J] &= \int \mathcal{D} w\ \mathcal{D} A_\mu \ \delta(G[A] - w) \text{det} \bigg(\frac{\delta G}{\delta \alpha}\bigg) e^{i S [A,J]} e^{-i \int d^4x \frac{1}{2\xi}w^2} \\
+&= \int \mathcal{D} A_\mu\ \text{det}\bigg(\frac{\delta G}{\delta \alpha}\bigg) e^{iS_\xi [A,J]} \\
 \text{where } &S_\xi[A,J] = S[A,J] - \int d^4x\ \frac{1}{2\xi} (G[A])^2.
 \end{split}
 \end{equation}
@@ -348,13 +350,13 @@ For example, for QED in the Lorenz gauge, $G[A] = \partial_\mu A^\mu$. Then
 \begin{equation}
 \frac{\delta G}{\delta \alpha} = -\partial^2,
 \end{equation}
-so $det(\delta G/\delta \alpha)$ is just an infinite constant, and we can ignore it. For a non-abelian gauge theory, $det(\delta G/\delta \alpha)$ is in general non-trivial, and we have to apply the Faddeev-Popov procedure, expressing the determinant as an exponential (see QCD course).
+so $\text{det}(\delta G/\delta \alpha)$ is just an infinite constant, and we can ignore it. For a non-abelian gauge theory, $\text{det}(\delta G/\delta \alpha)$ is in general non-trivial, and we have to apply the Faddeev-Popov procedure, expressing the determinant as an exponential (see QCD course).
 
 Note that if we take $\xi \to 0$, $G[A]=0$, which fixes the gauge. But if we take $\xi \to \infty$, $G[A]$ can be almost anything. However, physics is independent of $\xi$: a popular choice is $\xi =1$, the Feynman gauge.
 
 In our spontaneously broken gauge theory we could also choose $G^a = \partial_\mu A^a$ for $a=1,2,3...$. But the gauge can also be fixed through Goldstone bosons: write
 \begin{equation}
-\mathcal{Z}[J]= \int \mathcal{D}A\ \mathcal{D}\chi\ det\bigg(\frac{\delta G}{\delta \alpha} \bigg) e^{i\int d^4x\ \mathcal{L}[A, \chi, J] - \frac{1}{2\xi}(G^a[A, \chi])^2}.
+\mathcal{Z}[J]= \int \mathcal{D}A\ \mathcal{D}\chi\ \text{det}\bigg(\frac{\delta G}{\delta \alpha} \bigg) e^{i\int d^4x\ \mathcal{L}[A, \chi, J] - \frac{1}{2\xi}(G^a[A, \chi])^2}.
 \end{equation}
 One possible choice would be the unitary gauge: $\phi_i = 0$, i.e. $F^T\chi = 0$. However, a particularly clever choice is
 \begin{equation}
@@ -426,8 +428,8 @@ There are four ghosts, one for each vector bosons, and these have the same propa
 Finally, the Higgs boson has the propagator
 \begin{equation}
 \Delta_{h} = \frac{i}{k^2 -  m_h^2 + i\epsilon}.
-\end{equation} g
-Now, in the $R_\xi$ gauge, all the boson propagators fall as $1/k^2$ as $k^2 \to \infty$, so the theory is power-counting renormalisable. It is not possible to prove that it is fully renormalisable, and that all the $\xi$ dependence cancels in S-matrix elements. Cancellation of $\xi$ dependence is facilitated by writing
+\end{equation} 
+Now, in the $R_\xi$ gauge, all the boson propagators fall as $1/k^2$ as $k^2 \to \infty$, so the theory is power-counting renormalisable. It is possible to prove that it is fully renormalisable, and that all the $\xi$ dependence cancels in S-matrix elements. Cancellation of $\xi$ dependence is facilitated by writing
 \begin{equation}
 \Delta_{\mu \nu}^\xi = \frac{i}{k^2 - m^2 + i\epsilon}\bigg(-\eta_{\mu \nu} + \frac{k_\mu k_\nu}{k^2} \bigg) - \frac{i\xi}{k^2 - \xi m^2}\frac{k_\mu k_\nu}{k^2},
 \end{equation}
@@ -444,7 +446,7 @@ i.e. the "unitary" gauge. It is easy to see why this is the case: as $\xi \to \i
 which was the unitary gauge condition. In the unitary gauge, we have only massive vector bosons (and the Higgs): there are no unphysical fields. But the renormalisability is hidden. For the photon, this gauge does not exist.
 \item If we set $\xi = 1$ (the 't Hooft-Feynman gauge), the propagators simplify:
 \begin{equation}
-\Delta_{\mu\nu} = - \frac{i\eta_{\mu \nu}}{k^2 - m^2 + i\epsilon}; \qquad \Delta_{ij} = \frac{i}{k^2-m^2 + i\epsilon} \quad (= \Delta_{ghost}),
+\Delta_{\mu\nu} = - \frac{i\eta_{\mu \nu}}{k^2 - m^2 + i\epsilon}; \qquad \Delta_{GB} = \frac{i}{k^2-m^2 + i\epsilon} \quad (= \Delta_{ghost}),
 \end{equation}
 so all the propagators have poles at $k^2=m^2$. The vector boson propagator looks just like the Feynman propagator in QED, but with $m \neq 0$. The longitudinal modes of the massive vector bosons are now effectively the Goldstone bosons.
 \item If we let $\xi \to 0$ (Landau gauge), we find
@@ -588,7 +590,7 @@ i.e. $m_h \leq 1$ TeV.
 \end{equation}
 IN the unitary gauge, the Goldstone bosons disappear, but renormalisability is not manifest. So for high energy behaviour it is better to work in the $R_\xi$ gauge. 
 \subsubsection{Parameter counting}
-\begin{table}[h!]
+\begin{table}[H]
 \begin{tabular}{l|l|l}
 \centering
 $\mathcal{L}_D$ & $\alpha, \alpha_s, \theta_w$ & 3 parameters: "SU(3)$\otimes$SU(2)$\otimes$U(1)" $\implies$ GUT? \\ \hline

@@ -8,7 +8,7 @@ In QED, all diagrams with an odd number of photons vanish, because $V_\mu \to -V
 \newline
 \includegraphics[width=0.4\linewidth]{figs/39a.png}
 \newline
-but for chiral theories, $C$ is not a symmetry so the triangle graphs are non-zero. The simplest example is the following.
+but for chiral theories, $C$ is not a symmetry so some triangle graphs are non-zero. The simplest example is the following.
 \newline
 \includegraphics[width=0.4\linewidth]{figs/39b.png}
 \newline
@@ -145,11 +145,13 @@ So in QED (or QCD), we choose $\partial^\mu j_\mu = 0$ in order that gauge symme
 \partial^\mu j_\mu^5 = - \frac{1}{16 \pi^2} \epsilon^{\mu \nu \alpha \beta} F_{\mu \alpha} F_{\nu \beta} = \frac{1}{8 \pi^2} F_{\mu \nu}^* F^{\mu \nu},
 \end{equation}
 where $F_{\mu \nu}^* = \frac{1}{2} \epsilon_{\mu \nu \alpha \beta} F^{\alpha \beta}$.
-\subsubsection{Notes:}
+\newline
+\newline
+\textbf{Notes:}
 \begin{enumerate}
 \item The right hand side is a topological invariant: the anomaly is not renormalised.
-\item The above derivation is regulator-independent. There are problems with $\gamma^5$ in dimensional regularisation and in Pauli-Villars regularisation, but axial symmetry is broken explicitly here.
-\item Path integral derivation ???? - **I don't understand what this part says**
+\item The above derivation is regulator-independent. There are problems with $\gamma^5$ in dimensional regularisation. There are also problems with lattice in chiral theories. Pauli-Villars regularisation works, but axial symmetry is broken explicitly.
+\item Path integral derivation: the Jacobian in the chiral transformation of the measure gives an anomaly (Fujikawa, 1979).
 \item For non-abelian symmetries, there are related anomalies in the box and pentagon diagrams.
 \item A practical application is $\pi^0 \to 2\gamma$ (Steinberger, 1951).
 \end{enumerate}
@@ -165,7 +167,9 @@ For $LLL$, we want to have symmetry between each leg of the triangle: choose $1-
 \text{i.e. } \partial^\mu J_\mu^L = + \frac{1}{96\pi^2}\epsilon^{\mu \nu \alpha \beta}F_{\mu \alpha}^L F_{\nu \beta}^L = - \frac{1}{48 \pi^2}F_{\mu \nu}^{L *} F^{L \mu \nu}.
 \end{split}
 \end{equation}
-So the abelian gauge theory of a single left-handed (or right-handed) chiral fermion is inconsistent: the U(1)$_L$ current is not conserved, so unitarity and renormalisability are spoilt. For consistency, we need $\sum (Q_L^3 - Q_R^3)=0$, e.g. $Q_L=Q_R$ for QED. (There are some weird alternatives possible, such as $Q_L=2$, then 8  with $Q_R=1$.) But what about non-abelian theories, such as SU(2)$_L \otimes$U(1)$_Y$? For a non-abelian gauge theory, there is an additional factor $T_a$ at each vertex.
+So the abelian gauge theory of a single left-handed (or right-handed) chiral fermion is inconsistent: the U(1)$_L$ current is not conserved, so unitarity and renormalisability are spoilt. For consistency, we need $\sum (Q_L^3 - Q_R^3)=0$, e.g. $Q_L=Q_R$ for QED. (There are some weird alternatives possible, such as $Q_L=2$, then 8  with $Q_R=1$.)
+
+But what about non-abelian theories, such as SU(2)$_L \otimes$U(1)$_Y$? For a non-abelian gauge theory, there is an additional factor $T_a$ at each vertex.
 \begin{figure}[!h]
   \subfloat[]{\includegraphics[width=0.3\textwidth]{figs/42a.png}}
  % \hfill
@@ -218,7 +222,7 @@ In this case the external lines are gravitons, and we require $tr Y_L = tr Y_R$.
 \subsubsection{Summary}
 We need:
 \begin{itemize}
-\item $Y_L + 3 Y_Q = 0$, so $Q_e = -Q_p$; the hydrogen atom is netural.
+\item $Y_L + 3 Y_Q = 0$, so $Q_e = -Q_p$; the hydrogen atom is neutral.
 \item $2Y_Q - Y_u - Y_d = 0$ and $2Y_L - Y_e - Y_\nu=0$, so the left-handed doublets match the right-handed singlets.
 \item $2Y_L^3 - Y_e^3 - Y_\nu^3 + 3(2Y_Q^3 - Y_u^3 - Y_d^3) = 0$ for each generation.
 \end{itemize}
@@ -230,7 +234,7 @@ Note that we must have $Y_\nu=0$, because $\nu$ is purely left-handed and there 
 \implies Y_u = \frac{2}{3}, \frac{-1}{3}.
 \end{split}
 \end{equation} 
-This is because $u$ and $d$ have been treated on an equal footing. ????
+We get two solutions because $u$ and $d$ have been treated on an equal footing: we need t decide which to call "up" and which to call "down".
 %
 \subsection{The Witten SU(2) Anomaly (1983)}
 %
@@ -240,7 +244,7 @@ The SU(2) gauge theory of a single Weyl fermion (doublet) is not well-defined. T
 %
 There are chiral anomalies in global symmetries (rather than local gauge symmetries). The associated Noether current is no longer conserved, but there is no inconsistency. An important example is baryon number, $B$. The global symmetry is under the transformation $u \to \exp(\frac{i\alpha}{3})u$, $d \to \exp(\frac{i\alpha}{3})d$, $e \to e$, $\nu \to \nu$ etc.
 
-The mixed anomalies $B$(U(1)$_Q$)$^2$ and $B$(SU(3)$_c$)$^2$ cancel, because they are vector-like. But $B$(SU(2)$_L$)$^2$ doesn't cancel:
+The mixed anomalies $B$(U(1)$_Q$)$^2$ and $B$(SU(3)$_c$)$^2$ cancel, because they are vector-like. But $B$(SU(2)$_L$)$^2$ doesn't cancel: $VLL = LLL$ so
 \begin{equation}
 \partial_\mu J^{\mu B} = - \frac{3g^2}{16 \pi^2} \epsilon_{\mu \nu \alpha \beta}\ tr \mathcal{W}^{\mu \nu} \mathcal{W}^{\alpha \beta}.
 \end{equation}
@@ -250,4 +254,4 @@ There is a similar anomaly in the lepton number $L$, for the symmetry  $u \to u$
 \begin{equation}
 \partial_\mu J^{\mu L} = \partial_\mu J^{\mu B}
 \end{equation}
-for each generation. So $B + L$ is anomalous but $B-L$ is conserved (the anomalies cancel). Conservation of $B-L$ + charge conservation implies that the number of protons and the number of electrons were the same in the early Universe, leading to the formation of hydrogen atoms.
+for each generation. So $B + L$ is anomalous but $B-L$ is conserved (the anomalies cancel). Conservation of $B-L$ + charge conservation implies that the number of protons and the number of electrons were roughly the same in the early Universe, leading to the formation of hydrogen atoms.

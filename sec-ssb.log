@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2017.10.11)  5 MAR 2019 16:07
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2017.10.11)  13 MAR 2019 15:59
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -8391,6 +8391,7 @@ Missing character: There is no y in font nullfont!
 Missing character: There is no l in font nullfont!
 Missing character: There is no e in font nullfont!
 Missing character: There is no t in font nullfont!
+Missing character: There is no t in font nullfont!
 Missing character: There is no i in font nullfont!
 Missing character: There is no n in font nullfont!
 Missing character: There is no g in font nullfont!
@@ -15702,31 +15703,7 @@ Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
-
-Overfull \hbox (11.9705pt too wide) in paragraph at lines 588--603
-                         $\OML/cmm/m/it/10 R[]$
- []
-
-
-Overfull \hbox (101.85898pt too wide) in paragraph at lines 588--603
-[]
- []
-
-
-! LaTeX Error: The font size command \normalsize is not defined:
-               there is probably something wrong with the class file.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.603 \newpage
-              
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-[2])
+)
 ! Emergency stop.
 <*> sec-ssb.tex
                
@@ -15736,7 +15713,7 @@ or  <return>  to continue without it.
 Here is how much of TeX's memory you used:
  28 strings out of 495063
  320 string characters out of 3182200
- 114291 words of memory out of 3000000
+ 113026 words of memory out of 3000000
  3307 multiletter control sequences out of 15000+200000
  4294 words of font info for 16 fonts, out of 3000000 for 9000
  14 hyphenation exceptions out of 8191

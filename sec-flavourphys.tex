@@ -27,7 +27,7 @@ b_L   \end{array} \right);\]
 u_R^i = \qquad u_R, \qquad c_R, \qquad t_R, \qquad;
 \]
 \[ 
-d_R^i = \qquad d^\prime_R, \qquad s^\prime_R, \qquad b_R, \qquad \text{for } i=1,2,3.
+d_R^i = \qquad d^\prime_R, \qquad s^\prime_R, \qquad b_R^\prime, \qquad \text{for } i=1,2,3.
 \]
 where the "up-type" quarks appear on the top row and "down-type" quarks on the bottom row. For leptons we introduced Yukawa coupling to a complex doublet
 \[\phi = \left( \begin{array}{cc}
@@ -56,7 +56,9 @@ so under SU(2)$_L$, $\phi \to U \phi = \exp(\frac{i}{2}\underline{\alpha}\cdot \
 \end{equation}
 so $\phi^c$ is also a doublet under SU(2)$_L$.
 
-Note that this works because SU(2) is "pseudoreal". This implies also that $tr \sigma_i \{\sigma_j, \sigma_k \} = 0$, i.e. it is anomaly free. This does not generalise to SU(N), for N>2: for this we would need a second Higgs doublet. So besides $\bar{Q}_L\phi d_R$, which gives mass to down-type quarks, we also have $\bar{Q}_L\phi^c u_R$, which gives mass to up-type quarks. Both are invariant under SU(2)$_L \otimes$U(1)$_Y$:
+Note that this works because SU(2) is "pseudoreal". This implies also that $tr \sigma_i \{\sigma_j, \sigma_k \} = 0$, i.e. it is anomaly free. This does not generalise to SU(N), for N>2: for this we would need a second Higgs doublet. 
+
+So besides $\bar{Q}_L\phi d_R$, which gives mass to down-type quarks, we also have $\bar{Q}_L\phi^c u_R$, which gives mass to up-type quarks. Both are invariant under SU(2)$_L \otimes$U(1)$_Y$:
 \begin{equation}
 \begin{split}
 -\frac{1}{6} + \frac{1}{2} - \frac{1}{3} &= 0, \\
@@ -78,7 +80,8 @@ So defining mass matrices $M_{ij}^u = \frac{v}{\sqrt{2}}Y_{ij}^u$; $M_{ij}^d = \
 \mathcal{L}_{Y} = -(M_{ij}^u \bar{u}_L^i u_R^j + h.c.) - (M_{ij}^d \bar{d}_L^i d_R^j + h.c.).
 \end{equation}
 Note that there is mixing between up-type quarks and between down-type quarks, but not between different types: this would violate U(1)$_Y$. We need to diagonalise the mass matrices, in order to find the "mass basis". Consider $M^u$: $M^{u \dagger} M^u$ is hermitian, so the real positive eigenvalues are $m_u^2$, $m_c^2$ and $m_t^2$. Similarly, $M^{d \dagger} M^d$ is hermitian, so the real positive eigenvalues are $m_d^2$, $m_s^2$ and $m_b^2$.
-\subsubsection{Lemma: $\exists$ unitary matrices $L$ and $R$ such that $LMR^\dagger=D$, a diagonal matrix with masses $m_u^2$, $m_c^2$ and $m_t^2$ (or $m_d$, $m_s^2$ and $m_b^2$).}
+\subsubsection{Lemma:}
+ $\exists$ unitary matrices $L$ and $R$ such that $LMR^\dagger=D$, a diagonal matrix with masses $m_u^2$, $m_c^2$ and $m_t^2$ (or $m_d$, $m_s^2$ and $m_b^2$). \newline
 \textbf{Proof: }
 \begin{equation}
 (M^\dagger M)^\dagger = M^\dagger M, 
@@ -91,7 +94,11 @@ where $D$ is a diagonal matrix with real, positive eigenvalues. Then define $L =
 \begin{equation}
 L^\dagger = D^{-1}R^\dagger M^\dagger, \qquad L^\dagger L = D^{-1}R^\dagger M^\dagger MR D^{-1} = 1,
 \end{equation}
-i.e. $L$ is unitary and $L^\dagger MR = D^{-1}R^\dagger M^\dagger MR = D$, so we have
+i.e. $L$ is unitary and $L^\dagger MR = D^{-1}R^\dagger M^\dagger MR = D$.
+\newline
+\newline
+\newline
+So we have
 \begin{equation}
 L^{u \dagger}M^u R^u = D^u, \qquad L^{d \dagger}M^d R^d = D^d,
 \end{equation}
@@ -131,7 +138,7 @@ Charge conjugation relates up-type quarks to down-type quarks, so
 \end{equation}
 where $V = L^{u \dagger} L^d$ is the CKM matrix, named after Cabibbo, Kobayashi and Maskawa (1973). The CKM matrix mixes the charged current interactions.
 
-$V$ is unitary: $V^\dagger V = L^{d \dagger}L^u L^{u \dagger} L^d = 1$. There are $N$ generations, so $V$ is an $N\times N$ complex matrix and has $2N^2$ real parameters. Unitarity gives $N^2$ constraints, so there are $N^2$ remaining real parameters. However, phase changes of the form $u_L^i \to \exp(i\alpha_i)u_L^i$, $d_L^i \to \exp(i\beta_i)d_L^i$ can remove $ 2N-1$ of these parameters. So overall we have 
+$V$ is unitary: $V^\dagger V = L^{d \dagger}L^u L^{u \dagger} L^d = 1$. There are $N$ generations, so $V$ is an $N\times N$ complex matrix and has $2N^2$ real parameters. Unitarity gives $N^2$ constraints, so there are $N^2$ remaining real parameters. However, phase changes of the form $u_L^i \to \exp(i\alpha_i)u_L^i$, $d_L^i \to \exp(i\beta_i)d_L^i$ can remove $ 2N-1$ of these parameters. Note that an overall phase change $u_L^i \to \exp(i\alpha)u_L^i,\ d_L^i \to \exp(i\alpha)d_L^i$ has no effect at all. So overall we have 
 \begin{equation}
 N^2 - (2N-1) = (N-1)^2 = \frac{N}{2}(N-1) + \frac{1}{2}(N-1)(N-2).
 \end{equation}
@@ -145,8 +152,8 @@ $V=1$ and there is no mixing.
 There is one angle and are no phases.
 \begin{equation}
 V = \begin{pmatrix}
-\cos\theta_L & \sin\theta_L \\
--\sin\theta_L & \cos\theta_c
+\cos\theta_c & \sin\theta_c \\
+-\sin\theta_c & \cos\theta_c
 \end{pmatrix},
 \end{equation}
 where $\theta_c$ is the Cabbibo angle.
@@ -209,7 +216,7 @@ This is a triangle because it is a sum of three complex numbers. The diagram on 
 \begin{itemize}
 \item The top left part of $V$ (which doesn't involve $t$ or $b$ quarks) is determined by measuring $\theta_c$ as above. More specifically: $|V_{ud}|$ is determined through $\beta$ and pion decay, $|V_{us}|$ through kaon and tau decays, and $|V_{cd}|$ and $|V_{cs}|$ are determined through $D$ semileptonic decays such as $D \to \pi l \nu$ and $D \to K l \nu$.
 \item Additional elements involving the $b$ quark but not the $t$ quark (i.e. "B physics") are determined by $B$ semileptonic decays such as $B \to \pi l \nu$ and $B \to D l \nu$. 
-\item $|V_{tb}|$ is determined through single top producgion $t \to bW$, but $|V_{ts}|$ and $|V_{td}|$ are very hard to measure directly. We can use corrections to loop calculations to find these (see later).
+\item $|V_{tb}|$ is determined through single top production $t \to bW$, but $|V_{ts}|$ and $|V_{td}|$ are very hard to measure directly. We can use corrections to loop calculations to find these (see later).
 \end{itemize}
 The results of the combined fits are usefully summarised by the Wolfenstein parametrisation (1983):
 \begin{equation}
@@ -241,7 +248,7 @@ since $(T^+)^T = T^-$. However, we now need to include the effects of the CKM ma
 = &\frac{g}{\sqrt{2}}(W_\mu^+\bar{Q}_L T^-\gamma^\mu V^{*\dagger} Q_L + W_\mu^- \bar{Q}_L T^+ \gamma^\mu V^* Q_L).
 \end{split}
 \end{equation}
-So we have CP invariance only if $V = V^*$. This means that the electroweak sector is CP invariant for two generations ($N=2$), but not for three generations ($N=3$) if $\delta \neq 0$. In other words, this complex phase, $\delta$, is CP-violating. Note that from the CPT theorem, which states invariance of CPT, that CP violation implies T violation. T is equivalent to complex conjugation, i.e. $\exp(iHt) \to \exp(-iHt)$.
+So we have CP invariance only if $V = V^*$. This means that the electroweak sector is CP invariant for two generations ($N=2$), but not for three generations ($N=3$) if $\delta \neq 0$. In other words, this complex phase, $\delta$, is CP-violating. Note that from the CPT theorem, which states invariance of CPT, that CP violation implies T violation. T involves complex conjugation: $\exp(iHt) \to \exp(-iHt)$.
 
 A useful measure of the amount of CP violation is given by the area of the unitarity triangle. For example, if we consider the $bd$ triangle,
 \newline
@@ -278,11 +285,11 @@ For $J=0$, there is no CP violation. Even though $\delta$ is large, CP violation
 %
 \subsection{$K-\bar{K}$ Mixing and Decay}
 %
-Remarkably, CP violation was observed already in 1964 (Cronin \& Fitch) through study of decays of neutral $K$ mesons, $K^0=(d\bar{s})$ and $\bar{K}^0=(s\bar{d})$. (CP violation has also been observed in B physics in 2001.) Under CP, $K^0 \leftrightarrow \bar{K}^0$, conventially written as:
+Remarkably, CP violation was observed already in 1964 (Cronin \& Fitch) through study of decays of neutral $K$ mesons, $K^0=(d\bar{s})$ and $\bar{K}^0=(s\bar{d})$. (CP violation has also been observed in B physics in 2001.) Under CP, $K^0 \leftrightarrow \bar{K}^0$:
 \begin{equation}
-CP|K^0\rangle = -|\bar{K}^0 \rangle, \qquad CP|\bar{K}^0 \rangle = -|K^0\rangle.
+CP|K^0\rangle = -|\bar{K}^0 \rangle, \qquad CP|\bar{K}^0 \rangle = -|K^0\rangle,
 \end{equation}
-The CP eigenstates are
+where the phase is conventional. The CP eigenstates are
 \begin{equation}
 |K_1\rangle = \frac{1}{\sqrt{2}}(|K^0\rangle - |\bar{K}^0\rangle), \qquad |K_2\rangle = \frac{1}{\sqrt{2}}(|K^0\rangle + |\bar{K}^0\rangle),
 \end{equation}
@@ -309,7 +316,7 @@ and $\eta_{00} \sim \eta_{+-} \sim 10^{-3}$. Clearly this violates CP. There are
 \begin{enumerate}
 \item \textbf{Direct CP Violation: }
 
-$K_S,\ K_L$ are CP eigenstates, but the decay process is CP violating.
+$K_S,\ K_L$ are CP eigenstates, but the decay process is CP violating. The CP violating diagram s called a "penguin diagram".
 \begin{figure}[H]
   \subfloat[$\Delta S =1,\ CP$]{\includegraphics[width=0.5\textwidth]{figs/49a.png}}
   \hfill
@@ -369,7 +376,7 @@ so $|K_L\rangle$ has an admixture of $|K_1\rangle$, and can therefore decay to $
 M_X = \frac{\langle K^0 | \mathcal{H} | \bar{K}^0 \rangle}{2m_K},
 \end{equation}
 where the denominator is a normalisation factor due to density of state arguments (see the QFT course from last term). Calculating the phase of $\epsilon$, and the equivalent parameter $\epsilon^\prime$ from \textit{direct} CP violation is rather harder.
-\item In B physics, direct CP violation is more important.
+\item In B physics, direct CP violation is more important than indirect CP violation.
 \end{itemize}
 %
 \subsection{Box Diagrams}
@@ -419,7 +426,7 @@ where
 \begin{equation}
 \mathcal{I}_1(x_a,x_b) = \int_0^\infty dz \frac{z}{(z+1)^2(z+x_a)(z+x_b)}.
 \end{equation}
-Note that $\mathcal{M}$ vanishes if we ignore the quark masses, because $\sum_a \xi_a =0$, by the unitarity triangle. The integrals can be evaluated using partial fractions (\textit{exercise}), e.g.
+Note that $\mathcal{M}$ vanishes if we ignore the quark masses, because $\sum_a \xi_a =0$, by the unitarity triangle. The integrals can be evaluated using partial fractions (\textit{exercise}):
 \begin{equation}
 \begin{split}
 &\mathcal{I}_k(x_a,x_b) = \frac{A_k(x_a)-A_k(x_b)}{x_a-x_b}; \\
@@ -463,12 +470,12 @@ So
 \begin{itemize}
 \item the $\xi_c^2$ term is $\mathcal{O}(m_c^2)O(\lambda^2) \sim 2 \times 10^{-5}$: largest, but no CP violation,
 \item the $2\xi_c \xi_t$ term is $\mathcal{O}(m_c^2)\mathcal{O}(\lambda^6) \sim 1 \times 10^{-7}$,
-\item the $\xi_t^2$ term is $\mathcal{O}(m_t^2)O(\lambda^10) \sim 2 \times 10^{-6}$: the largest CP violating term, because $m_t$ is so large.
+\item the $\xi_t^2$ term is $\mathcal{O}(m_t^2)O(\lambda^{10}) \sim 2 \times 10^{-6}$: the largest CP violating term, because $m_t$ is so large.
 \end{itemize}
 So 
 \begin{equation}
 \begin{split}
-\Delta m_K = 2\frac{|\langle K^0|\mathcal{H}|\bar{K}^0\rangle |}{2m_K}&= 2M_X \\ &\approx \frac{G_F^2}{6\pi^2}m_K f_K^2 B_K\sin^2\theta_c m_c^2 \\
+\Delta m_K = 2\frac{|\langle K^0|\mathcal{H}|\bar{K}^0\rangle |}{2m_K} &\approx \frac{G_F^2}{6\pi^2}m_K f_K^2 B_K\sin^2\theta_c m_c^2 \\
 &\sim 3\times 10^{-5} \text{ GeV}.
 \end{split}
 \end{equation}
@@ -480,7 +487,7 @@ E_{tt} \equiv F_{tt} + F_{uu} - 2F_{ut} = + \frac{3}{2} \frac{x_t^3 \ln x_t}{(x_
 \end{equation}
 known as the Inami-Lim function (1981). We know that
 \begin{equation}
-\Im \xi_t^2 = 2\Im \xi_t \Re \xi_+ = -2A^4 \lambda^{10}(1-\rho)\eta,
+\Im \xi_t^2 = 2\Im \xi_t \Re \xi_t = -2A^4 \lambda^{10}(1-\rho)\eta,
 \end{equation}
 so
 \begin{equation}
@@ -498,7 +505,7 @@ So far we have assumed $m_\nu \equiv 0$. Indeed, no neutrino mass has yet been m
 \begin{itemize}
 \item atmospheric neutrions undergo processes like $\pi^- \to \mu^- \bar{\nu}_\mu \to e^- \nu_e \nu_\mu \bar{\nu}_\mu$, interchanging $\nu_e$ and $\nu_\mu$. These oscillations were observed by Kamiokande in 1998;
 \item solar neutrinos are produced during $\beta$-decay to $\nu_e$, but $\nu_\mu$ and $\nu_\tau$ have also been seen, at Sudbury in the early 2000s;
-\item reactor neutrinos are now observed at many experiments, where neutrino beams can be viewed in the lab.
+\item reactor neutrinos are now used at many experiments, and neutrino beams produced in the lab.
 \end{itemize}
 Mixing naturally arises through the presence of mass terms. The easiest way to include such terms in electroweak theory is through Yukawa terms, just like for quarks.
 \begin{equation}
@@ -512,7 +519,7 @@ L_L = &\begin{pmatrix} \nu_{eL} \\ e_L \end{pmatrix},
 \begin{pmatrix} \nu_{\tau L} \\ \tau_L \end{pmatrix}
 \qquad Y=-\frac{1}{2} \ \text{as before}; \\
 &e_R, \mu_R, \tau_R \qquad \qquad \qquad \qquad Y=-1 \ \text{as before}; \\
-&\nu_{eR}, \nu_{\mu R}, \nu_{\tau R}\qquad \qquad \qquad Y=0\ \text{new: need } Y=0 \text{ because } Q=0.
+&\nu_{eR}, \nu_{\mu R}, \nu_{\tau R}\qquad \qquad \qquad Y=0\ \text{ (need } Y=0 \text{ because } Q=0).
 \end{split}
 \end{equation}
 This works because the complex doublet $\phi$ has $Y=+\frac{1}{2}$ and $\phi^c$ has $Y=-\frac{1}{2}$.  As for quarks, we can rotate into the mass basis. The mass terms are then
@@ -554,7 +561,7 @@ with eigenvalues
 \end{equation}
 So for $M \gg m$, we have masses $M$ and $\frac{m^2}{M} \ll m$. This is called the "see-saw mechanism". For example, if $M \sim 10^{19}$ GeV at the Plank scale, and $m \sim 100$ GeV at the electroweak scale, then $\frac{m^2}{M} \sim 10^{-6}$ eV, which is very small.
 
-If we include a Majorana mass term like this we get two extra CP violating phases in the PMNS matrix, which can no longer be roatated away. This could be how nature works, but there are many other possibilities. 
+If we include a Majorana mass term like this we get two extra CP violating phases in the PMNS matrix, which can no longer be rotated away. This could be how nature works, but there are many other possibilities. 
 \subsection{Baryogenesis}
 To create matter (i.e. baryons) in the early universe, we need (Sakharov, 1967):
 \begin{itemize}
